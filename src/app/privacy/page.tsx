@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Privacy Policy"
         title="Your privacy is the product"
-        body="Privacy isn't a legal checkbox for us — it's the reason MyIntel exists. Here's how we handle your information."
+        body="Privacy isn't a legal checkbox for us. It's the reason MyIntel exists. Here's how we handle your information."
       />
 
       <section className="mx-auto max-w-3xl space-y-10 px-5 py-20 text-lg leading-relaxed text-clay">
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           <h2 className="display text-2xl">Information we collect</h2>
           <p className="mt-3">
             When you contact us, join our waitlist, or subscribe to updates, we
-            collect the information you provide — such as your name, email
+            collect the information you provide, such as your name, email
             address, and phone number. If you use the MyIntel platform, our
             sensors collect activity and routine data from the home. We never
             record video or audio of you or your loved ones.
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           <p className="mt-3">
             For any privacy questions or requests regarding your data, contact
             us at{" "}
-            <a href={site.emailHref} className="font-extrabold text-pine">
+            <a href={site.emailHref} className="font-extrabold text-navy">
               {site.email}
             </a>{" "}
             or call {site.phone}.

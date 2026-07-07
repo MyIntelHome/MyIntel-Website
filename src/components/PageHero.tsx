@@ -11,7 +11,7 @@ export function PageHero({
     <section className="relative overflow-hidden bg-sand">
       <div
         aria-hidden="true"
-        className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-sage opacity-70 blur-3xl"
+        className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-sky opacity-70 blur-3xl"
       />
       <div className="relative mx-auto max-w-6xl px-5 py-20 sm:py-24">
         <p className="eyebrow">{eyebrow}</p>

@@ -15,7 +15,7 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "What are the benefits of home automation for aging in place?",
-        a: "Home automation offers increased safety and security, improved accessibility and convenience, and enhanced monitoring of health and wellness — all of which help older adults live independently longer.",
+        a: "Home automation offers increased safety and security, improved accessibility and convenience, and enhanced monitoring of health and wellness, all of which help older adults live independently longer.",
       },
       {
         q: "How can I prevent falls at home as I age?",
@@ -27,7 +27,7 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How can technology help seniors age in place independently?",
-        a: "Smart home devices for security, fall detection systems, medication management tools, and remote health monitoring let seniors stay independent while keeping family and care teams informed — without constant check-ins.",
+        a: "Smart home devices for security, fall detection systems, medication management tools, and remote health monitoring let seniors stay independent while keeping family and care teams informed, without constant check-ins.",
       },
     ],
   },
@@ -40,11 +40,11 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What are the top smart home devices for older adults?",
-        a: "Smart door locks, video doorbells for security, smart thermostats, motion sensor lighting, smart medication dispensers, and smart home assistants are among the most valuable — alongside passive monitoring like MyIntel's sensor platform.",
+        a: "Smart door locks, video doorbells for security, smart thermostats, motion sensor lighting, smart medication dispensers, and smart home assistants are among the most valuable, alongside passive monitoring like MyIntel's sensor platform.",
       },
       {
         q: "Does MyIntel use cameras or wearables?",
-        a: "No. MyIntel is built privacy-first: discreet in-home sensors learn daily routines without recording video or requiring anything to be worn or charged. Families see calm summaries and alerts — never surveillance footage.",
+        a: "No. MyIntel is built privacy-first: discreet in-home sensors learn daily routines without recording video or requiring anything to be worn or charged. Families see calm summaries and alerts, never surveillance footage.",
       },
     ],
   },
@@ -53,11 +53,11 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Are there grants or funding available for home modifications for seniors?",
-        a: "Yes — government programs, nonprofit organizations, and private foundations offer grants and funding for senior home modifications. We help clients identify and apply for programs they qualify for.",
+        a: "Yes. Government programs, nonprofit organizations, and private foundations offer grants and funding for senior home modifications. We help clients identify and apply for programs they qualify for.",
       },
       {
         q: "Are there insurance policies that cover home modifications?",
-        a: "Some long-term care insurance policies and Medicare Advantage plans may provide coverage for home modifications. Review your policy details, or ask us — we're happy to help you navigate it.",
+        a: "Some long-term care insurance policies and Medicare Advantage plans may provide coverage for home modifications. Review your policy details, or ask us. We're happy to help you navigate it.",
       },
       {
         q: "How can I use Medicare or Medicaid to help with home modifications?",
@@ -82,7 +82,7 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How do I assess my home for safety hazards?",
-        a: "Walk through each room looking for trip hazards, poor lighting, and hard-to-reach essentials — then have a professional confirm. Our CAPS-certified specialists perform comprehensive Home Safety Assessments in Denver CO, Lake of the Ozarks MO, and Corpus Christi TX.",
+        a: "Walk through each room looking for trip hazards, poor lighting, and hard-to-reach essentials, then have a professional confirm. Our CAPS-certified specialists perform comprehensive Home Safety Assessments in Denver CO, Lake of the Ozarks MO, and Corpus Christi TX.",
       },
     ],
   },
@@ -95,7 +95,7 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Are there training programs for family caregivers?",
-        a: "Yes — many organizations offer workshops, webinars, and resources covering caregiving techniques, stress management, and self-care for caregivers.",
+        a: "Yes. Many organizations offer workshops, webinars, and resources covering caregiving techniques, stress management, and self-care for caregivers.",
       },
     ],
   },
@@ -108,7 +108,7 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Are there legal resources to help seniors with estate planning?",
-        a: "Yes — local bar associations, legal aid clinics, senior legal helplines, and reputable online legal services can all help seniors navigate estate planning affordably.",
+        a: "Yes. Local bar associations, legal aid clinics, senior legal helplines, and reputable online legal services can all help seniors navigate estate planning affordably.",
       },
     ],
   },
@@ -120,7 +120,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions families ask us every day"
-        body="Everything you need to know about aging in place, home safety, and how MyIntel works. Don't see your question? Reach out — a real person will answer."
+        body="Everything you need to know about aging in place, home safety, and how MyIntel works. Don't see your question? Reach out. A real person will answer."
       />
 
       <section className="mx-auto max-w-4xl px-5 py-20">
@@ -137,7 +137,7 @@ export default function FaqPage() {
                     {q}
                     <span
                       aria-hidden="true"
-                      className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sage text-pine transition-transform duration-200 group-open:rotate-45"
+                      className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky text-navy transition-transform duration-200 group-open:rotate-45"
                     >
                       <svg
                         viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ export default function FaqPage() {
             Still have questions?
           </p>
           <p className="mt-2 font-semibold text-clay">
-            Call {site.phone} or email {site.email} — we&apos;re happy to talk
+            Call {site.phone} or email {site.email}. We&apos;re happy to talk
             it through.
           </p>
         </div>

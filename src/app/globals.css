@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #faf6ef;
-  --color-sand: #f2ecdf;
-  --color-ink: #2b2a26;
-  --color-clay: #6b6459;
-  --color-pine: #35543f;
-  --color-pine-dark: #263d2e;
-  --color-pine-deep: #1c2f23;
-  --color-sage: #e4ecdf;
-  --color-sage-dark: #a8bda9;
-  --color-terracotta: #c26b47;
-  --color-terracotta-dark: #a25336;
+  --color-cream: #faf8f4;
+  --color-sand: #f1eee7;
+  --color-ink: #14243c;
+  --color-clay: #55627a;
+  --color-navy: #1e3357;
+  --color-navy-dark: #172845;
+  --color-navy-deep: #101d33;
+  --color-sky: #e1eef8;
+  --color-sky-dark: #a9cbe4;
+  --color-blue: #2e96d1;
+  --color-blue-dark: #237aad;
   --color-gold: #d9a441;
 }
 
 @theme inline {
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-manrope);
   --font-sans: var(--font-nunito);
 }
 
@@ -38,19 +38,19 @@ html {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-bold transition-all duration-200;
   }
   .btn-primary {
-    @apply bg-pine text-cream shadow-lg shadow-pine/20 hover:bg-pine-dark hover:shadow-xl hover:shadow-pine/25 hover:-translate-y-0.5;
+    @apply bg-navy text-cream shadow-lg shadow-navy/20 hover:bg-navy-dark hover:shadow-xl hover:shadow-navy/25 hover:-translate-y-0.5;
   }
   .btn-accent {
-    @apply bg-terracotta text-cream shadow-lg shadow-terracotta/25 hover:bg-terracotta-dark hover:-translate-y-0.5;
+    @apply bg-blue text-cream shadow-lg shadow-blue/25 hover:bg-blue-dark hover:-translate-y-0.5;
   }
   .btn-outline {
-    @apply border-2 border-pine/25 text-pine hover:border-pine hover:bg-pine/5;
+    @apply border-2 border-navy/25 text-navy hover:border-navy hover:bg-navy/5;
   }
   .btn-light {
-    @apply bg-cream text-pine-dark hover:bg-sand hover:-translate-y-0.5;
+    @apply bg-cream text-navy-dark hover:bg-sand hover:-translate-y-0.5;
   }
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-sm font-extrabold uppercase tracking-[0.18em] text-terracotta;
+    @apply inline-flex items-center gap-2 text-sm font-extrabold uppercase tracking-[0.18em] text-blue;
   }
   .display {
     @apply font-display font-semibold tracking-tight text-ink;

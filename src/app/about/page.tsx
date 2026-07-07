@@ -29,7 +29,7 @@ const values = [
   {
     icon: Users,
     title: "The whole circle of care",
-    body: "Older adults, families, caregivers, and communities all deserve calm and clarity — we design for every one of them.",
+    body: "Older adults, families, caregivers, and communities all deserve calm and clarity. We design for every one of them.",
   },
   {
     icon: Home,
@@ -44,7 +44,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About MyIntel"
         title="It started with two grandparents and a promise"
-        body="MyIntel exists because our founder wanted to know his grandparents were safe and comfortable — even from miles away."
+        body="MyIntel exists because our founder wanted to know his grandparents were safe and comfortable, even from miles away."
       />
 
       {/* Story */}
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <h2 className="display text-4xl sm:text-5xl">Our story</h2>
             <p>
               Like millions of families, ours faced a hard question: how do you
-              support aging loved ones who want to stay in the home they love —
+              support aging loved ones who want to stay in the home they love
               when you can&apos;t be there every day?
             </p>
             <p>
@@ -68,12 +68,12 @@ export default function AboutPage() {
               What began as one family&apos;s solution became a mission: to
               share the benefits of smart, safe living with everyone. Today,
               MyIntel combines privacy-first sensors with routine-learning AI
-              to give older adults calm confidence at home — and give families
+              to give older adults calm confidence at home, and give families
               and care teams the clarity they need to help.
             </p>
           </div>
 
-          <figure className="rounded-3xl bg-pine p-10 text-cream">
+          <figure className="rounded-3xl bg-navy p-10 text-cream">
             <Quote className="h-10 w-10 text-gold" />
             <blockquote className="mt-6 font-display text-2xl font-medium leading-snug">
               &ldquo;Revolutionize everyday living with responsive smart home
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {values.map(({ icon: ValueIcon, title, body }) => (
               <div key={title} className="rounded-3xl bg-white p-8">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sage text-pine">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                   <ValueIcon className="h-6 w-6" />
                 </span>
                 <h3 className="mt-5 font-display text-2xl font-semibold text-ink">

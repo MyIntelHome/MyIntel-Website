@@ -26,7 +26,7 @@ const roles = [
   {
     icon: Wrench,
     title: "Executive Certification in Home Modification (ECHM)",
-    body: "Design and oversee home modification projects that transform safety and accessibility — from planning through professional installation.",
+    body: "Design and oversee home modification projects that transform safety and accessibility, from planning through professional installation.",
     tag: "Modifications",
   },
 ];
@@ -40,7 +40,7 @@ const perks = [
   {
     icon: Sparkles,
     title: "Ground-floor opportunity",
-    body: "MyIntel is growing fast across three regions. Join early and help shape how the company — and the industry — grows.",
+    body: "MyIntel is growing fast across three regions. Join early and help shape how the company and the industry grow.",
   },
   {
     icon: GraduationCap,
@@ -55,7 +55,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Help families age in place with dignity"
-        body="We're building the team that makes safe, independent living possible — in Denver CO, Lake of the Ozarks MO, and Corpus Christi TX."
+        body="We're building the team that makes safe, independent living possible in Denver CO, Lake of the Ozarks MO, and Corpus Christi TX."
       />
 
       {/* Open roles */}
@@ -71,10 +71,10 @@ export default function CareersPage() {
               className="flex flex-col rounded-3xl border border-ink/8 bg-white p-9 shadow-sm"
             >
               <div className="flex items-center justify-between gap-4">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sage text-pine">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                   <RoleIcon className="h-6 w-6" />
                 </span>
-                <span className="rounded-full bg-terracotta/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-terracotta">
+                <span className="rounded-full bg-blue/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-blue">
                   {tag}
                 </span>
               </div>
@@ -106,7 +106,7 @@ export default function CareersPage() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {perks.map(({ icon: PerkIcon, title, body }) => (
               <div key={title} className="rounded-3xl bg-white p-8 text-center">
-                <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-terracotta/15 text-terracotta">
+                <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-blue/15 text-blue">
                   <PerkIcon className="h-6 w-6" />
                 </span>
                 <h3 className="mt-5 font-display text-xl font-semibold text-ink">
@@ -119,8 +119,8 @@ export default function CareersPage() {
           <p className="mx-auto mt-12 max-w-xl text-center font-semibold text-clay">
             Don&apos;t see your exact role? If you&apos;re passionate about
             helping older adults live independently, we want to hear from you
-            anyway — email{" "}
-            <a href={site.emailHref} className="font-extrabold text-pine">
+            anyway. Email{" "}
+            <a href={site.emailHref} className="font-extrabold text-navy">
               {site.email}
             </a>
             .
@@ -130,7 +130,7 @@ export default function CareersPage() {
 
       <CtaBand
         title="Ready to join the team?"
-        body="Send us a note about your background and certifications — we respond to every application personally."
+        body="Send us a note about your background and certifications. We respond to every application personally."
       />
     </>
   );

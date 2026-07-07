@@ -1,9 +1,9 @@
 export const site = {
   name: "MyIntel",
   legalName: "MyIntel Co.",
-  tagline: "Peace of mind for families. Powerful insights for care teams.",
+  tagline: "Peace of mind for families. Independence for seniors.",
   description:
-    "MyIntel combines privacy-first sensors with routine-learning AI to deliver calm, clear updates — no cameras, no wearables. Ideal for homes and senior living communities.",
+    "MyIntel combines privacy-first sensors with routine-learning AI to deliver calm, clear updates. No cameras, no wearables. Built for homes and senior living communities.",
   url: "https://myintelhome.com",
   phone: "(720) 989-1123",
   phoneHref: "tel:+17209891123",

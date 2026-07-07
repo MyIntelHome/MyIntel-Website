@@ -2,24 +2,24 @@ import { site } from "@/lib/site";
 import { ArrowRight, Phone } from "@/components/icons";
 
 export function CtaBand({
-  title = "Ready for calm confidence at home?",
+  title = "Stay independent. Stay safe. Stay home.",
   body = "Join the waitlist for early access to the MyIntel platform, or talk with a home safety expert about your family's needs.",
 }: {
   title?: string;
   body?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-pine-dark">
+    <section className="relative overflow-hidden bg-navy-dark">
       <div
         aria-hidden="true"
-        className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-pine opacity-60 blur-3xl"
+        className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-blue/30 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-terracotta/40 blur-3xl"
+        className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-blue/20 blur-3xl"
       />
       <div className="relative mx-auto max-w-4xl px-5 py-20 text-center">
-        <h2 className="display text-4xl text-cream sm:text-5xl">{title}</h2>
+        <h2 className="display text-4xl !text-cream sm:text-5xl">{title}</h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-cream/75">
           {body}
         </p>

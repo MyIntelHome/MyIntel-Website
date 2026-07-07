@@ -26,7 +26,7 @@ const features = [
   {
     icon: Activity,
     title: "Activities of Daily Living scores",
-    body: "A single, holistic wellness score built from real daily routines — so you can see at a glance how someone is really doing.",
+    body: "One holistic wellness score built from real daily routines. See at a glance how someone is really doing.",
   },
   {
     icon: PersonStanding,
@@ -41,7 +41,7 @@ const features = [
   {
     icon: Bell,
     title: "Fall detection",
-    body: "Around-the-clock detection that alerts the right people quickly — without cameras watching anyone.",
+    body: "Around-the-clock detection that alerts the right people quickly, without cameras watching anyone.",
   },
   {
     icon: Pill,
@@ -51,7 +51,7 @@ const features = [
   {
     icon: Dashboard,
     title: "Clear health dashboards",
-    body: "Families and care teams see calm, digestible updates — not a flood of raw data or false alarms.",
+    body: "Families and care teams see calm, digestible updates. Not a flood of raw data or false alarms.",
   },
 ];
 
@@ -60,19 +60,19 @@ const audiences = [
     icon: Heart,
     label: "For Older Adults",
     title: "Calm confidence at home",
-    body: "Passive, privacy-first monitoring — no wearables, no cameras — so you feel supported without feeling watched.",
+    body: "Passive, privacy-first monitoring. No wearables, no cameras. You feel supported without feeling watched.",
   },
   {
     icon: Users,
     label: "For Families & Loved Ones",
     title: "Clarity without hovering",
-    body: "A clear view of routines and alerts — so you can support from anywhere without constant check-ins.",
+    body: "A clear view of routines and alerts, so you can support from anywhere without constant check-ins.",
   },
   {
     icon: ClipboardCheck,
     label: "For Caregivers & Homecare",
     title: "Prioritize where care matters",
-    body: "Exception-based monitoring surfaces who needs attention first — boosting quality and saving time.",
+    body: "Exception-based monitoring surfaces who needs attention first, boosting quality and saving time.",
   },
   {
     icon: Building,
@@ -84,46 +84,77 @@ const audiences = [
 
 const steps = [
   {
-    title: "Discreet sensors are installed",
-    body: "Small, privacy-first sensors are placed around the home in about an hour. No cameras. No microphones pointed at conversations. Nothing to wear.",
+    title: "Assess the living space and lifestyle",
+    body: "A certified specialist walks the home with you, learns the daily routine, and identifies where risks actually are. That assessment shapes everything that follows.",
   },
   {
-    title: "AI learns the rhythm of home",
-    body: "Over the first days, MyIntel learns what normal looks like — sleep, meals, movement, and daily routines unique to each person.",
+    title: "Set up the right smart supports",
+    body: "Discreet sensors and safety upgrades are installed in about an hour. No cameras. No microphones. Nothing to wear or charge.",
   },
   {
-    title: "Calm, clear updates reach the right people",
-    body: "Families and care teams get simple daily summaries, and immediate alerts only when something truly needs attention.",
+    title: "Track daily rhythm for proactive care",
+    body: "The platform learns what normal looks like, then sends families and care teams calm daily summaries and immediate alerts only when something truly needs attention.",
   },
 ];
+
+const partners = [
+  { src: "/partners/talius.png", alt: "Talius" },
+  { src: "/partners/ciap.png", alt: "CIAP" },
+  { src: "/partners/adi.png", alt: "ADI" },
+  { src: "/partners/portal-io.png", alt: "Portal.io" },
+  { src: "/partners/wave.jpg", alt: "WAVE" },
+  { src: "/partners/snap-one.jpg", alt: "Snap One" },
+];
+
+function FingerprintArcs({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 400 400"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      {[70, 110, 150, 190, 230].map((r) => (
+        <path
+          key={r}
+          d={`M ${200 - r} 400 A ${r} ${r} 0 0 1 ${200 + r} 400`}
+          stroke="currentColor"
+          strokeWidth="10"
+          strokeLinecap="round"
+        />
+      ))}
+    </svg>
+  );
+}
 
 function HeroVisual() {
   return (
     <div className="relative mx-auto w-full max-w-md">
       <div
         aria-hidden="true"
-        className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-sage via-sand to-terracotta/20"
+        className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-sky via-cream to-blue/15"
       />
+      <FingerprintArcs className="absolute -bottom-8 -left-10 w-48 text-sky-dark/50" />
 
-      <div className="relative rounded-3xl border border-ink/8 bg-white p-6 shadow-2xl shadow-pine/10">
+      <div className="relative rounded-3xl border border-ink/8 bg-white p-6 shadow-2xl shadow-navy/10">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-widest text-clay">
               Today at Mom&apos;s
             </p>
-            <p className="font-display text-xl font-semibold text-ink">
+            <p className="font-display text-xl font-bold text-ink">
               All routines on track
             </p>
           </div>
           <div className="relative grid h-16 w-16 place-items-center">
             <svg viewBox="0 0 64 64" className="absolute inset-0 h-16 w-16 -rotate-90">
-              <circle cx="32" cy="32" r="27" fill="none" stroke="var(--color-sage)" strokeWidth="7" />
+              <circle cx="32" cy="32" r="27" fill="none" stroke="var(--color-sky)" strokeWidth="7" />
               <circle
                 cx="32"
                 cy="32"
                 r="27"
                 fill="none"
-                stroke="var(--color-pine)"
+                stroke="var(--color-blue)"
                 strokeWidth="7"
                 strokeLinecap="round"
                 strokeDasharray="169.6"
@@ -131,7 +162,7 @@ function HeroVisual() {
               />
             </svg>
             <div className="text-center">
-              <p className="font-display text-lg font-bold leading-none text-pine">92</p>
+              <p className="font-display text-lg font-extrabold leading-none text-navy">92</p>
               <p className="text-[9px] font-extrabold uppercase tracking-wide text-clay">ADL</p>
             </div>
           </div>
@@ -139,7 +170,7 @@ function HeroVisual() {
 
         <ul className="mt-5 space-y-3">
           {[
-            { icon: Moon, text: "Slept 7h 40m — restful night" },
+            { icon: Moon, text: "Slept 7h 40m, restful night" },
             { icon: Utensils, text: "Breakfast activity at 8:12 AM" },
             { icon: PersonStanding, text: "Morning walk around the house" },
             { icon: Pill, text: "Medication reminder acknowledged" },
@@ -148,18 +179,18 @@ function HeroVisual() {
               key={text}
               className="flex items-center gap-3 rounded-xl bg-cream px-4 py-3"
             >
-              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sage text-pine">
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky text-navy">
                 <ItemIcon className="h-4 w-4" />
               </span>
               <span className="text-sm font-semibold text-ink/80">{text}</span>
-              <Check className="ml-auto h-4 w-4 shrink-0 text-pine" />
+              <Check className="ml-auto h-4 w-4 shrink-0 text-blue" />
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="absolute -left-6 -bottom-6 hidden items-center gap-3 rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-pine/10 sm:flex">
-        <span className="grid h-10 w-10 place-items-center rounded-full bg-terracotta/15 text-terracotta">
+      <div className="absolute -right-4 -bottom-6 hidden items-center gap-3 rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10 sm:flex">
+        <span className="grid h-10 w-10 place-items-center rounded-full bg-blue/15 text-blue">
           <EyeOff className="h-5 w-5" />
         </span>
         <div>
@@ -178,22 +209,21 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="absolute -right-40 top-0 h-[34rem] w-[34rem] rounded-full bg-sage/60 blur-3xl"
+          className="absolute -right-40 top-0 h-[34rem] w-[34rem] rounded-full bg-sky/70 blur-3xl"
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-16 lg:grid-cols-2 lg:pb-28 lg:pt-24">
           <div>
             <p className="eyebrow">
               <Sparkles className="h-4 w-4" />
-              Privacy-first aging in place
+              Safer, Smarter Care
             </p>
             <h1 className="display mt-5 text-5xl leading-[1.05] sm:text-6xl">
               Peace of mind for families.{" "}
-              <span className="text-pine">Powerful insights</span> for care
-              teams.
+              <span className="text-blue">Independence</span> for seniors.
             </h1>
             <p className="prose-warm mt-6 max-w-xl">
               MyIntel combines privacy-first sensors with routine-learning AI
-              to deliver calm, clear updates — no cameras, no wearables. Ideal
+              to deliver calm, clear updates. No cameras. No wearables. Built
               for homes and senior living communities.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -214,7 +244,7 @@ export default function HomePage() {
               {["No cameras", "No wearables", "Installed in about an hour"].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-pine" />
+                    <Check className="h-4 w-4 text-blue" />
                     {item}
                   </li>
                 )
@@ -225,8 +255,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Partner strip */}
+      <section className="border-y border-ink/8 bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-10">
+          <p className="text-center text-xs font-extrabold uppercase tracking-[0.2em] text-clay">
+            Trusted technology and partners
+          </p>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {partners.map(({ src, alt }) => (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="h-9 w-auto opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-11"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Stats band */}
-      <section className="border-y border-ink/8 bg-sand">
+      <section className="bg-sand">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 text-center sm:grid-cols-3">
           {[
             {
@@ -239,11 +289,13 @@ export default function HomePage() {
             },
             {
               stat: "0",
-              label: "cameras or wearables required — monitoring stays invisible",
+              label: "cameras or wearables required. Monitoring stays invisible",
             },
           ].map(({ stat, label }) => (
             <div key={stat}>
-              <p className="font-display text-5xl font-bold text-pine">{stat}</p>
+              <p className="font-display text-5xl font-extrabold text-navy">
+                {stat}
+              </p>
               <p className="mx-auto mt-3 max-w-xs font-semibold text-clay">
                 {label}
               </p>
@@ -255,9 +307,9 @@ export default function HomePage() {
       {/* How it works */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="max-w-2xl">
-          <p className="eyebrow">How it works</p>
+          <p className="eyebrow">How we help at home</p>
           <h2 className="display mt-4 text-4xl sm:text-5xl">
-            Technology that understands the rhythm of home
+            Start with a safer, smarter home
           </h2>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -266,10 +318,10 @@ export default function HomePage() {
               key={step.title}
               className="relative rounded-3xl border border-ink/8 bg-white p-8 shadow-sm"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-pine font-display text-lg font-bold text-cream">
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-blue font-display text-lg font-extrabold text-white">
                 {i + 1}
               </span>
-              <h3 className="mt-5 font-display text-2xl font-semibold text-ink">
+              <h3 className="mt-5 font-display text-2xl font-bold text-ink">
                 {step.title}
               </h3>
               <p className="mt-3 leading-relaxed text-clay">{step.body}</p>
@@ -279,7 +331,7 @@ export default function HomePage() {
         <div className="mt-10">
           <Link
             href="/how-it-works"
-            className="inline-flex items-center gap-2 font-extrabold text-pine hover:text-pine-dark"
+            className="inline-flex items-center gap-2 font-extrabold text-blue hover:text-blue-dark"
           >
             Explore the platform in depth
             <ArrowRight className="h-5 w-5" />
@@ -288,10 +340,11 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="bg-pine-dark py-24 text-cream">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="relative overflow-hidden bg-navy py-24 text-cream">
+        <FingerprintArcs className="absolute -top-24 right-0 w-96 rotate-180 text-white/5" />
+        <div className="relative mx-auto max-w-6xl px-5">
           <div className="max-w-2xl">
-            <p className="eyebrow !text-gold">Smart sensors + clear insights</p>
+            <p className="eyebrow !text-gold">One platform. Real-time action.</p>
             <h2 className="display mt-4 text-4xl !text-cream sm:text-5xl">
               Everything you need to feel confident, nothing you don&apos;t
             </h2>
@@ -302,12 +355,10 @@ export default function HomePage() {
                 key={title}
                 className="rounded-3xl border border-cream/10 bg-white/5 p-7 transition-colors hover:bg-white/10"
               >
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold/15 text-gold">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-blue/20 text-sky-dark">
                   <FeatureIcon className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl font-semibold">
-                  {title}
-                </h3>
+                <h3 className="mt-5 font-display text-xl font-bold">{title}</h3>
                 <p className="mt-2.5 leading-relaxed text-cream/70">{body}</p>
               </div>
             ))}
@@ -331,17 +382,17 @@ export default function HomePage() {
           {audiences.map(({ icon: AudienceIcon, label, title, body }) => (
             <div
               key={label}
-              className="group rounded-3xl border border-ink/8 bg-white p-8 shadow-sm transition-shadow hover:shadow-lg hover:shadow-pine/10"
+              className="group rounded-3xl border border-ink/8 bg-white p-8 shadow-sm transition-shadow hover:shadow-lg hover:shadow-navy/10"
             >
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sage text-pine">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                   <AudienceIcon className="h-6 w-6" />
                 </span>
-                <p className="text-sm font-extrabold uppercase tracking-widest text-terracotta">
+                <p className="text-sm font-extrabold uppercase tracking-widest text-blue">
                   {label}
                 </p>
               </div>
-              <h3 className="mt-5 font-display text-2xl font-semibold text-ink">
+              <h3 className="mt-5 font-display text-2xl font-bold text-ink">
                 {title}
               </h3>
               <p className="mt-3 leading-relaxed text-clay">{body}</p>
@@ -361,7 +412,7 @@ export default function HomePage() {
             <p className="prose-warm mt-6">
               Our Certified Aging in Place Specialists walk through your home,
               identify fall risks and hidden hazards, and build a personalized
-              plan — from lighting and grab bars to smart technology.
+              plan. From lighting and grab bars to smart technology.
             </p>
             <ul className="mt-8 space-y-4">
               {[
@@ -371,7 +422,7 @@ export default function HomePage() {
                 "Professional installation, training, and ongoing support",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-pine text-cream">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-blue text-white">
                     <Check className="h-3.5 w-3.5" />
                   </span>
                   <span className="font-semibold text-ink/80">{item}</span>
@@ -390,13 +441,13 @@ export default function HomePage() {
           </div>
 
           <div className="relative">
-            <div className="rounded-3xl border border-ink/8 bg-white p-8 shadow-xl shadow-pine/10">
+            <div className="rounded-3xl border border-ink/8 bg-white p-8 shadow-xl shadow-navy/10">
               <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-terracotta/15 text-terracotta">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-blue/15 text-blue">
                   <Home className="h-6 w-6" />
                 </span>
                 <div>
-                  <p className="font-display text-xl font-semibold text-ink">
+                  <p className="font-display text-xl font-bold text-ink">
                     Now serving three regions
                   </p>
                   <p className="text-sm font-semibold text-clay">
@@ -410,13 +461,13 @@ export default function HomePage() {
                     key={area}
                     className="flex items-center gap-3 rounded-xl bg-cream px-4 py-3.5 font-bold text-ink/80"
                   >
-                    <MapPin className="h-5 w-5 text-terracotta" />
+                    <MapPin className="h-5 w-5 text-blue" />
                     {area}
                   </li>
                 ))}
               </ul>
               <p className="mt-5 text-sm font-semibold leading-relaxed text-clay">
-                Outside these areas? Join the waitlist — we&apos;re expanding,
+                Outside these areas? Join the waitlist. We&apos;re expanding,
                 and remote consultations are available.
               </p>
             </div>
@@ -427,18 +478,18 @@ export default function HomePage() {
       {/* Testimonial + founder */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="grid gap-6 lg:grid-cols-2">
-          <figure className="flex flex-col justify-between rounded-3xl bg-pine p-10 text-cream">
+          <figure className="flex flex-col justify-between rounded-3xl bg-navy p-10 text-cream">
             <Quote className="h-10 w-10 text-gold" />
-            <blockquote className="mt-6 font-display text-2xl font-medium leading-snug">
+            <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug">
               &ldquo;My husband and I couldn&apos;t be happier with our
               experience with MyIntel. From start to finish, the team was
-              professional — and the system has given us so much peace of
+              professional, and the system has given us so much peace of
               mind.&rdquo;
             </blockquote>
             <figcaption className="mt-8 font-extrabold text-cream/80">
               Alice Koehn
               <span className="block text-sm font-semibold text-cream/60">
-                MyIntel customer
+                Founding pilot member
               </span>
             </figcaption>
           </figure>
@@ -446,8 +497,8 @@ export default function HomePage() {
           <div className="flex flex-col justify-between rounded-3xl border border-ink/8 bg-white p-10 shadow-sm">
             <div>
               <p className="eyebrow">Why we exist</p>
-              <blockquote className="mt-6 font-display text-2xl font-medium leading-snug text-ink">
-                &ldquo;MyIntel started with my own grandparents — wanting to
+              <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug text-ink">
+                &ldquo;MyIntel started with my own grandparents. I wanted to
                 know they were safe and comfortable, even from miles away.
                 That&apos;s the peace of mind we build for every family.&rdquo;
               </blockquote>
@@ -461,7 +512,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 font-extrabold text-pine hover:text-pine-dark"
+                className="inline-flex items-center gap-2 font-extrabold text-blue hover:text-blue-dark"
               >
                 Our story
                 <ArrowRight className="h-5 w-5" />

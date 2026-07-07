@@ -23,8 +23,8 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-[15px] font-bold transition-colors hover:text-pine ${
-                pathname === item.href ? "text-pine" : "text-ink/70"
+              className={`text-[15px] font-bold transition-colors hover:text-navy ${
+                pathname === item.href ? "text-navy" : "text-ink/70"
               }`}
             >
               {item.label}
@@ -66,7 +66,7 @@ export function Header() {
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className={`block border-b border-ink/5 py-3.5 text-lg font-bold ${
-                    pathname === item.href ? "text-pine" : "text-ink/80"
+                    pathname === item.href ? "text-navy" : "text-ink/80"
                   }`}
                 >
                   {item.label}

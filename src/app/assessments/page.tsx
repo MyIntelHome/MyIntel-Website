@@ -20,14 +20,14 @@ import {
 export const metadata: Metadata = {
   title: "Home Safety Assessments",
   description:
-    "CAPS-certified Home Safety Assessments identify fall risks, lighting, and accessibility needs — with personalized recommendations and financial aid guidance.",
+    "CAPS-certified Home Safety Assessments identify fall risks, lighting, and accessibility needs, with personalized recommendations and financial aid guidance.",
 };
 
 const evaluations = [
   {
     icon: PersonStanding,
     title: "Fall risks",
-    body: "Loose rugs, thresholds, stairs, and bathroom hazards — the leading causes of injury at home, identified room by room.",
+    body: "Loose rugs, thresholds, stairs, and bathroom hazards. We identify the leading causes of injury at home, room by room.",
   },
   {
     icon: Lightbulb,
@@ -37,7 +37,7 @@ const evaluations = [
   {
     icon: PersonStanding,
     title: "Mobility & accessibility",
-    body: "Doorways, handles, counter heights, and entries — assessed against how you actually move through your home.",
+    body: "Doorways, handles, counter heights, and entries, assessed against how you actually move through your home.",
   },
   {
     icon: Shield,
@@ -53,11 +53,11 @@ const processSteps = [
   },
   {
     title: "Walk through with a specialist",
-    body: "A Certified Aging in Place Specialist (CAPS) evaluates the home top to bottom — with you, at your pace.",
+    body: "A Certified Aging in Place Specialist (CAPS) evaluates the home top to bottom, with you and at your pace.",
   },
   {
     title: "Receive a personalized plan",
-    body: "You get clear, prioritized recommendations — from simple fixes to smart technology — matched to your budget.",
+    body: "You get clear, prioritized recommendations matched to your budget, from simple fixes to smart technology.",
   },
   {
     title: "Installation & training",
@@ -78,7 +78,7 @@ export default function AssessmentsPage() {
       <PageHero
         eyebrow="Home Safety Assessments"
         title="Every safe home starts with a clear picture"
-        body="1 in 4 adults over 65 falls each year — and most homes were never designed for aging safely. A professional Home Safety Assessment finds the hidden risks and shows you exactly what to do about them."
+        body="1 in 4 adults over 65 falls each year, and most homes were never designed for aging safely. A professional Home Safety Assessment finds the hidden risks and shows you exactly what to do about them."
       />
 
       {/* What we evaluate */}
@@ -95,7 +95,7 @@ export default function AssessmentsPage() {
               key={title}
               className="flex gap-5 rounded-3xl border border-ink/8 bg-white p-7 shadow-sm"
             >
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-terracotta/15 text-terracotta">
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue/15 text-blue">
                 <EvalIcon className="h-6 w-6" />
               </span>
               <div>
@@ -121,7 +121,7 @@ export default function AssessmentsPage() {
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step, i) => (
               <div key={step.title} className="rounded-3xl bg-white p-7">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-pine font-display text-lg font-bold text-cream">
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-navy font-display text-lg font-bold text-cream">
                   {i + 1}
                 </span>
                 <h3 className="mt-5 font-display text-xl font-semibold text-ink">
@@ -138,7 +138,7 @@ export default function AssessmentsPage() {
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-ink/8 bg-white p-10 shadow-sm">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sage text-pine">
+            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
               <GraduationCap className="h-6 w-6" />
             </span>
             <h3 className="mt-6 font-display text-3xl font-semibold text-ink">
@@ -147,7 +147,7 @@ export default function AssessmentsPage() {
             <p className="prose-warm mt-4">
               Assessments are performed by Certified Aging in Place Specialists
               (CAPS) with training in home modification. You get honest,
-              expert recommendations — whether or not they involve our
+              expert recommendations, whether or not they involve our
               products.
             </p>
             <ul className="mt-6 space-y-3">
@@ -157,14 +157,14 @@ export default function AssessmentsPage() {
                 "Personalized recommendations, never one-size-fits-all",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <ClipboardCheck className="mt-0.5 h-5 w-5 shrink-0 text-pine" />
+                  <ClipboardCheck className="mt-0.5 h-5 w-5 shrink-0 text-navy" />
                   <span className="font-semibold text-ink/80">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-3xl bg-pine p-10 text-cream">
+          <div className="rounded-3xl bg-navy p-10 text-cream">
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold/20 text-gold">
               <BadgeDollar className="h-6 w-6" />
             </span>
@@ -172,7 +172,7 @@ export default function AssessmentsPage() {
               Help paying for it
             </h3>
             <p className="mt-4 text-lg leading-relaxed text-cream/75">
-              Aging in place costs a fraction of assisted living — and many
+              Aging in place costs a fraction of assisted living, and many
               modifications qualify for financial assistance. We help you
               navigate:
             </p>
@@ -201,7 +201,7 @@ export default function AssessmentsPage() {
                 key={area}
                 className="flex flex-col items-center gap-3 rounded-3xl bg-white p-8"
               >
-                <span className="grid h-12 w-12 place-items-center rounded-full bg-terracotta/15 text-terracotta">
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-blue/15 text-blue">
                   <MapPin className="h-6 w-6" />
                 </span>
                 <p className="font-display text-xl font-semibold text-ink">
@@ -211,7 +211,7 @@ export default function AssessmentsPage() {
             ))}
           </div>
           <p className="mx-auto mt-8 max-w-xl font-semibold text-clay">
-            Somewhere else? Reach out anyway — remote consultations are
+            Somewhere else? Reach out anyway. Remote consultations are
             available, and we&apos;re expanding.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -231,7 +231,7 @@ export default function AssessmentsPage() {
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="flex flex-col items-start justify-between gap-8 rounded-3xl border border-ink/8 bg-white p-10 shadow-sm md:flex-row md:items-center">
           <div className="flex items-start gap-5">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-sage text-pine">
+            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-sky text-navy">
               <Wrench className="h-7 w-7" />
             </span>
             <div>
@@ -240,7 +240,7 @@ export default function AssessmentsPage() {
               </h3>
               <p className="mt-2 max-w-xl leading-relaxed text-clay">
                 Fall detection, motion lighting, smart locks, thermostats, and
-                monitoring — professionally installed, with hands-on training
+                monitoring, professionally installed, with hands-on training
                 so everything actually gets used.
               </p>
             </div>

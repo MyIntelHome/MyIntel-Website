@@ -26,7 +26,7 @@ const channels = [
   {
     icon: Mail,
     title: "Email us",
-    body: "Questions, assessments, partnerships, careers — we answer everything personally.",
+    body: "Questions, assessments, partnerships, careers. We answer everything personally.",
     linkLabel: site.email,
     href: site.emailHref,
   },
@@ -46,7 +46,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Talk to a real person about your home"
-        body="Whether you're planning ahead, worried about a parent, or running a care community — we'd love to hear from you."
+        body="Whether you're planning ahead, worried about a parent, or running a care community, we'd love to hear from you."
       />
 
       <section className="mx-auto max-w-6xl px-5 py-24">
@@ -58,16 +58,16 @@ export default function ContactPage() {
               {...(external
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="group rounded-3xl border border-ink/8 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine/10"
+              className="group rounded-3xl border border-ink/8 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sage text-pine">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                 <ChannelIcon className="h-6 w-6" />
               </span>
               <h2 className="mt-5 font-display text-2xl font-semibold text-ink">
                 {title}
               </h2>
               <p className="mt-2.5 leading-relaxed text-clay">{body}</p>
-              <p className="mt-5 inline-flex items-center gap-2 font-extrabold text-pine">
+              <p className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy">
                 {linkLabel}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </p>
@@ -76,7 +76,7 @@ export default function ContactPage() {
         </div>
 
         {/* Waitlist highlight */}
-        <div className="mt-14 grid items-center gap-10 rounded-3xl bg-pine p-10 text-cream lg:grid-cols-[1.4fr_1fr]">
+        <div className="mt-14 grid items-center gap-10 rounded-3xl bg-navy p-10 text-cream lg:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="display text-3xl !text-cream sm:text-4xl">
               Want early access to the MyIntel platform?
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 key={area}
                 className="flex items-center gap-4 rounded-2xl bg-sand px-6 py-5"
               >
-                <MapPin className="h-6 w-6 shrink-0 text-terracotta" />
+                <MapPin className="h-6 w-6 shrink-0 text-blue" />
                 <p className="font-display text-lg font-semibold text-ink">
                   {area}
                 </p>

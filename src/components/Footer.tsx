@@ -5,14 +5,13 @@ import { Facebook, Mail, MapPin, Phone } from "@/components/icons";
 
 export function Footer() {
   return (
-    <footer className="bg-pine-deep text-cream">
+    <footer className="bg-navy-deep text-cream">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1.2fr]">
         <div>
-          <Logo dark />
-          <p className="mt-4 max-w-sm text-cream/70">
-            Privacy-first sensors and routine-learning AI that help older
-            adults live safely and independently at home — no cameras, no
-            wearables.
+          <Logo dark className="h-14 w-auto" />
+          <p className="mt-5 max-w-sm text-cream/70">
+            Safer, smarter care. Privacy-first sensors and routine-learning AI
+            that help older adults stay independent, stay safe, and stay home.
           </p>
           <a
             href={site.waitlistUrl}
@@ -63,9 +62,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3 text-cream/70">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-              <span>
-                Serving {site.serviceAreas.join(" · ")}
-              </span>
+              <span>Serving {site.serviceAreas.join(", ")}</span>
             </li>
             <li>
               <a
