@@ -11,7 +11,7 @@ export const site = {
   emailHref: "mailto:info@myintelhome.com",
   waitlistUrl: "https://form.typeform.com/to/qC7nbQod",
   facebookUrl: "https://www.facebook.com/profile.php?id=61572203865392",
-  serviceAreas: ["Denver, CO", "Lake of the Ozarks, MO", "Corpus Christi, TX"],
+  serviceAreas: ["Denver, CO", "Lake of the Ozarks, MO"],
 };
 
 export const nav = [

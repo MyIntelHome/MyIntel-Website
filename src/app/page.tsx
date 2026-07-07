@@ -448,7 +448,7 @@ export default function HomePage() {
                 </span>
                 <div>
                   <p className="font-display text-xl font-bold text-ink">
-                    Now serving three regions
+                    Now serving two regions
                   </p>
                   <p className="text-sm font-semibold text-clay">
                     In-home assessments and installations

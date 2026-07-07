@@ -82,7 +82,7 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "How do I assess my home for safety hazards?",
-        a: "Walk through each room looking for trip hazards, poor lighting, and hard-to-reach essentials, then have a professional confirm. Our CAPS-certified specialists perform comprehensive Home Safety Assessments in Denver CO, Lake of the Ozarks MO, and Corpus Christi TX.",
+        a: "Walk through each room looking for trip hazards, poor lighting, and hard-to-reach essentials, then have a professional confirm. Our CAPS-certified specialists perform comprehensive Home Safety Assessments in Denver CO and Lake of the Ozarks MO.",
       },
     ],
   },

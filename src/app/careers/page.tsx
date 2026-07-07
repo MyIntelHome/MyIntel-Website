@@ -40,7 +40,7 @@ const perks = [
   {
     icon: Sparkles,
     title: "Ground-floor opportunity",
-    body: "MyIntel is growing fast across three regions. Join early and help shape how the company and the industry grow.",
+    body: "MyIntel is growing fast across Colorado and Missouri. Join early and help shape how the company and the industry grow.",
   },
   {
     icon: GraduationCap,
@@ -55,7 +55,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Help families age in place with dignity"
-        body="We're building the team that makes safe, independent living possible in Denver CO, Lake of the Ozarks MO, and Corpus Christi TX."
+        body="We're building the team that makes safe, independent living possible in Denver CO and Lake of the Ozarks MO."
       />
 
       {/* Open roles */}

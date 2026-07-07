@@ -193,7 +193,7 @@ export default function AssessmentsPage() {
         <div className="mx-auto max-w-6xl px-5 text-center">
           <p className="eyebrow justify-center">Where we work</p>
           <h2 className="display mx-auto mt-4 max-w-2xl text-4xl sm:text-5xl">
-            In-home assessments in three regions
+            In-home assessments in two regions
           </h2>
           <div className="mx-auto mt-12 grid max-w-3xl gap-5 sm:grid-cols-3">
             {site.serviceAreas.map((area) => (
