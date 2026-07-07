@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Austi/Downloads/Claude/**)",
+      "Bash(/c/Users/Austi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe /c/Users/Austi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/pnpm/bin/pnpm.cjs create vite@latest myintel-assessment -- --template react)",
+      "Bash(cp \"/c/Users/Austi/Downloads/myintel_assessment.jsx\" \"/c/Users/Austi/Downloads/Claude/myintel-assessment/src/App.jsx\" && echo \"Copied\")",
+      "Bash(mkdir -p \"/c/Users/Austi/Downloads/Claude/HSA APP/.claude\")",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(rm -f src/counter.ts src/main.ts tsconfig.json public/icons.svg)",
+      "Bash(rm -rf src/assets)",
+      "WebFetch(domain:myintelhome.com)",
+      "PowerShell(npm install)",
+      "Bash(which node *)",
+      "PowerShell(winget list --id OpenJS.NodeJS)",
+      "PowerShell(winget list --name node)",
+      "PowerShell(winget --version)",
+      "PowerShell(winget search OpenJS.NodeJS.LTS --accept-source-agreements 2>$null)",
+      "PowerShell(winget install --id OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node --version; npm install)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + $env:Path; npm run build)"
+    ]
+  }
+}

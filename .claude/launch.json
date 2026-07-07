@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "myintel-website",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "C:\\Users\\Austi\\Downloads\\Claude\\HSA APP\\.claude\\start-website.bat"],
+      "port": 3000
+    },
+    {
+      "name": "myintel-dev",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "C:\\Users\\Austi\\Downloads\\Claude\\myintel-assessment\\start-dev.bat"],
+      "port": 5173
+    }
+  ]
+}
