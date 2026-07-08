@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { nav, site } from "@/lib/site";
-import { Logo } from "@/components/Logo";
+import { LogoLockup } from "@/components/Logo";
 import { Facebook, Mail, MapPin, Phone } from "@/components/icons";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="bg-navy-deep text-cream">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1.2fr]">
         <div>
-          <Logo dark className="h-14 w-auto" />
+          <LogoLockup dark className="h-14 w-auto" />
           <p className="mt-5 max-w-sm text-cream/70">
             Safer, smarter care. Privacy-first sensors and routine-learning AI
             that help older adults stay independent, stay safe, and stay home.
