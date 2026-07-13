@@ -59,17 +59,14 @@ export default function CareersPage() {
       />
 
       {/* Open roles */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="max-w-2xl">
           <p className="eyebrow">Who we&apos;re looking for</p>
-          <h2 className="display mt-4 text-4xl sm:text-5xl">Open roles</h2>
+          <h2 className="statement mt-4">Open roles</h2>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {roles.map(({ icon: RoleIcon, title, body, tag }) => (
-            <div
-              key={title}
-              className="flex flex-col rounded-3xl border border-ink/8 bg-white p-9 shadow-sm"
-            >
+            <div key={title} className="card flex flex-col p-9">
               <div className="flex items-center justify-between gap-4">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                   <RoleIcon className="h-6 w-6" />
@@ -95,17 +92,17 @@ export default function CareersPage() {
       </section>
 
       {/* Why MyIntel */}
-      <section className="bg-sand py-24">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-sand">
+        <div className="container-x section">
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow justify-center">Why MyIntel</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">
+            <h2 className="statement mt-4">
               Do the most meaningful work of your career
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {perks.map(({ icon: PerkIcon, title, body }) => (
-              <div key={title} className="rounded-3xl bg-white p-8 text-center">
+              <div key={title} className="card p-8 text-center">
                 <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-blue/15 text-blue">
                   <PerkIcon className="h-6 w-6" />
                 </span>

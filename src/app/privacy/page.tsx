@@ -16,9 +16,11 @@ export default function PrivacyPage() {
         body="Privacy isn't a legal checkbox for us. It's the reason MyIntel exists. Here's how we handle your information."
       />
 
-      <section className="mx-auto max-w-3xl space-y-10 px-5 py-20 text-lg leading-relaxed text-clay">
+      <section className="mx-auto max-w-3xl space-y-10 px-6 py-24 text-lg leading-relaxed text-clay">
         <div>
-          <h2 className="display text-2xl">Information we collect</h2>
+          <h2 className="font-display text-2xl font-extrabold tracking-tight text-ink">
+            Information we collect
+          </h2>
           <p className="mt-3">
             When you contact us, join our waitlist, or subscribe to updates, we
             collect the information you provide, such as your name, email

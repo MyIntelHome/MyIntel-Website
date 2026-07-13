@@ -123,10 +123,12 @@ export default function FaqPage() {
         body="Everything you need to know about aging in place, home safety, and how MyIntel works. Don't see your question? Reach out. A real person will answer."
       />
 
-      <section className="mx-auto max-w-4xl px-5 py-20">
+      <section className="mx-auto max-w-4xl px-6 py-24">
         {faqGroups.map(({ category, items }) => (
           <div key={category} className="mb-14">
-            <h2 className="display text-3xl">{category}</h2>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink">
+              {category}
+            </h2>
             <div className="mt-6 space-y-4">
               {items.map(({ q, a }) => (
                 <details

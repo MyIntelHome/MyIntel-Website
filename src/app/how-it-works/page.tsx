@@ -186,30 +186,31 @@ export default function HowItWorksPage() {
       />
 
       {/* Platform diagram */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="max-w-2xl">
           <p className="eyebrow">The MyIntel Platform</p>
-          <h2 className="display mt-4 text-4xl sm:text-5xl">
+          <h2 className="statement mt-4">
             One platform. Any sensor. Real-time action.
           </h2>
-          <p className="prose-warm mt-5">
-            Professional-grade Talius sensors feed one intelligent platform
-            that turns raw home data into calm, useful updates for everyone in
-            the circle of care.
+          <p className="lead mt-5">
+            Professional-grade sensors feed one intelligent platform that turns
+            raw home data into calm, useful updates for everyone in the circle
+            of care. Data is read every few seconds, around the clock, so
+            meaningful changes are never missed.
           </p>
         </div>
         <PlatformDiagram />
       </section>
 
       {/* What we monitor */}
-      <section className="bg-sand py-24">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-sand">
+        <div className="container-x section">
           <div className="max-w-2xl">
             <p className="eyebrow">The full picture</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">
+            <h2 className="statement mt-4">
               What MyIntel quietly keeps an eye on
             </h2>
-            <p className="prose-warm mt-5">
+            <p className="lead mt-5">
               Real risks show up as changes in routine long before an
               emergency. That&apos;s why MyIntel watches the whole pattern of
               daily life instead of waiting for a single alarm.
@@ -217,7 +218,7 @@ export default function HowItWorksPage() {
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {monitors.map(({ icon: MonitorIcon, title, body }) => (
-              <div key={title} className="rounded-3xl bg-white p-7 shadow-sm">
+              <div key={title} className="card p-7">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                   <MonitorIcon className="h-6 w-6" />
                 </span>
@@ -232,11 +233,11 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Privacy by design */}
-      <section className="bg-navy py-24 text-cream">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-navy text-cream">
+        <div className="container-x section">
           <div className="max-w-2xl">
             <p className="eyebrow !text-gold">Privacy by design</p>
-            <h2 className="display mt-4 text-4xl !text-cream sm:text-5xl">
+            <h2 className="statement mt-4 !text-cream">
               Support without feeling watched
             </h2>
           </div>
@@ -258,14 +259,12 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Pilot program */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div>
             <p className="eyebrow">Founding homes</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">
-              Join the 50-home founding pilot
-            </h2>
-            <p className="prose-warm mt-6">
+            <h2 className="statement mt-4">Join the 50-home founding pilot</h2>
+            <p className="lead mt-6">
               We&apos;re selecting 50 Colorado households to become MyIntel
               founding homes. Founding members get early access to the
               platform, white-glove installation, and a direct line to our

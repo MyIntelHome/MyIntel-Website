@@ -82,19 +82,16 @@ export default function AssessmentsPage() {
       />
 
       {/* What we evaluate */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="max-w-2xl">
           <p className="eyebrow">What we evaluate</p>
-          <h2 className="display mt-4 text-4xl sm:text-5xl">
+          <h2 className="statement mt-4">
             A room-by-room look at safety and independence
           </h2>
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {evaluations.map(({ icon: EvalIcon, title, body }) => (
-            <div
-              key={title}
-              className="flex gap-5 rounded-3xl border border-ink/8 bg-white p-7 shadow-sm"
-            >
+            <div key={title} className="card flex gap-5 p-7">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue/15 text-blue">
                 <EvalIcon className="h-6 w-6" />
               </span>
@@ -110,11 +107,11 @@ export default function AssessmentsPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-sand py-24">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-sand">
+        <div className="container-x section">
           <div className="max-w-2xl">
             <p className="eyebrow">The process</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">
+            <h2 className="statement mt-4">
               Simple, respectful, and built around you
             </h2>
           </div>
@@ -135,13 +132,13 @@ export default function AssessmentsPage() {
       </section>
 
       {/* Credentials + financial aid */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-3xl border border-ink/8 bg-white p-10 shadow-sm">
+          <div className="card p-10">
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
               <GraduationCap className="h-6 w-6" />
             </span>
-            <h3 className="mt-6 font-display text-3xl font-semibold text-ink">
+            <h3 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-ink">
               Certified specialists, not salespeople
             </h3>
             <p className="prose-warm mt-4">
@@ -168,7 +165,7 @@ export default function AssessmentsPage() {
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold/20 text-gold">
               <BadgeDollar className="h-6 w-6" />
             </span>
-            <h3 className="mt-6 font-display text-3xl font-semibold">
+            <h3 className="mt-6 font-display text-3xl font-extrabold tracking-tight">
               Help paying for it
             </h3>
             <p className="mt-4 text-lg leading-relaxed text-cream/75">
@@ -189,10 +186,10 @@ export default function AssessmentsPage() {
       </section>
 
       {/* Service areas */}
-      <section className="bg-sand py-24">
-        <div className="mx-auto max-w-6xl px-5 text-center">
+      <section className="bg-sand">
+        <div className="container-x section text-center">
           <p className="eyebrow justify-center">Where we work</p>
-          <h2 className="display mx-auto mt-4 max-w-2xl text-4xl sm:text-5xl">
+          <h2 className="statement mx-auto mt-4 max-w-2xl">
             In-home assessments in two regions
           </h2>
           <div className="mx-auto mt-12 grid max-w-3xl gap-5 sm:grid-cols-3">
@@ -228,8 +225,8 @@ export default function AssessmentsPage() {
       </section>
 
       {/* Smart install teaser */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="flex flex-col items-start justify-between gap-8 rounded-3xl border border-ink/8 bg-white p-10 shadow-sm md:flex-row md:items-center">
+      <section className="container-x section">
+        <div className="card flex flex-col items-start justify-between gap-8 p-10 md:flex-row md:items-center">
           <div className="flex items-start gap-5">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-sky text-navy">
               <Wrench className="h-7 w-7" />

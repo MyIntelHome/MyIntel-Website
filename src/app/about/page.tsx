@@ -48,10 +48,10 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="grid items-start gap-14 lg:grid-cols-[1.3fr_1fr]">
           <div className="space-y-6 text-lg leading-relaxed text-clay">
-            <h2 className="display text-4xl sm:text-5xl">Our story</h2>
+            <h2 className="statement">Our story</h2>
             <p>
               Like millions of families, ours faced a hard question: how do you
               support aging loved ones who want to stay in the home they love
@@ -92,17 +92,15 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-sand py-24">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-sand">
+        <div className="container-x section">
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow justify-center">What we believe</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">
-              The values behind the technology
-            </h2>
+            <h2 className="statement mt-4">The values behind the technology</h2>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {values.map(({ icon: ValueIcon, title, body }) => (
-              <div key={title} className="rounded-3xl bg-white p-8">
+              <div key={title} className="card p-8">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                   <ValueIcon className="h-6 w-6" />
                 </span>

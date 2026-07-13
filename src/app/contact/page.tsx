@@ -49,7 +49,7 @@ export default function ContactPage() {
         body="Whether you're planning ahead, worried about a parent, or running a care community, we'd love to hear from you."
       />
 
-      <section className="mx-auto max-w-6xl px-5 py-24">
+      <section className="container-x section">
         <div className="grid gap-6 md:grid-cols-3">
           {channels.map(({ icon: ChannelIcon, title, body, linkLabel, href, external }) => (
             <a
@@ -58,7 +58,7 @@ export default function ContactPage() {
               {...(external
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="group rounded-3xl border border-ink/8 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10"
+              className="group card card-hover p-8"
             >
               <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
                 <ChannelIcon className="h-6 w-6" />
@@ -78,7 +78,7 @@ export default function ContactPage() {
         {/* Waitlist highlight */}
         <div className="mt-14 grid items-center gap-10 rounded-3xl bg-navy p-10 text-cream lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="display text-3xl !text-cream sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
               Want early access to the MyIntel platform?
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-cream/75">
@@ -101,7 +101,9 @@ export default function ContactPage() {
 
         {/* Service areas */}
         <div className="mt-14">
-          <h2 className="display text-3xl">Where we work in person</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink">
+            Where we work in person
+          </h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-3">
             {site.serviceAreas.map((area) => (
               <div

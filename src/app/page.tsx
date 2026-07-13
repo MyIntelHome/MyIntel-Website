@@ -8,6 +8,7 @@ import {
   Building,
   Check,
   ClipboardCheck,
+  Clock,
   Dashboard,
   EyeOff,
   Heart,
@@ -17,7 +18,11 @@ import {
   PersonStanding,
   Pill,
   Quote,
+  ShieldCheck,
   Sparkles,
+  Star,
+  Stethoscope,
+  TrendingDown,
   Users,
   Utensils,
 } from "@/components/icons";
@@ -52,6 +57,38 @@ const features = [
     icon: Dashboard,
     title: "Clear health dashboards",
     body: "Families and care teams see calm, digestible updates. Not a flood of raw data or false alarms.",
+  },
+];
+
+const outcomes = [
+  {
+    icon: TrendingDown,
+    title: "Fewer avoidable emergencies",
+    body: "By surfacing changes in routine early, MyIntel is built to help families and care teams step in before a small issue becomes a hospital visit.",
+  },
+  {
+    icon: Clock,
+    title: "Earlier awareness",
+    body: "The platform learns each person's normal and flags meaningful shifts in sleep, mobility, and meals, often days before anyone would notice on their own.",
+  },
+  {
+    icon: Home,
+    title: "More time at home",
+    body: "The goal of every MyIntel home: help older adults stay independent, safely, in the place they most want to be.",
+  },
+];
+
+const stats = [
+  { stat: "1 in 4", label: "adults over 65 falls each year", source: "CDC" },
+  {
+    stat: "Every 11s",
+    label: "an older adult is treated in the ER for a fall",
+    source: "NCOA",
+  },
+  {
+    stat: "Nearly 90%",
+    label: "of older adults want to age in their own home",
+    source: "AARP",
   },
 ];
 
@@ -136,19 +173,29 @@ function HeroVisual() {
       />
       <FingerprintArcs className="absolute -bottom-8 -left-10 w-48 text-sky-dark/50" />
 
-      <div className="relative rounded-3xl border border-ink/8 bg-white p-6 shadow-2xl shadow-navy/10">
+      <div className="relative rounded-3xl border border-ink/8 bg-white p-6 shadow-[0_20px_60px_-15px_rgba(20,36,60,0.25)]">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-widest text-clay">
               Today at Mom&apos;s
             </p>
-            <p className="font-display text-xl font-bold text-ink">
+            <p className="font-display text-xl font-extrabold text-ink">
               All routines on track
             </p>
           </div>
           <div className="relative grid h-16 w-16 place-items-center">
-            <svg viewBox="0 0 64 64" className="absolute inset-0 h-16 w-16 -rotate-90">
-              <circle cx="32" cy="32" r="27" fill="none" stroke="var(--color-sky)" strokeWidth="7" />
+            <svg
+              viewBox="0 0 64 64"
+              className="absolute inset-0 h-16 w-16 -rotate-90"
+            >
+              <circle
+                cx="32"
+                cy="32"
+                r="27"
+                fill="none"
+                stroke="var(--color-sky)"
+                strokeWidth="7"
+              />
               <circle
                 cx="32"
                 cy="32"
@@ -162,8 +209,12 @@ function HeroVisual() {
               />
             </svg>
             <div className="text-center">
-              <p className="font-display text-lg font-extrabold leading-none text-navy">92</p>
-              <p className="text-[9px] font-extrabold uppercase tracking-wide text-clay">ADL</p>
+              <p className="font-display text-lg font-extrabold leading-none text-navy">
+                92
+              </p>
+              <p className="text-[9px] font-extrabold uppercase tracking-wide text-clay">
+                ADL
+              </p>
             </div>
           </div>
         </div>
@@ -195,7 +246,9 @@ function HeroVisual() {
         </span>
         <div>
           <p className="text-sm font-extrabold text-ink">Privacy-first</p>
-          <p className="text-xs font-semibold text-clay">No cameras. No wearables.</p>
+          <p className="text-xs font-semibold text-clay">
+            No cameras. No wearables.
+          </p>
         </div>
       </div>
     </div>
@@ -211,20 +264,20 @@ export default function HomePage() {
           aria-hidden="true"
           className="absolute -right-40 top-0 h-[34rem] w-[34rem] rounded-full bg-sky/70 blur-3xl"
         />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-16 lg:grid-cols-2 lg:pb-28 lg:pt-24">
-          <div>
+        <div className="container-x relative grid items-center gap-14 pb-20 pt-14 lg:grid-cols-2 lg:pb-28 lg:pt-24">
+          <div className="reveal">
             <p className="eyebrow">
               <Sparkles className="h-4 w-4" />
               Safer, Smarter Care
             </p>
-            <h1 className="display mt-5 text-5xl leading-[1.05] sm:text-6xl">
+            <h1 className="statement mt-5 text-5xl sm:text-6xl lg:text-7xl">
               Peace of mind for families.{" "}
               <span className="text-blue">Independence</span> for seniors.
             </h1>
-            <p className="prose-warm mt-6 max-w-xl">
-              MyIntel combines privacy-first sensors with routine-learning AI
-              to deliver calm, clear updates. No cameras. No wearables. Built
-              for homes and senior living communities.
+            <p className="lead mt-6 max-w-xl">
+              MyIntel combines privacy-first sensors with routine-learning AI to
+              deliver calm, clear updates. No cameras. No wearables. Built for
+              homes and senior living communities.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
@@ -251,15 +304,17 @@ export default function HomePage() {
               )}
             </ul>
           </div>
-          <HeroVisual />
+          <div className="reveal">
+            <HeroVisual />
+          </div>
         </div>
       </section>
 
-      {/* Partner strip */}
+      {/* Trust / partner strip */}
       <section className="border-y border-ink/8 bg-white">
-        <div className="mx-auto max-w-6xl px-5 py-10">
+        <div className="container-x py-10">
           <p className="text-center text-xs font-extrabold uppercase tracking-[0.2em] text-clay">
-            Trusted technology and partners
+            Powered by proven care technology
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
             {partners.map(({ src, alt }) => (
@@ -272,80 +327,104 @@ export default function HomePage() {
               />
             ))}
           </div>
+          <p className="mt-8 text-center text-sm font-semibold text-clay">
+            Enterprise-grade sensors read the home every few seconds, around the
+            clock, so nothing meaningful slips through.
+          </p>
         </div>
       </section>
 
-      {/* Stats band */}
-      <section className="bg-sand">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 text-center sm:grid-cols-3">
-          {[
-            {
-              stat: "90%",
-              label: "of seniors want to stay in their own homes as they age",
-            },
-            {
-              stat: "1 in 4",
-              label: "adults over 65 experiences a fall each year",
-            },
-            {
-              stat: "0",
-              label: "cameras or wearables required. Monitoring stays invisible",
-            },
-          ].map(({ stat, label }) => (
-            <div key={stat}>
-              <p className="font-display text-5xl font-extrabold text-navy">
-                {stat}
-              </p>
-              <p className="mx-auto mt-3 max-w-xs font-semibold text-clay">
-                {label}
-              </p>
-            </div>
-          ))}
+      {/* Outcomes (research-backed) */}
+      <section className="section">
+        <div className="container-x">
+          <div className="mx-auto max-w-3xl text-center reveal">
+            <p className="eyebrow justify-center">Why it matters</p>
+            <h2 className="statement mt-4">
+              Detect early. Act sooner. Stay home longer.
+            </h2>
+            <p className="lead mx-auto mt-5 max-w-2xl">
+              Most emergencies among older adults are preceded by small,
+              detectable changes in daily life. MyIntel is designed to catch
+              those signals early, when there&apos;s still time to help.
+            </p>
+          </div>
+
+          {/* Research stat row */}
+          <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-3 reveal">
+            {stats.map(({ stat, label, source }) => (
+              <div
+                key={label}
+                className="rounded-3xl bg-sand p-8 text-center"
+              >
+                <p className="font-display text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
+                  {stat}
+                </p>
+                <p className="mx-auto mt-3 max-w-[15rem] font-semibold text-clay">
+                  {label}
+                </p>
+                <p className="mt-4 text-xs font-extrabold uppercase tracking-widest text-clay/60">
+                  Source: {source}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Outcome cards */}
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {outcomes.map(({ icon: OutcomeIcon, title, body }) => (
+              <div key={title} className="card card-hover p-8 reveal">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-blue/12 text-blue">
+                  <OutcomeIcon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 font-display text-xl font-extrabold text-ink">
+                  {title}
+                </h3>
+                <p className="mt-2.5 leading-relaxed text-clay">{body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="max-w-2xl">
-          <p className="eyebrow">How we help at home</p>
-          <h2 className="display mt-4 text-4xl sm:text-5xl">
-            Start with a safer, smarter home
-          </h2>
-        </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {steps.map((step, i) => (
-            <div
-              key={step.title}
-              className="relative rounded-3xl border border-ink/8 bg-white p-8 shadow-sm"
+      <section className="bg-sand">
+        <div className="container-x section">
+          <div className="max-w-2xl reveal">
+            <p className="eyebrow">How we help at home</p>
+            <h2 className="statement mt-4">Start with a safer, smarter home</h2>
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {steps.map((step, i) => (
+              <div key={step.title} className="rounded-3xl bg-white p-8 reveal">
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-blue font-display text-lg font-extrabold text-white">
+                  {i + 1}
+                </span>
+                <h3 className="mt-5 font-display text-2xl font-extrabold text-ink">
+                  {step.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-clay">{step.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 reveal">
+            <Link
+              href="/how-it-works"
+              className="inline-flex items-center gap-2 font-extrabold text-blue hover:text-blue-dark"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-blue font-display text-lg font-extrabold text-white">
-                {i + 1}
-              </span>
-              <h3 className="mt-5 font-display text-2xl font-bold text-ink">
-                {step.title}
-              </h3>
-              <p className="mt-3 leading-relaxed text-clay">{step.body}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10">
-          <Link
-            href="/how-it-works"
-            className="inline-flex items-center gap-2 font-extrabold text-blue hover:text-blue-dark"
-          >
-            Explore the platform in depth
-            <ArrowRight className="h-5 w-5" />
-          </Link>
+              Explore the platform in depth
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="relative overflow-hidden bg-navy py-24 text-cream">
+      <section className="relative overflow-hidden bg-navy text-cream">
         <FingerprintArcs className="absolute -top-24 right-0 w-96 rotate-180 text-white/5" />
-        <div className="relative mx-auto max-w-6xl px-5">
-          <div className="max-w-2xl">
+        <div className="container-x section relative">
+          <div className="max-w-2xl reveal">
             <p className="eyebrow !text-gold">One platform. Real-time action.</p>
-            <h2 className="display mt-4 text-4xl !text-cream sm:text-5xl">
+            <h2 className="statement mt-4 !text-cream">
               Everything you need to feel confident, nothing you don&apos;t
             </h2>
           </div>
@@ -353,12 +432,14 @@ export default function HomePage() {
             {features.map(({ icon: FeatureIcon, title, body }) => (
               <div
                 key={title}
-                className="rounded-3xl border border-cream/10 bg-white/5 p-7 transition-colors hover:bg-white/10"
+                className="rounded-3xl border border-cream/10 bg-white/5 p-7 transition-colors hover:bg-white/10 reveal"
               >
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-blue/20 text-sky-dark">
                   <FeatureIcon className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl font-bold">{title}</h3>
+                <h3 className="mt-5 font-display text-xl font-extrabold">
+                  {title}
+                </h3>
                 <p className="mt-2.5 leading-relaxed text-cream/70">{body}</p>
               </div>
             ))}
@@ -366,50 +447,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Audiences */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow justify-center">Who we help</p>
-          <h2 className="display mt-4 text-4xl sm:text-5xl">
-            Everyday moments, made safer
-          </h2>
-          <p className="prose-warm mt-5">
-            One system, designed so every person in the circle of care feels
-            more supported and confident.
-          </p>
-        </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {audiences.map(({ icon: AudienceIcon, label, title, body }) => (
-            <div
-              key={label}
-              className="group rounded-3xl border border-ink/8 bg-white p-8 shadow-sm transition-shadow hover:shadow-lg hover:shadow-navy/10"
-            >
-              <div className="flex items-center gap-4">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
-                  <AudienceIcon className="h-6 w-6" />
-                </span>
-                <p className="text-sm font-extrabold uppercase tracking-widest text-blue">
-                  {label}
-                </p>
-              </div>
-              <h3 className="mt-5 font-display text-2xl font-bold text-ink">
-                {title}
-              </h3>
-              <p className="mt-3 leading-relaxed text-clay">{body}</p>
+      {/* Emotional — circle of care */}
+      <section className="section">
+        <div className="container-x">
+          <div className="grid items-center gap-14 lg:grid-cols-2">
+            <div className="reveal">
+              <p className="eyebrow">The circle of care</p>
+              <h2 className="statement mt-4">
+                An invisible safety net for everyone who loves them
+              </h2>
+              <p className="lead mt-6">
+                Aging in place shouldn&apos;t mean choosing between independence
+                and safety, or between privacy and peace of mind. MyIntel gives
+                older adults the freedom of their own home and gives the people
+                who love them the quiet reassurance that someone is always
+                paying attention.
+              </p>
+              <ul className="mt-8 space-y-4">
+                {[
+                  "Seniors keep their independence, privacy, and dignity",
+                  "Families trade constant worry for calm, honest updates",
+                  "Caregivers know exactly who needs them first",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-blue text-white">
+                      <Check className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="font-semibold text-ink/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
+
+            <div className="grid gap-6 sm:grid-cols-2">
+              {audiences.map(({ icon: AudienceIcon, label, title }) => (
+                <div
+                  key={label}
+                  className="card p-6 reveal"
+                >
+                  <span className="grid h-11 w-11 place-items-center rounded-2xl bg-sky text-navy">
+                    <AudienceIcon className="h-5 w-5" />
+                  </span>
+                  <p className="mt-4 text-xs font-extrabold uppercase tracking-widest text-blue">
+                    {label}
+                  </p>
+                  <h3 className="mt-1 font-display text-lg font-extrabold text-ink">
+                    {title}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Home Safety Assessment */}
       <section className="bg-sand">
-        <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 lg:grid-cols-2">
-          <div>
+        <div className="container-x section grid items-center gap-14 lg:grid-cols-2">
+          <div className="reveal">
             <p className="eyebrow">Start here</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">
+            <h2 className="statement mt-4">
               Every safe home starts with a Home Safety Assessment
             </h2>
-            <p className="prose-warm mt-6">
+            <p className="lead mt-6">
               Our Certified Aging in Place Specialists walk through your home,
               identify fall risks and hidden hazards, and build a personalized
               plan. From lighting and grab bars to smart technology.
@@ -440,14 +540,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="rounded-3xl border border-ink/8 bg-white p-8 shadow-xl shadow-navy/10">
+          <div className="relative reveal">
+            <div className="card p-8">
               <div className="flex items-center gap-4">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-blue/15 text-blue">
                   <Home className="h-6 w-6" />
                 </span>
                 <div>
-                  <p className="font-display text-xl font-bold text-ink">
+                  <p className="font-display text-xl font-extrabold text-ink">
                     Now serving two regions
                   </p>
                   <p className="text-sm font-semibold text-clay">
@@ -467,56 +567,106 @@ export default function HomePage() {
                 ))}
               </ul>
               <p className="mt-5 text-sm font-semibold leading-relaxed text-clay">
-                Outside these areas? Join the waitlist. We&apos;re expanding,
-                and remote consultations are available.
+                Outside these areas? Join the waitlist. We&apos;re expanding, and
+                remote consultations are available.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonial + founder */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <figure className="flex flex-col justify-between rounded-3xl bg-navy p-10 text-cream">
-            <Quote className="h-10 w-10 text-gold" />
-            <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug">
-              &ldquo;My husband and I couldn&apos;t be happier with our
-              experience with MyIntel. From start to finish, the team was
-              professional, and the system has given us so much peace of
-              mind.&rdquo;
-            </blockquote>
-            <figcaption className="mt-8 font-extrabold text-cream/80">
-              Alice Koehn
-              <span className="block text-sm font-semibold text-cream/60">
-                Founding pilot member
-              </span>
-            </figcaption>
-          </figure>
-
-          <div className="flex flex-col justify-between rounded-3xl border border-ink/8 bg-white p-10 shadow-sm">
-            <div>
-              <p className="eyebrow">Why we exist</p>
-              <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug text-ink">
-                &ldquo;MyIntel started with my own grandparents. I wanted to
-                know they were safe and comfortable, even from miles away.
-                That&apos;s the peace of mind we build for every family.&rdquo;
-              </blockquote>
-            </div>
-            <div className="mt-8 flex items-center justify-between gap-4">
-              <p className="font-extrabold text-ink">
-                Austin Gough
-                <span className="block text-sm font-semibold text-clay">
-                  Founder &amp; CEO, MyIntel
+      {/* Credibility */}
+      <section className="section">
+        <div className="container-x">
+          <div className="mx-auto max-w-2xl text-center reveal">
+            <p className="eyebrow justify-center">Built to be trusted</p>
+            <h2 className="statement mt-4">
+              Credible people, proven technology
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                icon: Stethoscope,
+                title: "Clinically informed",
+                body: "Assessments follow Certified Aging in Place Specialist (CAPS) standards and are shaped with input from occupational therapists.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Privacy by design",
+                body: "No cameras and no wearables, ever. We sense patterns, not moments, so dignity and privacy are protected from day one.",
+              },
+              {
+                icon: Activity,
+                title: "Enterprise-grade platform",
+                body: "MyIntel runs on professional care-sensing technology trusted by senior living operators and care providers worldwide.",
+              },
+            ].map(({ icon: CredIcon, title, body }) => (
+              <div key={title} className="card p-8 reveal">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
+                  <CredIcon className="h-6 w-6" />
                 </span>
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 font-extrabold text-blue hover:text-blue-dark"
-              >
-                Our story
-                <ArrowRight className="h-5 w-5" />
-              </Link>
+                <h3 className="mt-5 font-display text-xl font-extrabold text-ink">
+                  {title}
+                </h3>
+                <p className="mt-2.5 leading-relaxed text-clay">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial + founder */}
+      <section className="bg-sand">
+        <div className="container-x section">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <figure className="flex flex-col justify-between rounded-3xl bg-navy p-10 text-cream reveal">
+              <div>
+                <div className="flex gap-1 text-gold">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-gold" />
+                  ))}
+                </div>
+                <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug">
+                  &ldquo;My husband and I couldn&apos;t be happier with our
+                  experience with MyIntel. From start to finish, the team was
+                  professional, and the system has given us so much peace of
+                  mind.&rdquo;
+                </blockquote>
+              </div>
+              <figcaption className="mt-8 font-extrabold text-cream/80">
+                Alice Koehn
+                <span className="block text-sm font-semibold text-cream/60">
+                  Founding pilot member
+                </span>
+              </figcaption>
+            </figure>
+
+            <div className="flex flex-col justify-between rounded-3xl bg-white p-10 shadow-sm reveal">
+              <div>
+                <p className="eyebrow">Why we exist</p>
+                <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug text-ink">
+                  &ldquo;MyIntel started with my own grandparents. I wanted to
+                  know they were safe and comfortable, even from miles away.
+                  That&apos;s the peace of mind we build for every
+                  family.&rdquo;
+                </blockquote>
+              </div>
+              <div className="mt-8 flex items-center justify-between gap-4">
+                <p className="font-extrabold text-ink">
+                  Austin Gough
+                  <span className="block text-sm font-semibold text-clay">
+                    Founder &amp; CEO, MyIntel
+                  </span>
+                </p>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 font-extrabold text-blue hover:text-blue-dark"
+                >
+                  Our story
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

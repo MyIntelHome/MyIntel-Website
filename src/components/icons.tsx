@@ -34,6 +34,36 @@ export const Check = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 );
 
+export const TrendingDown = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M16 17h6v-6" />
+    <path d="m22 17-8.5-8.5-5 5L2 7" />
+  </Icon>
+);
+
+export const Stethoscope = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M11 2v2" />
+    <path d="M5 2v2" />
+    <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
+    <path d="M8 15a6 6 0 0 0 12 0v-3" />
+    <circle cx="20" cy="10" r="2" />
+  </Icon>
+);
+
+export const ShieldCheck = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+    <path d="m9 12 2 2 4-4" />
+  </Icon>
+);
+
+export const Star = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z" />
+  </Icon>
+);
+
 export const Menu = (p: SVGProps<SVGSVGElement>) => (
   <Icon {...p}>
     <path d="M4 6h16" />
