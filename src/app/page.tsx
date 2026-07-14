@@ -2,7 +2,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 import { Photo } from "@/components/Photo";
-import { Arcs, CareNetwork, DotGrid, HomeScene } from "@/components/Illustrations";
+import { Arcs, DotGrid, HomeScene } from "@/components/Illustrations";
 import {
   Activity,
   ArrowRight,
@@ -16,7 +16,6 @@ import {
   Heart,
   Home,
   MapPin,
-  Moon,
   PersonStanding,
   Pill,
   Quote,
@@ -131,81 +130,19 @@ const partners = [
 
 function HeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-md">
+    <div className="relative mx-auto w-full max-w-lg">
       <div
         aria-hidden="true"
-        className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-sky via-cream to-blue/15"
+        className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-sky via-cream to-blue/15"
       />
-      <Arcs className="absolute -bottom-8 -left-10 w-48 text-sky-dark/50" />
+      <Photo
+        src="/photos/app-nightstand.jpg"
+        alt="The MyIntel app on a bedside stand with discreet privacy-first sensors in a warm home"
+        label="Product photo"
+        className="relative aspect-[4/3] rounded-[2rem] border border-white/60 shadow-[0_30px_70px_-20px_rgba(20,36,60,0.4)]"
+      />
 
-      <div className="relative rounded-3xl border border-ink/8 bg-white p-6 shadow-[0_20px_60px_-15px_rgba(20,36,60,0.25)]">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-xs font-extrabold uppercase tracking-widest text-clay">
-              Today at Mom&apos;s
-            </p>
-            <p className="font-display text-xl font-extrabold text-ink">
-              All routines on track
-            </p>
-          </div>
-          <div className="relative grid h-16 w-16 place-items-center">
-            <svg
-              viewBox="0 0 64 64"
-              className="absolute inset-0 h-16 w-16 -rotate-90"
-            >
-              <circle
-                cx="32"
-                cy="32"
-                r="27"
-                fill="none"
-                stroke="var(--color-sky)"
-                strokeWidth="7"
-              />
-              <circle
-                cx="32"
-                cy="32"
-                r="27"
-                fill="none"
-                stroke="var(--color-blue)"
-                strokeWidth="7"
-                strokeLinecap="round"
-                strokeDasharray="169.6"
-                strokeDashoffset="13.6"
-              />
-            </svg>
-            <div className="text-center">
-              <p className="font-display text-lg font-extrabold leading-none text-navy">
-                92
-              </p>
-              <p className="text-[9px] font-extrabold uppercase tracking-wide text-clay">
-                ADL
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <ul className="mt-5 space-y-3">
-          {[
-            { icon: Moon, text: "Slept 7h 40m, restful night" },
-            { icon: Utensils, text: "Breakfast activity at 8:12 AM" },
-            { icon: PersonStanding, text: "Morning walk around the house" },
-            { icon: Pill, text: "Medication reminder acknowledged" },
-          ].map(({ icon: ItemIcon, text }) => (
-            <li
-              key={text}
-              className="flex items-center gap-3 rounded-xl bg-cream px-4 py-3"
-            >
-              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky text-navy">
-                <ItemIcon className="h-4 w-4" />
-              </span>
-              <span className="text-sm font-semibold text-ink/80">{text}</span>
-              <Check className="ml-auto h-4 w-4 shrink-0 text-blue" />
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="absolute -right-4 -bottom-6 hidden items-center gap-3 rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10 sm:flex">
+      <div className="absolute -left-4 -bottom-5 flex items-center gap-3 rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10">
         <span className="grid h-10 w-10 place-items-center rounded-full bg-blue/15 text-blue">
           <EyeOff className="h-5 w-5" />
         </span>
@@ -397,6 +334,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Product showcase */}
+      <section className="section">
+        <div className="container-x grid items-center gap-14 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">The dashboard</p>
+            <h2 className="statement mt-4">One dashboard. The whole picture.</h2>
+            <p className="lead mt-6">
+              Every routine, score, and alert in one calm view, on a phone or a
+              tablet by the bed. Families see simple daily summaries; care teams
+              get the depth they need, all without a single camera.
+            </p>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {[
+                "Daily wellness scores",
+                "Sleep, mobility & meals",
+                "Real-time alerts",
+                "Sensor status at a glance",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-blue text-white">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="font-semibold text-ink/80">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-4 rounded-[2.5rem] bg-sky/50 blur-2xl"
+            />
+            <Photo
+              src="/photos/product-dashboard.jpg"
+              alt="The MyIntel dashboard shown on a tablet and phone"
+              label="Dashboard photo"
+              className="relative aspect-[4/3] rounded-3xl border border-white/60 shadow-[0_30px_70px_-25px_rgba(20,36,60,0.4)]"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Features — dark showcase grid */}
       <section className="relative overflow-hidden bg-navy text-cream">
         <Arcs className="absolute -top-24 right-0 w-96 rotate-180 text-white/5" />
@@ -430,10 +409,11 @@ export default function HomePage() {
       <section className="section">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div className="relative order-2 lg:order-1">
-            <CareNetwork
-              className="mx-auto w-full max-w-sm"
-              centerIcon={Home}
-              nodeIconList={[Users, ClipboardCheck, Building]}
+            <Photo
+              src="/photos/care-network.jpg"
+              alt="A senior at home whose daily wellness reaches family, caregivers, and providers"
+              label="Care network illustration"
+              className="aspect-[16/9] rounded-3xl"
             />
           </div>
           <div className="order-1 lg:order-2">
@@ -567,26 +547,37 @@ export default function HomePage() {
       {/* Testimonial — wide feature quote */}
       <section className="bg-sand">
         <div className="container-x section">
-          <figure className="relative overflow-hidden rounded-[2rem] bg-navy px-8 py-14 text-cream sm:px-16">
-            <Arcs className="absolute -bottom-20 -right-10 w-80 text-white/5" count={6} />
-            <div className="relative mx-auto max-w-3xl text-center">
-              <div className="flex justify-center gap-1 text-gold">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-6 w-6 fill-gold" />
-                ))}
+          <figure className="grid overflow-hidden rounded-[2rem] bg-navy text-cream lg:grid-cols-2">
+            <Photo
+              src="/photos/family-couch.jpg"
+              alt="An adult daughter and her mother sharing a warm moment at home"
+              label="Family photo"
+              className="min-h-[18rem] lg:h-full"
+            />
+            <div className="relative flex flex-col justify-center overflow-hidden px-8 py-12 sm:px-12">
+              <Arcs
+                className="absolute -bottom-20 -right-12 w-72 text-white/5"
+                count={6}
+              />
+              <div className="relative">
+                <div className="flex gap-1 text-gold">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-gold" />
+                  ))}
+                </div>
+                <blockquote className="mt-5 font-display text-2xl font-semibold leading-snug">
+                  &ldquo;My husband and I couldn&apos;t be happier with our
+                  experience with MyIntel. From start to finish, the team was
+                  professional, and the system has given us so much peace of
+                  mind.&rdquo;
+                </blockquote>
+                <figcaption className="mt-6 font-extrabold text-cream/80">
+                  Alice Koehn
+                  <span className="block text-sm font-semibold text-cream/55">
+                    Founding pilot member
+                  </span>
+                </figcaption>
               </div>
-              <blockquote className="mt-6 font-display text-2xl font-semibold leading-snug sm:text-3xl">
-                &ldquo;My husband and I couldn&apos;t be happier with our
-                experience with MyIntel. From start to finish, the team was
-                professional, and the system has given us so much peace of
-                mind.&rdquo;
-              </blockquote>
-              <figcaption className="mt-8 font-extrabold text-cream/80">
-                Alice Koehn
-                <span className="block text-sm font-semibold text-cream/55">
-                  Founding pilot member
-                </span>
-              </figcaption>
             </div>
           </figure>
 
