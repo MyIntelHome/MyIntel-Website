@@ -287,6 +287,14 @@ export const Quote = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 );
 
+export const ImageIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+    <circle cx="9" cy="9" r="2" />
+    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+  </Icon>
+);
+
 export const Facebook = (p: SVGProps<SVGSVGElement>) => (
   <Icon {...p}>
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
