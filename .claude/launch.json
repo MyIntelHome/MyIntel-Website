@@ -8,6 +8,12 @@
       "port": 3000
     },
     {
+      "name": "ciap-website",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "C:\\Users\\Austi\\Downloads\\Claude\\CIAP Website\\.claude\\start-website.bat"],
+      "port": 3100
+    },
+    {
       "name": "myintel-dev",
       "runtimeExecutable": "cmd.exe",
       "runtimeArgs": ["/c", "C:\\Users\\Austi\\Downloads\\Claude\\myintel-assessment\\start-dev.bat"],

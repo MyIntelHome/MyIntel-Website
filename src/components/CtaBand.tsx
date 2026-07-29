@@ -3,7 +3,7 @@ import { ArrowRight, Phone } from "@/components/icons";
 
 export function CtaBand({
   title = "Stay independent. Stay safe. Stay home.",
-  body = "Join the waitlist for early access to the MyIntel platform, or talk with a home safety expert about your family's needs.",
+  body = "Tell us a little about your situation, or just call and talk it through with a real person. There's no cost to ask.",
 }: {
   title?: string;
   body?: string;
@@ -30,7 +30,7 @@ export function CtaBand({
             rel="noopener noreferrer"
             className="btn-accent"
           >
-            Join the Waitlist
+            Get started
             <ArrowRight className="h-5 w-5" />
           </a>
           <a href={site.phoneHref} className="btn-light">

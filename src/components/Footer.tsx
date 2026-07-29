@@ -10,8 +10,9 @@ export function Footer() {
         <div>
           <LogoLockup dark className="h-14 w-auto" />
           <p className="mt-5 max-w-sm text-cream/70">
-            Safer, smarter care. Privacy-first sensors and routine-learning AI
-            that help older adults stay independent, stay safe, and stay home.
+            Safer, smarter care. We make homes safer for older adults and keep
+            families in the loop, so everyone can stay independent, stay safe,
+            and stay home.
           </p>
           <a
             href={site.waitlistUrl}
@@ -19,7 +20,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="btn-light mt-6 text-sm"
           >
-            Join the Waitlist
+            Get started
           </a>
         </div>
 

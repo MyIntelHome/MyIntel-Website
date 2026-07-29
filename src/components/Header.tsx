@@ -39,7 +39,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="btn-primary !px-5 !py-2.5 text-sm"
           >
-            Join the Waitlist
+            Get started
           </a>
         </div>
 
@@ -80,7 +80,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="btn-primary mt-5 w-full"
           >
-            Join the Waitlist
+            Get started
           </a>
         </nav>
       )}
