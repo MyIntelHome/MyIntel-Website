@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
+import { Photo } from "@/components/Photo";
 import {
   EyeOff,
   Heart,
@@ -12,29 +13,29 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "MyIntel was founded by Austin Gough to help his own grandparents live safely at home. Today we bring privacy-first aging-in-place technology to families everywhere.",
+    "MyIntel started when our founder wanted to know his own grandparents were okay, without calling five times a day and without putting a camera in their living room.",
 };
 
 const values = [
   {
     icon: EyeOff,
-    title: "Privacy first",
-    body: "No cameras, no wearables, no surveillance. Technology should protect dignity, not trade it away for safety.",
+    title: "Privacy comes first",
+    body: "No cameras, no wearables, nobody watching. Safety should never cost someone their dignity, and we won't build anything that asks them to make that trade.",
   },
   {
     icon: Heart,
-    title: "Dignity & independence",
-    body: "90% of seniors want to age in their own homes. Our job is to make that choice safe, confident, and sustainable.",
+    title: "It's their home, not a facility",
+    body: "Nearly nine in ten older adults want to stay in their own home. Our job is to make that a safe choice instead of a risky one.",
   },
   {
     icon: Users,
-    title: "The whole circle of care",
-    body: "Older adults, families, caregivers, and communities all deserve calm and clarity. We design for every one of them.",
+    title: "The whole family, not just one person",
+    body: "The person aging at home, the daughter three states away, the caregiver who shows up on Tuesdays. All of them are carrying something. We build for all of them.",
   },
   {
     icon: Home,
-    title: "Accessible to everyone",
-    body: "Smart, safe living shouldn't be a luxury. We build practical solutions for real homes and real budgets.",
+    title: "Regular people should be able to afford it",
+    body: "Staying safe at home shouldn't be something only wealthy families get. We keep it practical, for real houses and real budgets.",
   },
 ];
 
@@ -65,29 +66,36 @@ export default function AboutPage() {
               understood their routines and spoke up when something changed.
             </p>
             <p>
-              What began as one family&apos;s solution became a mission: to
-              share the benefits of smart, safe living with everyone. Today,
-              MyIntel combines privacy-first sensors with routine-learning AI
-              to give older adults calm confidence at home, and give families
-              and care teams the clarity they need to help.
+              What started as one family&apos;s fix turned into the whole
+              company. Today MyIntel does the same two things for other
+              families: make the house itself safer, and keep an eye on the
+              everyday patterns that tell you how someone is really doing.
             </p>
           </div>
 
-          <figure className="rounded-3xl bg-navy p-10 text-cream">
-            <Quote className="h-10 w-10 text-gold" />
-            <blockquote className="mt-6 font-display text-2xl font-medium leading-snug">
-              &ldquo;Revolutionize everyday living with responsive smart home
-              technology. MyIntel provides innovative solutions that enhance
-              safety, convenience, and efficiency for a smarter, more connected
-              world.&rdquo;
-            </blockquote>
-            <figcaption className="mt-8 font-extrabold text-cream/80">
-              Austin Gough
-              <span className="block text-sm font-semibold text-cream/60">
-                Founder &amp; CEO
-              </span>
-            </figcaption>
-          </figure>
+          <div className="space-y-6">
+            <Photo
+              src="/photos/family-couch.jpg"
+              alt="An adult daughter and her mother talking together at home"
+              label="Family photo"
+              className="aspect-[4/3] rounded-3xl shadow-[0_20px_60px_-20px_rgba(20,36,60,0.3)]"
+            />
+            <figure className="rounded-3xl bg-navy p-10 text-cream">
+              <Quote className="h-10 w-10 text-gold" />
+              <blockquote className="mt-6 font-display text-xl font-semibold leading-snug">
+                &ldquo;I built the first version of this for my own
+                grandparents. I wanted to know they were okay without calling
+                five times a day, and without putting a camera in their living
+                room. Everything since is just a better version of that.&rdquo;
+              </blockquote>
+              <figcaption className="mt-8 font-extrabold text-cream/80">
+                Austin Gough
+                <span className="block text-sm font-semibold text-cream/60">
+                  Founder &amp; CEO
+                </span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

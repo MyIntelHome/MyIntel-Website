@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
+import { Photo } from "@/components/Photo";
 import {
   ArrowRight,
   BadgeDollar,
@@ -20,48 +21,48 @@ import {
 export const metadata: Metadata = {
   title: "Home Safety Assessments",
   description:
-    "CAPS-certified Home Safety Assessments identify fall risks, lighting, and accessibility needs, with personalized recommendations and financial aid guidance.",
+    "A specialist walks through the home with you, finds what's actually risky, and gives you a plain list of what to fix. About an hour, and no pressure to buy anything.",
 };
 
 const evaluations = [
   {
     icon: PersonStanding,
-    title: "Fall risks",
-    body: "Loose rugs, thresholds, stairs, and bathroom hazards. We identify the leading causes of injury at home, room by room.",
+    title: "Where a fall would happen",
+    body: "Loose rugs, raised thresholds, stairs without a good rail, and the bathroom, which is where a great many falls happen. We go room by room.",
   },
   {
     icon: Lightbulb,
-    title: "Lighting & visibility",
-    body: "Poor lighting is a silent threat to independence. We evaluate every pathway, entry, and night route.",
+    title: "Lighting",
+    body: "A hallway that's perfectly fine at noon can be dangerous at two in the morning. We walk the paths someone actually takes at night.",
   },
   {
     icon: PersonStanding,
-    title: "Mobility & accessibility",
-    body: "Doorways, handles, counter heights, and entries, assessed against how you actually move through your home.",
+    title: "Getting around",
+    body: "Doorways, door handles, counter heights, the front step. Measured against how this person actually moves, not a generic checklist.",
   },
   {
     icon: Shield,
-    title: "Smart safety opportunities",
-    body: "Where technology genuinely helps: fall detection, motion lighting, smart locks, and monitoring that fits your life.",
+    title: "Where technology helps",
+    body: "And where it doesn't. Fall detection and motion lighting are worth it in some homes. In others, a grab bar and a better lamp are the whole answer, and we'll say so.",
   },
 ];
 
 const processSteps = [
   {
-    title: "Schedule your assessment",
-    body: "Call or email us to book a time that works. We'll ask a few questions about the home and your goals.",
+    title: "Set up a time",
+    body: "Call or email. We'll ask a few questions about the home and about what's been worrying you.",
   },
   {
-    title: "Walk through with a specialist",
-    body: "A Certified Aging in Place Specialist (CAPS) evaluates the home top to bottom, with you and at your pace.",
+    title: "Walk through together",
+    body: "A Certified Aging in Place Specialist goes through the house with you, at your pace. Bring every question you have.",
   },
   {
-    title: "Receive a personalized plan",
-    body: "You get clear, prioritized recommendations matched to your budget, from simple fixes to smart technology.",
+    title: "Get a plain list",
+    body: "Clear recommendations, sorted by what matters most, with what each one costs. Nothing hidden, nothing upsold.",
   },
   {
-    title: "Installation & training",
-    body: "Choose what fits. We handle professional installation, teach you everything, and stay available for support.",
+    title: "We do the work",
+    body: "Pick what you want done. We handle the installation, show you how it all works, and stay available afterward.",
   },
 ];
 
@@ -76,33 +77,48 @@ export default function AssessmentsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Home Safety Assessments"
-        title="Every safe home starts with a clear picture"
-        body="1 in 4 adults over 65 falls each year, and most homes were never designed for aging safely. A professional Home Safety Assessment finds the hidden risks and shows you exactly what to do about them."
+        eyebrow="Home safety assessments"
+        title="Most homes were never built for getting older."
+        body="Stairs with no rail. A tub you have to climb into. A hallway that's dark at two in the morning. A specialist walks through with you, finds what's actually risky, and hands you a plain list of what to do about it. About an hour, and there's no pressure to buy anything."
       />
 
-      {/* What we evaluate */}
-      <section className="container-x section">
-        <div className="max-w-2xl">
-          <p className="eyebrow">What we evaluate</p>
-          <h2 className="statement mt-4">
-            A room-by-room look at safety and independence
-          </h2>
+      {/* What we look at */}
+      <section className="container-x section grid items-center gap-14 lg:grid-cols-2">
+        <div className="relative">
+          <Photo
+            src="/photos/home-assessment.jpg"
+            alt="A MyIntel specialist going through a home safety plan with an older adult at her kitchen table"
+            label="Home visit photo"
+            className="aspect-[4/3] rounded-3xl shadow-[0_20px_60px_-20px_rgba(20,36,60,0.35)]"
+          />
+          <div className="absolute -bottom-5 -right-5 hidden rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10 sm:block">
+            <p className="font-display text-2xl font-extrabold text-navy">
+              ~1 hour
+            </p>
+            <p className="text-xs font-bold text-clay">A typical visit</p>
+          </div>
         </div>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {evaluations.map(({ icon: EvalIcon, title, body }) => (
-            <div key={title} className="card flex gap-5 p-7">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue/15 text-blue">
-                <EvalIcon className="h-6 w-6" />
-              </span>
-              <div>
-                <h3 className="font-display text-xl font-semibold text-ink">
-                  {title}
-                </h3>
-                <p className="mt-2 leading-relaxed text-clay">{body}</p>
-              </div>
-            </div>
-          ))}
+
+        <div>
+          <p className="eyebrow">What we look at</p>
+          <h2 className="statement mt-4">
+            Room by room, the way someone actually lives in it
+          </h2>
+          <ul className="mt-10 divide-y divide-ink/8">
+            {evaluations.map(({ icon: EvalIcon, title, body }) => (
+              <li key={title} className="flex gap-5 py-6 first:pt-0">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue/12 text-blue">
+                  <EvalIcon className="h-6 w-6" />
+                </span>
+                <div>
+                  <h3 className="font-display text-xl font-extrabold text-ink">
+                    {title}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-clay">{body}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -110,10 +126,8 @@ export default function AssessmentsPage() {
       <section className="bg-sand">
         <div className="container-x section">
           <div className="max-w-2xl">
-            <p className="eyebrow">The process</p>
-            <h2 className="statement mt-4">
-              Simple, respectful, and built around you
-            </h2>
+            <p className="eyebrow">What to expect</p>
+            <h2 className="statement mt-4">Four steps, no surprises</h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step, i) => (
@@ -142,10 +156,10 @@ export default function AssessmentsPage() {
               Certified specialists, not salespeople
             </h3>
             <p className="prose-warm mt-4">
-              Assessments are performed by Certified Aging in Place Specialists
-              (CAPS) with training in home modification. You get honest,
-              expert recommendations, whether or not they involve our
-              products.
+              Your visit is done by a Certified Aging in Place Specialist, who
+              is trained specifically in making homes safer to grow older in.
+              They will tell you what you need and what you don&apos;t, even
+              when the honest answer is that you don&apos;t need us.
             </p>
             <ul className="mt-6 space-y-3">
               {[
@@ -169,9 +183,9 @@ export default function AssessmentsPage() {
               Help paying for it
             </h3>
             <p className="mt-4 text-lg leading-relaxed text-cream/75">
-              Aging in place costs a fraction of assisted living, and many
-              modifications qualify for financial assistance. We help you
-              navigate:
+              Staying at home costs a small fraction of assisted living, and a
+              lot of these changes qualify for help paying for them. Most
+              families have no idea this exists. We&apos;ll walk you through:
             </p>
             <ul className="mt-6 space-y-3">
               {financial.map((item) => (
@@ -232,13 +246,15 @@ export default function AssessmentsPage() {
               <Wrench className="h-7 w-7" />
             </span>
             <div>
-              <h3 className="font-display text-2xl font-semibold text-ink">
-                From assessment to a smarter, safer home
+              <h3 className="font-display text-2xl font-extrabold text-ink">
+                Then we make the changes
               </h3>
               <p className="mt-2 max-w-xl leading-relaxed text-clay">
-                Fall detection, motion lighting, smart locks, thermostats, and
-                monitoring, professionally installed, with hands-on training
-                so everything actually gets used.
+                Grab bars and better lighting, and where it earns its keep,
+                technology like fall detection, lights that come on by
+                themselves, and door locks that don&apos;t need a key. We
+                install it and we teach you how to use it, so it doesn&apos;t
+                sit there unused.
               </p>
             </div>
           </div>
