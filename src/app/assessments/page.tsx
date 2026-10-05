@@ -19,9 +19,9 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Home Safety Assessments",
+  title: "HomeCheck & Home Safety Assessments",
   description:
-    "A specialist walks through the home with you, finds what's actually risky, and gives you a plain list of what to fix. About an hour, and no pressure to buy anything.",
+    "Explore MyIntel HomeCheck, a guided online home check, or arrange an in-home professional assessment. Understand your options and choose your next step.",
 };
 
 const evaluations = [
@@ -77,13 +77,68 @@ export default function AssessmentsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Home safety assessments"
-        title="Most homes were never built for getting older."
-        body="Stairs with no rail. A tub you have to climb into. A hallway that's dark at two in the morning. A specialist walks through with you, finds what's actually risky, and hands you a plain list of what to do about it. About an hour, and there's no pressure to buy anything."
+        eyebrow="HomeCheck & assessments"
+        title="Understand your home. Choose your next step."
+        body="Start with a guided online home check, or talk with us about a professional visit. Both help you decide what needs attention, with different levels of support."
       />
 
+
+      <section aria-labelledby="assessment-options" className="container-x pb-14 pt-10">
+        <h2 id="assessment-options" className="font-display text-2xl font-extrabold text-ink">Two ways to get started</h2>
+        <div className="mt-7 grid gap-6 lg:grid-cols-2">
+          <article id="homecheck" className="scroll-mt-28 rounded-3xl border-2 border-blue/30 bg-sky p-7 sm:p-10">
+            <p className="eyebrow">New · Self-guided pilot</p>
+            <h3 className="mt-4 font-display text-3xl font-extrabold text-ink">HomeCheck</h3>
+            <p className="prose-warm mt-4">
+              For older adults, families and caregivers who want a practical starting point.
+              Walk through the rooms you use and answer plain-language questions about the home and daily routines.
+            </p>
+            <ol className="mt-6 list-decimal space-y-3 pl-5 font-semibold text-ink/80">
+              <li>Choose your rooms and answer at your own pace.</li>
+              <li>Use yes, no, or not sure to describe what you observe.</li>
+              <li>Review a report explaining your answers, priorities and next steps.</li>
+            </ol>
+            <p className="mt-5 leading-relaxed text-clay">
+              You can explore professional support afterward. Sharing your home check requires your consent.
+              No account is needed to view results; sign in if you want to save to your account.
+            </p>
+            <a href={site.homeCheckUrl} className="btn-primary mt-7">
+              Open HomeCheck <ArrowRight className="h-5 w-5" />
+            </a>
+            <p className="mt-4 text-sm font-bold text-clay">No payment to view your results.</p>
+            <p className="mt-4 text-sm leading-relaxed text-clay">
+              The pilot currently asks users to use example information. Results reflect your answers;
+              they are not a diagnosis or confirmation that a home is safe.
+            </p>
+          </article>
+          <article className="card p-7 sm:p-10">
+            <p className="eyebrow">With a specialist</p>
+            <h3 className="mt-4 font-display text-3xl font-extrabold text-ink">Professional home assessment</h3>
+            <p className="prose-warm mt-4">
+              Prefer someone to look at the home with you? A specialist reviews the space,
+              how you move through it and your concerns, then discusses practical recommendations.
+            </p>
+            <ul className="mt-6 space-y-3 font-semibold text-ink/80">
+              <li>A personalized walkthrough with a trained professional</li>
+              <li>Support with home changes and where technology may help</li>
+              <li>An opportunity to ask questions and discuss your priorities</li>
+            </ul>
+            <p className="mt-5 leading-relaxed text-clay">
+              You do not need to finish HomeCheck before contacting us. Visit options,
+              availability and any costs are confirmed with our team.
+            </p>
+            <a href={site.phoneHref} className="btn-outline mt-7">
+              <Phone className="h-5 w-5" /> Discuss a professional assessment
+            </a>
+            <a href="#professional-assessment" className="mt-5 block font-bold text-blue underline underline-offset-4">
+              See what a professional visit covers
+            </a>
+          </article>
+        </div>
+      </section>
+
       {/* What we look at */}
-      <section className="container-x section grid items-center gap-14 lg:grid-cols-2">
+      <section id="professional-assessment" className="container-x section scroll-mt-24 grid items-center gap-14 lg:grid-cols-2">
         <div className="relative">
           <Photo
             src="/photos/home-assessment.jpg"
@@ -277,3 +332,4 @@ export default function AssessmentsPage() {
     </>
   );
 }
+

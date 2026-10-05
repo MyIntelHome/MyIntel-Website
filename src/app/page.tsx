@@ -221,6 +221,47 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* HomeCheck introduction */}
+      <section aria-labelledby="homecheck-title" className="border-y border-blue/20 bg-sky">
+        <div className="container-x grid gap-10 py-14 sm:py-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <div>
+            <p className="eyebrow"><Sparkles className="h-4 w-4" /> New · HomeCheck pilot</p>
+            <h2 id="homecheck-title" className="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+              A clearer starting point for a safer home.
+            </h2>
+            <p className="lead mt-5">
+              HomeCheck is MyIntel&apos;s guided online home check for you and your family.
+              Choose the rooms you use, answer simple questions at your own pace, and
+              review a report with practical next steps and areas that may need professional attention.
+            </p>
+            <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <Link href="/assessments" className="btn-primary">
+                Explore HomeCheck &amp; assessments <ArrowRight className="h-5 w-5" />
+              </Link>
+              <a href={site.homeCheckUrl} className="btn-outline">
+                Open HomeCheck <ArrowRight className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+          <div className="rounded-3xl border border-blue/15 bg-white p-7 sm:p-8">
+            <p className="font-display text-xl font-extrabold text-navy">Know what to expect</p>
+            <ul className="mt-5 space-y-4">
+              {["Choose your rooms and describe everyday life at home", "Answer yes, no, or not sure — no clinical training needed", "Review your next steps and explore professional support"].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-blue" />
+                  <span className="font-semibold text-ink/80">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm leading-relaxed text-clay">
+              No payment to view your results. HomeCheck is a starting point based on your answers;
+              it does not replace an in-home professional assessment.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Trust strip */}
       <section className="border-y border-ink/8 bg-white">
         <div className="container-x py-10">
@@ -620,3 +661,4 @@ export default function HomePage() {
     </>
   );
 }
+
