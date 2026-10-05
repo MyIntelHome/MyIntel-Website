@@ -17,6 +17,7 @@ export const site = {
 export const nav = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "Assessments", href: "/assessments" },
+  { label: "HomeCheck", href: "https://homecheck.myintelhome.com" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Careers", href: "/careers" },
