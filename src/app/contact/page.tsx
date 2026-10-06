@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to a MyIntel home safety expert. Call (720) 989-1123, email info@myintelhome.com, or join the waitlist for early access.",
+    "Talk to a MyIntel home safety expert. Call (720) 989-1123, email info@myintelhome.com, or start a free HomeCheck.",
 };
 
 const channels = [
@@ -75,25 +75,25 @@ export default function ContactPage() {
           ))}
         </div>
 
-        {/* Waitlist highlight */}
-        <div className="mt-14 grid items-center gap-10 rounded-3xl bg-navy p-10 text-cream lg:grid-cols-[1.4fr_1fr]">
+        {/* Free home check */}
+        <div className="mt-14 grid items-center gap-10 rounded-3xl bg-navy p-6 text-cream sm:p-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
-              Want early access to the MyIntel platform?
+              Want a clear starting point for your home?
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-cream/75">
-              Join the waitlist and we&apos;ll reach out as the pilot program
-              expands. It takes about a minute, and there&apos;s no commitment.
+              Answer a few simple questions about the home and get a clear
+              starting point. It&apos;s free, and there&apos;s no payment to see your results.
             </p>
           </div>
           <div className="lg:text-right">
             <a
-              href={site.waitlistUrl}
+              href={site.homeCheckUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-accent"
             >
-              Join the Waitlist
+              Start a free home check
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>
@@ -118,8 +118,8 @@ export default function ContactPage() {
             ))}
           </div>
           <p className="mt-5 font-semibold text-clay">
-            Not nearby? Remote consultations are available, and the waitlist
-            helps us decide where to expand next.
+            Not nearby? You can take the free home check wherever you live.
+            Remote consultations are also available.
           </p>
         </div>
       </section>

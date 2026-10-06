@@ -392,7 +392,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Under the hood — the real technical detail */}
+      {/* Under the hood , the real technical detail */}
       <section className="container-x section">
         <div className="max-w-2xl">
           <p className="eyebrow">Under the hood</p>
@@ -463,7 +463,7 @@ export default function HowItWorksPage() {
               rel="noopener noreferrer"
               className="btn-accent mt-9"
             >
-              Get started
+              Join the founding homes list
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>
@@ -499,7 +499,7 @@ export default function HowItWorksPage() {
 
       <CtaBand
         title="Still have questions?"
-        body="That's normal, and we'd rather answer them than have you guess. Call us, or tell us about your situation and we'll get back to you."
+        body="Call us to talk it through, or take the free home check for a clear starting point. Answer a few simple questions about the home, with no payment to see your results."
       />
     </>
   );

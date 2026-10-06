@@ -3,7 +3,7 @@ import { ArrowRight, Phone } from "@/components/icons";
 
 export function CtaBand({
   title = "Stay independent. Stay safe. Stay home.",
-  body = "Tell us a little about your situation, or just call and talk it through with a real person. There's no cost to ask.",
+  body = "Answer a few simple questions about the home and get a clear starting point. It's free, and there's no payment to see your results. You can also call and talk it through with a real person.",
 }: {
   title?: string;
   body?: string;
@@ -25,12 +25,12 @@ export function CtaBand({
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href={site.waitlistUrl}
+            href={site.homeCheckUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-accent"
           >
-            Get started
+            Start a free home check
             <ArrowRight className="h-5 w-5" />
           </a>
           <a href={site.phoneHref} className="btn-light">

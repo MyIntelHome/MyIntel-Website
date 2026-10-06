@@ -126,8 +126,8 @@ export default function CareersPage() {
       </section>
 
       <CtaBand
-        title="Ready to join the team?"
-        body="Send us a note about your background and certifications. We respond to every application personally."
+        title="See how we help families"
+        body="Try our free home check to see how we help older adults and families find a clear starting point. There's no payment to see your results."
       />
     </>
   );

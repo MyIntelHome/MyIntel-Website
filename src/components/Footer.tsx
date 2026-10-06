@@ -15,12 +15,12 @@ export function Footer() {
             and stay home.
           </p>
           <a
-            href={site.waitlistUrl}
+            href={site.homeCheckUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-light mt-6 text-sm"
           >
-            Get started
+            Start a free home check
           </a>
         </div>
 

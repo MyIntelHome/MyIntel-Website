@@ -295,7 +295,7 @@ export default function AssessmentsPage() {
 
       {/* Smart install teaser */}
       <section className="container-x section">
-        <div className="card flex flex-col items-start justify-between gap-8 p-10 md:flex-row md:items-center">
+        <div className="card flex flex-col items-start justify-between gap-8 p-6 sm:p-10 lg:flex-row lg:items-center">
           <div className="flex items-start gap-5">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-sky text-navy">
               <Wrench className="h-7 w-7" />
@@ -314,20 +314,20 @@ export default function AssessmentsPage() {
             </div>
           </div>
           <a
-            href={site.waitlistUrl}
+            href={`${site.homeCheckUrl}/?view=help`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-accent shrink-0"
+            className="btn-accent shrink-0 text-center"
           >
-            Get started
+            Request help with home changes
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
       </section>
 
       <CtaBand
-        title="Schedule a Home Safety Assessment"
-        body="Talk to a home safety expert today. One visit can prevent the fall that changes everything."
+        title="Start with a free home check"
+        body="Answer a few simple questions about the home and review practical next steps. It's free, with no payment to see your results. You can ask for professional help afterward."
       />
     </>
   );
