@@ -392,7 +392,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Under the hood — the real technical detail */}
+      {/* Under the hood , the real technical detail */}
       <section className="container-x section">
         <div className="max-w-2xl">
           <p className="eyebrow">Under the hood</p>
@@ -461,9 +461,9 @@ export default function HowItWorksPage() {
               href={site.waitlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-accent mt-9"
+              className="mt-9 inline-flex items-center gap-2 font-bold text-cream underline underline-offset-4"
             >
-              Get started
+              Join the founding homes list
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>
@@ -498,8 +498,8 @@ export default function HowItWorksPage() {
       </section>
 
       <CtaBand
-        title="Still have questions?"
-        body="That's normal, and we'd rather answer them than have you guess. Call us, or tell us about your situation and we'll get back to you."
+        title="Start with your home"
+        body="Take the free home check to find a clear starting point before deciding what support or technology you need. There's no payment to see your results."
       />
     </>
   );

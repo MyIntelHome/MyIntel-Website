@@ -14,14 +14,6 @@ export function Footer() {
             families in the loop, so everyone can stay independent, stay safe,
             and stay home.
           </p>
-          <a
-            href={site.waitlistUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-light mt-6 text-sm"
-          >
-            Get started
-          </a>
         </div>
 
         <div>

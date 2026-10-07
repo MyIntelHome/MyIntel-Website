@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
-import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import {
   ArrowRight,
@@ -125,10 +124,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <CtaBand
-        title="Ready to join the team?"
-        body="Send us a note about your background and certifications. We respond to every application personally."
-      />
     </>
   );
 }
