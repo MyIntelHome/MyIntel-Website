@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
-import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import {
   ArrowRight,
@@ -125,10 +124,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <CtaBand
-        title="See how we help families"
-        body="Try our free home check to see how we help older adults and families find a clear starting point. There's no payment to see your results."
-      />
     </>
   );
 }

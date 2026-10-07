@@ -461,7 +461,7 @@ export default function HowItWorksPage() {
               href={site.waitlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-accent mt-9"
+              className="mt-9 inline-flex items-center gap-2 font-bold text-cream underline underline-offset-4"
             >
               Join the founding homes list
               <ArrowRight className="h-5 w-5" />
@@ -498,8 +498,8 @@ export default function HowItWorksPage() {
       </section>
 
       <CtaBand
-        title="Still have questions?"
-        body="Call us to talk it through, or take the free home check for a clear starting point. Answer a few simple questions about the home, with no payment to see your results."
+        title="Start with your home"
+        body="Take the free home check to find a clear starting point before deciding what support or technology you need. There's no payment to see your results."
       />
     </>
   );

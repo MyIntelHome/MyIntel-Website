@@ -1,9 +1,9 @@
 import { site } from "@/lib/site";
-import { ArrowRight, Phone } from "@/components/icons";
+import { ArrowRight } from "@/components/icons";
 
 export function CtaBand({
   title = "Stay independent. Stay safe. Stay home.",
-  body = "Answer a few simple questions about the home and get a clear starting point. It's free, and there's no payment to see your results. You can also call and talk it through with a real person.",
+  body = "Answer a few simple questions about the home and get a clear starting point. It's free, and there's no payment to see your results.",
 }: {
   title?: string;
   body?: string;
@@ -33,11 +33,13 @@ export function CtaBand({
             Start a free home check
             <ArrowRight className="h-5 w-5" />
           </a>
-          <a href={site.phoneHref} className="btn-light">
-            <Phone className="h-5 w-5" />
-            {site.phone}
-          </a>
         </div>
+        <p className="mt-5 text-sm text-cream/75">
+          Prefer to talk?{" "}
+          <a href={site.phoneHref} className="font-bold text-cream underline underline-offset-4">
+            Call {site.phone}
+          </a>
+        </p>
       </div>
     </section>
   );

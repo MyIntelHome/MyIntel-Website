@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
-import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Photo } from "@/components/Photo";
 import {
@@ -15,7 +14,6 @@ import {
   PersonStanding,
   Phone,
   Shield,
-  Wrench,
 } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -103,7 +101,7 @@ export default function AssessmentsPage() {
               No account is needed to view results; sign in if you want to save to your account.
             </p>
             <a href={site.homeCheckUrl} className="btn-primary mt-7">
-              Open HomeCheck <ArrowRight className="h-5 w-5" />
+              Start a free home check <ArrowRight className="h-5 w-5" />
             </a>
             <p className="mt-4 text-sm font-bold text-clay">No payment to view your results.</p>
             <p className="mt-4 text-sm leading-relaxed text-clay">
@@ -127,8 +125,8 @@ export default function AssessmentsPage() {
               You do not need to finish HomeCheck before contacting us. Visit options,
               availability and any costs are confirmed with our team.
             </p>
-            <a href={site.phoneHref} className="btn-outline mt-7">
-              <Phone className="h-5 w-5" /> Discuss a professional assessment
+            <a href={`${site.homeCheckUrl}/?view=help`} className="btn-outline mt-7">
+              Request a professional assessment <ArrowRight className="h-5 w-5 shrink-0" />
             </a>
             <a href="#professional-assessment" className="mt-5 block font-bold text-blue underline underline-offset-4">
               See what a professional visit covers
@@ -285,7 +283,7 @@ export default function AssessmentsPage() {
               <Phone className="h-5 w-5" />
               Call {site.phone}
             </a>
-            <a href={site.emailHref} className="btn-outline">
+            <a href={site.emailHref} className="inline-flex items-center gap-2 font-bold text-navy underline underline-offset-4">
               <Mail className="h-5 w-5" />
               {site.email}
             </a>
@@ -293,42 +291,6 @@ export default function AssessmentsPage() {
         </div>
       </section>
 
-      {/* Smart install teaser */}
-      <section className="container-x section">
-        <div className="card flex flex-col items-start justify-between gap-8 p-6 sm:p-10 lg:flex-row lg:items-center">
-          <div className="flex items-start gap-5">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-sky text-navy">
-              <Wrench className="h-7 w-7" />
-            </span>
-            <div>
-              <h3 className="font-display text-2xl font-extrabold text-ink">
-                Then we make the changes
-              </h3>
-              <p className="mt-2 max-w-xl leading-relaxed text-clay">
-                Grab bars and better lighting, and where it earns its keep,
-                technology like fall detection, lights that come on by
-                themselves, and door locks that don&apos;t need a key. We
-                install it and we teach you how to use it, so it doesn&apos;t
-                sit there unused.
-              </p>
-            </div>
-          </div>
-          <a
-            href={`${site.homeCheckUrl}/?view=help`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-accent shrink-0 text-center"
-          >
-            Request help with home changes
-            <ArrowRight className="h-5 w-5" />
-          </a>
-        </div>
-      </section>
-
-      <CtaBand
-        title="Start with a free home check"
-        body="Answer a few simple questions about the home and review practical next steps. It's free, with no payment to see your results. You can ask for professional help afterward."
-      />
     </>
   );
 }

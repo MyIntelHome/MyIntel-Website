@@ -14,14 +14,6 @@ export function Footer() {
             families in the loop, so everyone can stay independent, stay safe,
             and stay home.
           </p>
-          <a
-            href={site.homeCheckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-light mt-6 text-sm"
-          >
-            Start a free home check
-          </a>
         </div>
 
         <div>

@@ -181,6 +181,9 @@ export default function HomePage() {
                 {site.phone}
               </a>
             </div>
+            <p className="mt-4 text-sm font-semibold text-clay">
+              Free to view your results. No account needed.
+            </p>
             <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-bold text-clay">
               {["No cameras", "Nothing to wear", "Set up in about an hour"].map(
                 (item) => (
@@ -235,19 +238,17 @@ export default function HomePage() {
               Choose the rooms you use, answer simple questions at your own pace, and
               review a report with practical next steps and areas that may need professional attention.
             </p>
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <Link href="/assessments" className="btn-primary">
-                Explore HomeCheck &amp; assessments <ArrowRight className="h-5 w-5" />
-              </Link>
-              <a href={site.homeCheckUrl} className="btn-outline">
-                Open HomeCheck <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
+            <Link
+              href="/assessments"
+              className="mt-7 inline-flex items-center gap-2 font-bold text-navy underline underline-offset-4"
+            >
+              See what HomeCheck covers <ArrowRight className="h-5 w-5 shrink-0" />
+            </Link>
           </div>
           <div className="rounded-3xl border border-blue/15 bg-white p-7 sm:p-8">
             <p className="font-display text-xl font-extrabold text-navy">Know what to expect</p>
             <ul className="mt-5 space-y-4">
-              {["Choose your rooms and describe everyday life at home", "Answer yes, no, or not sure , no clinical training needed", "Review your next steps and explore professional support"].map((item) => (
+              {["Choose your rooms and describe everyday life at home", "Answer yes, no, or not sure. No clinical training needed", "Review your next steps and explore professional support"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Check className="mt-1 h-5 w-5 shrink-0 text-blue" />
                   <span className="font-semibold text-ink/80">{item}</span>
@@ -385,8 +386,8 @@ export default function HomePage() {
               In-home visits in {site.serviceAreas.join(" and ")}
             </p>
             <div className="mt-6">
-              <Link href="/assessments" className="btn-primary">
-                Book a home safety visit
+              <Link href="/assessments#professional-assessment" className="inline-flex items-center gap-2 font-bold text-navy underline underline-offset-4">
+                Learn about professional home assessments
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>

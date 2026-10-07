@@ -75,29 +75,6 @@ export default function ContactPage() {
           ))}
         </div>
 
-        {/* Free home check */}
-        <div className="mt-14 grid items-center gap-10 rounded-3xl bg-navy p-6 text-cream sm:p-10 lg:grid-cols-[1.4fr_1fr]">
-          <div>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
-              Want a clear starting point for your home?
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-cream/75">
-              Answer a few simple questions about the home and get a clear
-              starting point. It&apos;s free, and there&apos;s no payment to see your results.
-            </p>
-          </div>
-          <div className="lg:text-right">
-            <a
-              href={site.homeCheckUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-accent"
-            >
-              Start a free home check
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
-        </div>
 
         {/* Service areas */}
         <div className="mt-14">

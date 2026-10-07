@@ -23,7 +23,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`whitespace-nowrap text-[15px] font-bold transition-colors hover:text-navy ${item.href === "/assessments" ? "rounded-full bg-sky px-4 py-2 ring-1 ring-blue/25" : ""} ${
+              className={`whitespace-nowrap text-[15px] font-bold transition-colors hover:text-navy ${
                 pathname === item.href ? "text-navy" : "text-ink/70"
               }`}
             >
@@ -65,7 +65,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`block border-b border-ink/5 py-3.5 text-lg font-bold ${item.href === "/assessments" ? "mt-2 rounded-xl bg-sky px-4 ring-1 ring-blue/25" : ""} ${
+                  className={`block border-b border-ink/5 py-3.5 text-lg font-bold ${
                     pathname === item.href ? "text-navy" : "text-ink/80"
                   }`}
                 >
