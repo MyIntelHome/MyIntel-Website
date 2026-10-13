@@ -14,9 +14,9 @@ export const positioning = {
 };
 
 export const journey = [
-  { label: "Assess", title: "Understand the person and home", body: "Start with HomeCheck. When a professional visit is appropriate, a specialist reviews the home, daily routines and the concerns that matter to you." },
-  { label: "Improve", title: "Make everyday life safer", body: "Address physical and environmental risks first, from loose rugs and poor lighting to grab bars and easier access. We discuss the changes and costs before work begins." },
-  { label: "Protect", title: "Choose the right ongoing support", body: "Recommend technology and support that fit your needs and preferences. Your plan sets out the installed features, who receives updates and how concerns should be handled." },
+  { label: "Assess", title: "Understand the person and home", body: "Start with HomeCheck. A professional visit, when needed, helps us understand your home, routines and concerns." },
+  { label: "Improve", title: "Make everyday life safer", body: "Start with practical changes, such as better lighting or grab bars. Agree on the work and costs before anything begins." },
+  { label: "Protect", title: "Choose the right ongoing support", body: "Choose suitable technology and support. Agree who gets updates and what happens when a concern is raised." },
 ];
 
 export const solutions = [

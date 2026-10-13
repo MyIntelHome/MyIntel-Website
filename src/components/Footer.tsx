@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { nav, site } from "@/lib/site";
+import { footerNav, site } from "@/lib/site";
 import { LogoLockup } from "@/components/Logo";
 import { Facebook, Mail, MapPin, Phone } from "@/components/icons";
 
@@ -19,7 +19,7 @@ export function Footer() {
         <div>
           <h3 className="font-display text-lg font-semibold">Explore</h3>
           <ul className="mt-4 space-y-2.5">
-            {nav.map((item) => (
+            {footerNav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}

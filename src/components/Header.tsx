@@ -18,12 +18,12 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-3 xl:flex" aria-label="Main">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`inline-flex min-h-11 items-center whitespace-nowrap text-[15px] font-bold transition-colors hover:text-navy ${
+              className={`inline-flex min-h-11 items-center whitespace-nowrap text-lg font-bold transition-colors hover:text-navy ${
                 pathname === item.href ? "text-navy" : "text-ink/70"
               }`}
             >
@@ -32,12 +32,12 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden xl:block">
+        <div className="hidden lg:block">
           <a
             href={site.homeCheckUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary whitespace-nowrap !px-4 !py-2.5 text-sm"
+            className="btn-primary whitespace-nowrap !px-5 !py-3 text-base"
           >
             Start a free home check
           </a>
@@ -45,18 +45,18 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-lg p-2 text-ink xl:hidden"
+          className="flex min-h-12 items-center gap-2 rounded-lg px-3 py-2 font-bold text-ink lg:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <Close className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <Close className="h-6 w-6" /> : <Menu className="h-6 w-6" />}<span>{open ? "Close" : "Menu"}</span>
         </button>
       </div>
 
       {open && (
         <nav
-          className="border-t border-ink/8 bg-cream px-5 pb-6 pt-2 xl:hidden"
+          className="border-t border-ink/8 bg-cream px-5 pb-6 pt-2 lg:hidden"
           aria-label="Mobile"
         >
           <ul className="flex flex-col">

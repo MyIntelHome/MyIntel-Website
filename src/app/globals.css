@@ -10,8 +10,8 @@
   --color-navy-deep: #101d33;
   --color-sky: #e1eef8;
   --color-sky-dark: #a9cbe4;
-  --color-blue: #2e96d1;
-  --color-blue-dark: #237aad;
+  --color-blue: #17658f;
+  --color-blue-dark: #124d6d;
   --color-gold: #d9a441;
 }
 
@@ -26,6 +26,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 html {
@@ -82,7 +84,7 @@ html {
     @apply font-display font-extrabold tracking-[-0.02em] text-ink;
   }
   .statement {
-    @apply font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.025em] text-ink sm:text-5xl lg:text-6xl;
+    @apply font-display text-4xl font-extrabold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl lg:text-6xl;
   }
   .lead {
     @apply text-lg leading-relaxed text-clay sm:text-xl;
@@ -99,4 +101,12 @@ html {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(20,36,60,0.04),0_24px_48px_-16px_rgba(20,36,60,0.18)];
   }
 
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 4px;
+}
+section.bg-navy :focus-visible, section.bg-navy-dark :focus-visible, footer :focus-visible {
+  outline-color: var(--color-cream);
 }

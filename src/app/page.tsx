@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 import { capabilities, followUp, journey, positioning, solutionPolicy } from "@/lib/solutions";
 import { CtaBand } from "@/components/CtaBand";
 import { Photo } from "@/components/Photo";
-import { Arcs, DotGrid } from "@/components/Illustrations";
+import { Arcs, DotGrid, HomeScene } from "@/components/Illustrations";
+import { SupportIllustration } from "@/components/SupportIllustration";
 import {
   Activity,
   ArrowRight,
@@ -98,9 +99,8 @@ export default function HomePage() {
               Stay in the <span className="text-blue">home you love</span>.
             </h1>
             <p className="lead mt-6 max-w-xl">
-              MyIntel helps older adults and families plan for safer living at home.
-              We assess the person and home, address practical risks, then recommend
-              technology and support that fit your needs and preferences.
+              We help make your home safer and choose support that fits your life.
+              Start with a free home check, at your own pace.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a
@@ -137,12 +137,11 @@ export default function HomePage() {
               aria-hidden="true"
               className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-sky via-cream to-blue/15"
             />
-            <Photo
-              src="/photos/app-nightstand.jpg"
-              alt="The MyIntel app on a bedside stand with small sensors in a warm home"
-              label="Product photo"
-              className="relative aspect-[4/3] rounded-[2rem] border border-white/60 shadow-[0_30px_70px_-20px_rgba(20,36,60,0.4)]"
-            />
+            <div className="relative rounded-[2rem] border border-white bg-white p-7 shadow-lg shadow-navy/10">
+              <HomeScene className="mx-auto w-full max-w-sm" />
+              <p className="mt-3 text-center text-xl font-bold text-navy">Your rooms. Your routine.</p>
+              <p className="mt-2 text-center text-lg text-clay">A plan that fits your home.</p>
+            </div>
             <div className="absolute -left-4 -bottom-5 flex items-center gap-3 rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-blue/15 text-blue">
                 <EyeOff className="h-5 w-5" />
@@ -170,9 +169,8 @@ export default function HomePage() {
               A clearer starting point for a safer home.
             </h2>
             <p className="lead mt-5">
-              HomeCheck is MyIntel&apos;s guided online home check for you and your family.
-              Choose the rooms you use, answer simple questions at your own pace, and
-              review a report with practical next steps and areas that may need professional attention.
+              Choose the rooms you use. Answer simple questions.
+              Get practical next steps you can discuss with your family or a professional.
             </p>
             <Link
               href="/assessments"
@@ -182,9 +180,10 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="rounded-3xl border border-blue/15 bg-white p-7 sm:p-8">
-            <p className="font-display text-xl font-extrabold text-navy">Know what to expect</p>
+            <SupportIllustration kind="complete" className="mx-auto mb-5 w-full max-w-[240px]" />
+            <p className="font-display text-2xl font-extrabold text-navy">One step at a time</p>
             <ul className="mt-5 space-y-4">
-              {["Choose your rooms and describe everyday life at home", "Answer yes, no, or not sure. No clinical training needed", "Review your next steps and explore professional support"].map((item) => (
+              {["Choose your rooms", "Answer yes, no, or not sure", "Review your next steps"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Check className="mt-1 h-5 w-5 shrink-0 text-blue" />
                   <span className="font-semibold text-ink/80">{item}</span>
@@ -296,7 +295,7 @@ export default function HomePage() {
             <h2 className="statement mt-4">
               Understand the risks. Make a practical plan.
             </h2>
-            <p className="mt-5 text-lg font-semibold text-navy">{positioning.principle}</p>
+            <p className="mt-5 text-xl leading-relaxed text-clay">First we understand your needs. Then we make a plan with you.</p>
             <ol className="mt-10 space-y-8">
               {offer.map((item, i) => (
                 <li key={item.title} className="relative flex gap-5">
@@ -386,7 +385,7 @@ export default function HomePage() {
             <h2 className="statement mt-4">
               We don&apos;t stop at the alert.
             </h2>
-            <p className="lead mt-6">A change needs a next step. As part of an agreed service plan, we help clarify who checks the concern, who acts and who follows up. Monitoring does not replace emergency services or clinical care.</p>
+            <p className="lead mt-6">When something changes, the right person needs a clear next step. We agree who checks in, what to do and who follows up.</p>
             <ol className="mt-10 space-y-8">
               {steps.map((step, i) => (
                 <li key={step.title} className="relative flex gap-5">
@@ -418,12 +417,8 @@ export default function HomePage() {
           </div>
 
           <div>
-            <Photo
-              src="/photos/care-network.jpg"
-              alt="A home where daily wellness reaches family, caregivers, and care providers"
-              label="How it works illustration"
-              className="aspect-[16/9] rounded-3xl"
-            />
+            <SupportIllustration kind="protect" className="mx-auto w-full max-w-lg" />
+            <p className="mt-4 text-center text-xl font-bold text-navy">Support around the person and home</p>
           </div>
         </div>
       </section>
@@ -438,9 +433,8 @@ export default function HomePage() {
               Notice changes with the right equipment.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-cream/75">
-              Depending on the system recommended for the home, these features
-              can help agreed contacts notice changes. No wearable is required.
-              We confirm what is included, what it can detect and its limits before installation.
+              Your plan may include some of these features. We explain what
+              each one can do before you choose.
             </p>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -455,7 +449,10 @@ export default function HomePage() {
                 <h3 className="mt-5 font-display text-xl font-extrabold">
                   {title}
                 </h3>
-                <p className="mt-2.5 leading-relaxed text-cream/70">{body}</p>
+                <details className="mt-3">
+                  <summary className="cursor-pointer py-3 text-lg font-bold text-cream underline underline-offset-4">Learn about {title.toLowerCase()}</summary>
+                  <p className="mt-2 text-lg leading-relaxed text-cream/90">{body}</p>
+                </details>
               </div>
             ))}
           </div>

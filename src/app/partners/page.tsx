@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 import { followUp, positioning } from "@/lib/solutions";
+import { SupportIllustration } from "@/components/SupportIllustration";
 import { Phone, Mail } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -16,12 +17,9 @@ const audiences = [
   { title: "Aging-in-place organizations and nonprofits", body: "Connect people with assessment, home changes and support that fit their needs and resources." },
 ];
 const serviceSteps = [
-  { title: "Assessment", body: "Use HomeCheck and professional assessment where appropriate to understand the person and home." },
-  { title: "Recommendations", body: "Prioritize physical risks and recommend the least intrusive suitable technology." },
-  { title: "Installation", body: "Confirm scope and costs, make agreed improvements and explain the selected equipment." },
-  { title: "Monitoring", body: "Use only the capabilities enabled in the person's configuration." },
-  { title: "Escalation", body: "Agree who receives a concern, when to contact them and what happens if they cannot be reached." },
-  { title: "Intervention and follow-up", body: "Assign practical next steps and review the home or care plan with the person's involvement." },
+  { title: "Understand the home", body: "Assess the person and home, then recommend practical changes and suitable support." },
+  { title: "Set up agreed support", body: "Install the chosen improvements and equipment. Confirm which monitoring features are included." },
+  { title: "Act and follow up", body: "Agree alert contacts, escalation, practical action and who will check back." },
 ];
 
 export default function PartnersPage() {
@@ -34,7 +32,7 @@ export default function PartnersPage() {
     <section className="bg-sand"><div className="container-x section">
       <h2 className="statement">From assessment to follow-up</h2>
       <p className="lead mt-5 max-w-3xl">{positioning.principle}</p>
-      <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{serviceSteps.map((s,i) => <li key={s.title} className="rounded-3xl bg-white p-7"><span className="font-bold text-blue">{i+1}</span><h3 className="mt-3 font-display text-xl font-bold">{s.title}</h3><p className="mt-3 leading-relaxed text-clay">{s.body}</p></li>)}</ol>
+      <ol className="mt-10 grid gap-6 md:grid-cols-3">{serviceSteps.map((s,i) => <li key={s.title} className="rounded-3xl bg-white p-7"><SupportIllustration kind={i === 0 ? "aware" : i === 1 ? "complete" : "protect"} className="mx-auto mb-5 w-full max-w-xs" /><span className="text-lg font-bold text-blue">Step {i+1}</span><h3 className="mt-3 font-display text-xl font-bold">{s.title}</h3><p className="mt-3 text-lg leading-relaxed text-clay">{s.body}</p></li>)}</ol>
     </div></section>
     <section className="container-x section">
       <h2 className="statement">We don&apos;t stop at the alert.</h2>

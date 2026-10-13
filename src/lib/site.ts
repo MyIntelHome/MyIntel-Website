@@ -16,12 +16,16 @@ export const site = {
 };
 
 export const nav = [
-  { label: "How It Works", href: "/how-it-works" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "HomeCheck & Assessments", href: "/assessments" },
-  { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
-  { label: "For Partners", href: "/partners" },
+  { label: "How we help", href: "/solutions" },
+  { label: "Home safety", href: "/assessments" },
   { label: "Contact", href: "/contact" },
+];
+
+export const footerNav = [
+  ...nav,
+  { label: "How it works", href: "/how-it-works" },
+  { label: "About MyIntel", href: "/about" },
+  { label: "Common questions", href: "/faq" },
+  { label: "For care partners", href: "/partners" },
 ];
 
