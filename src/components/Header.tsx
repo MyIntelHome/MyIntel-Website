@@ -13,17 +13,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink/8 bg-cream/90 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" onClick={() => setOpen(false)} aria-label="MyIntel home">
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-5 xl:flex" aria-label="Main">
+        <nav className="hidden items-center gap-3 xl:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`whitespace-nowrap text-[15px] font-bold transition-colors hover:text-navy ${
+              className={`inline-flex min-h-11 items-center whitespace-nowrap text-[15px] font-bold transition-colors hover:text-navy ${
                 pathname === item.href ? "text-navy" : "text-ink/70"
               }`}
             >

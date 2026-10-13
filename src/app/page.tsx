@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { capabilities, followUp, journey, positioning, solutionPolicy } from "@/lib/solutions";
 import { CtaBand } from "@/components/CtaBand";
 import { Photo } from "@/components/Photo";
 import { Arcs, DotGrid } from "@/components/Illustrations";
@@ -29,54 +30,11 @@ import {
 } from "@/components/icons";
 
 /* The offer, in plain terms. */
-const offer = [
-  {
-    title: "A home safety visit",
-    body: "A certified specialist walks through the home with you and finds what's actually risky: loose rugs, poor lighting, a bathroom that's hard to get in and out of. You get a clear plan and no pressure to buy anything.",
-  },
-  {
-    title: "A safer home",
-    body: "We take care of the changes that matter, from grab bars and better lighting to quiet technology that can tell when someone falls. Most homes are set up in about an hour.",
-  },
-  {
-    title: "Someone looking out, every day",
-    body: "You get a simple daily update: they slept well, they ate, they're moving around like usual. If something looks wrong, you hear about it right away.",
-  },
-];
+const offer = journey;
 
 /* What the system notices, described the way a person would say it. */
-const watchesFor = [
-  {
-    icon: Bell,
-    title: "A fall",
-    body: "If someone falls and doesn't get up, the right people are told right away. No button to press.",
-  },
-  {
-    icon: Moon,
-    title: "Sleep",
-    body: "Restless nights and getting up at 3 a.m. are often the very first sign that something is wrong.",
-  },
-  {
-    icon: Utensils,
-    title: "Meals",
-    body: "When the kitchen goes quiet, meals are usually being skipped. That's worth knowing early.",
-  },
-  {
-    icon: PersonStanding,
-    title: "Getting around",
-    body: "Moving slower, or moving less, tends to show up here before anyone notices it in person.",
-  },
-  {
-    icon: ShowerHead,
-    title: "Daily routines",
-    body: "A change in everyday habits can be an early clue about an infection or a problem worth a check-up.",
-  },
-  {
-    icon: Pill,
-    title: "Medications",
-    body: "Gentle reminders for the pills and the glass of water that are easy to forget.",
-  },
-];
+const watchIcons = [Bell, Moon, Utensils, PersonStanding, ShowerHead, Pill];
+const watchesFor = capabilities.map((item, i) => ({ ...item, icon: watchIcons[i] }));
 
 const crisisScenarios = [
   {
@@ -110,36 +68,15 @@ const stats = [
   },
 ];
 
-const steps = [
-  {
-    title: "We visit",
-    body: "A specialist spends about an hour in the home, gets to know the daily routine, and points out what's risky.",
-  },
-  {
-    title: "We set it up",
-    body: "Small sensors go on a few walls and doors. Nothing to wear, nothing to charge, nothing to remember.",
-  },
-  {
-    title: "You stay in the loop",
-    body: "After a few days it learns what a normal day looks like. From then on you get calm updates, and a fast alert when it really counts.",
-  },
-];
+const steps = followUp;
 
 const audiences = [
-  { icon: Heart, label: "Older adults" },
-  { icon: Users, label: "Families" },
-  { icon: ClipboardCheck, label: "Caregivers" },
-  { icon: Building, label: "Senior communities" },
+  { icon: Heart, label: "Planning for myself", href: "/solutions#planning-myself" },
+  { icon: Users, label: "Helping a parent", href: "/solutions#helping-parent" },
+  { icon: ClipboardCheck, label: "Professional / care provider", href: "/partners" },
 ];
 
-const partners = [
-  { src: "/partners/talius.png", alt: "Talius" },
-  { src: "/partners/ciap.png", alt: "CIAP" },
-  { src: "/partners/adi.png", alt: "ADI" },
-  { src: "/partners/portal-io.png", alt: "Portal.io" },
-  { src: "/partners/wave.jpg", alt: "WAVE" },
-  { src: "/partners/snap-one.jpg", alt: "Snap One" },
-];
+const partners = solutionPolicy.partnerLogosApproved ? [{ src: "/partners/talius.png", alt: "Talius" }] : [];
 
 export default function HomePage() {
   return (
@@ -161,10 +98,9 @@ export default function HomePage() {
               Stay in the <span className="text-blue">home you love</span>.
             </h1>
             <p className="lead mt-6 max-w-xl">
-              MyIntel helps older adults live safely on their own, and helps
-              families stop worrying. We make the home safer, then quietly look
-              out for it, so small problems get caught before they turn into
-              emergencies.
+              MyIntel helps older adults and families plan for safer living at home.
+              We assess the person and home, address practical risks, then recommend
+              technology and support that fit your needs and preferences.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a
@@ -185,7 +121,7 @@ export default function HomePage() {
               Free to view your results. No account needed.
             </p>
             <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-bold text-clay">
-              {["No cameras", "Nothing to wear", "Set up in about an hour"].map(
+              {["Core monitoring without cameras", "No wearable required", "Chosen for your home"].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-blue" />
@@ -216,7 +152,7 @@ export default function HomePage() {
                   Private by design
                 </p>
                 <p className="text-xs font-semibold text-clay">
-                  No cameras. Ever.
+                  Your choices come first.
                 </p>
               </div>
             </div>
@@ -263,11 +199,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="border-y border-ink/8 bg-white">
+      {/* Logos stay hidden until use and relationship descriptions are approved. */}
+      {partners.length > 0 && <section className="border-y border-ink/8 bg-white">
         <div className="container-x py-10">
           <p className="text-center text-xs font-extrabold uppercase tracking-[0.2em] text-clay">
-            Powered by proven care technology
+            Our technology partner
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
             {partners.map(({ src, alt }) => (
@@ -281,7 +217,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* The crisis we're preventing */}
       <section className="section">
@@ -351,15 +287,16 @@ export default function HomePage() {
               <p className="font-display text-2xl font-extrabold text-navy">
                 ~1 hour
               </p>
-              <p className="text-xs font-bold text-clay">Typical setup</p>
+              <p className="text-xs font-bold text-clay">A typical assessment visit</p>
             </div>
           </div>
 
           <div>
-            <p className="eyebrow">What you get</p>
+            <p className="eyebrow">Assess · Improve · Protect</p>
             <h2 className="statement mt-4">
-              Three things that keep someone safely at home.
+              Understand the risks. Make a practical plan.
             </h2>
+            <p className="mt-5 text-lg font-semibold text-navy">{positioning.principle}</p>
             <ol className="mt-10 space-y-8">
               {offer.map((item, i) => (
                 <li key={item.title} className="relative flex gap-5">
@@ -374,7 +311,7 @@ export default function HomePage() {
                   </span>
                   <div>
                     <h3 className="font-display text-xl font-extrabold text-ink">
-                      {item.title}
+                      {item.label}: {item.title}
                     </h3>
                     <p className="mt-2 leading-relaxed text-clay">{item.body}</p>
                   </div>
@@ -391,6 +328,7 @@ export default function HomePage() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
+            <Link href="/solutions" className="mt-3 inline-flex min-h-11 items-center font-bold text-navy underline underline-offset-4">Compare MyIntel levels of support</Link>
           </div>
         </div>
       </section>
@@ -406,15 +344,15 @@ export default function HomePage() {
             <p className="lead mt-6">
               Caring for a parent from across town, or across the country,
               turns into a second job: the check-in calls, the guessing, the
-              late-night drive over just to make sure. MyIntel carries that
-              weight for you.
+              late-night drive over just to make sure. MyIntel helps you share that
+              responsibility, with an agreed plan and updates from the features you choose.
             </p>
             <ul className="mt-8 space-y-4">
               {[
-                "Know they're okay without having to ask",
-                "Sleep through the night without wondering",
+                "Notice changes that may call for a check-in",
+                "Agree who receives updates and what to do next",
                 "Share updates with siblings and caregivers, so it isn't all on you",
-                "Step in early, instead of reacting to a crisis",
+                "Use changes in routines to start a helpful conversation",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-blue text-white">
@@ -444,10 +382,11 @@ export default function HomePage() {
       <section className="section">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div>
-            <p className="eyebrow">How it works</p>
+            <p className="eyebrow">Practical follow-up</p>
             <h2 className="statement mt-4">
-              Simple to set up. Nothing to learn.
+              We don&apos;t stop at the alert.
             </h2>
+            <p className="lead mt-6">A change needs a next step. As part of an agreed service plan, we help clarify who checks the concern, who acts and who follows up. Monitoring does not replace emergency services or clinical care.</p>
             <ol className="mt-10 space-y-8">
               {steps.map((step, i) => (
                 <li key={step.title} className="relative flex gap-5">
@@ -496,12 +435,12 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <p className="eyebrow !text-gold">What it watches for</p>
             <h2 className="statement mt-4 !text-cream">
-              It notices what you would, if you were there.
+              Notice changes with the right equipment.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-cream/75">
-              No cameras. No microphones. No wristband to charge. Just small
-              sensors that pick up on movement and everyday patterns, and let
-              someone know when those patterns change.
+              Depending on the system recommended for the home, these features
+              can help agreed contacts notice changes. No wearable is required.
+              We confirm what is included, what it can detect and its limits before installation.
             </p>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -528,18 +467,18 @@ export default function HomePage() {
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div>
             <p className="eyebrow">The daily update</p>
-            <h2 className="statement mt-4">One screen. The whole picture.</h2>
+            <h2 className="statement mt-4">A clearer view of everyday patterns.</h2>
             <p className="lead mt-6">
-              Open the app and see how the day is going, in plain language. No
-              charts to figure out, and no alarms going off over nothing. If a
-              professional care team is involved, they can dig deeper when they
-              need to.
+              See information from the features installed in your home.
+              It can help you decide when to check in, but it does not diagnose
+              a problem or confirm that someone is safe. We agree which family
+              members or care providers should receive updates.
             </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {[
-                "How they slept",
-                "Whether they've eaten",
-                "How much they're moving",
+                "Sleep patterns, with supported sensing",
+                "Kitchen and meal-related activity",
+                "Movement detected in covered spaces",
                 "Anything that needs attention",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -597,18 +536,19 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <span className="text-sm font-extrabold uppercase tracking-widest text-clay">
-              We help
+              Your starting point
             </span>
-            {audiences.map(({ icon: AudienceIcon, label }) => (
-              <div
+            {audiences.map(({ icon: AudienceIcon, label, href }) => (
+              <Link
                 key={label}
-                className="flex items-center gap-2.5 rounded-full border border-ink/10 bg-white px-4 py-2.5 shadow-sm"
+                href={href}
+                className="flex min-h-11 items-center gap-2.5 rounded-full border border-ink/10 bg-white px-4 py-2.5 shadow-sm underline underline-offset-4 hover:bg-sky"
               >
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-sky text-navy">
                   <AudienceIcon className="h-4 w-4" />
                 </span>
                 <span className="text-sm font-bold text-ink/80">{label}</span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -633,12 +573,12 @@ export default function HomePage() {
               {
                 icon: ShieldCheck,
                 title: "Private by design",
-                body: "No cameras, ever. We look at patterns, not people. Nobody is watching your mom or dad, and nothing is recorded.",
+                body: "Our core monitoring doesn't require cameras. MyIntel monitors patterns, not people. We explain data collection and optional communication features before you choose them.",
               },
               {
                 icon: Activity,
-                title: "Proven technology",
-                body: "The sensors we install are already trusted by senior living communities and professional care providers around the world.",
+                title: "Technology that fits",
+                body: "We select technology around the risks and preferences identified in your assessment. Coverage, capabilities and response arrangements are confirmed for your plan.",
               },
             ].map(({ icon: TrustIcon, title, body }) => (
               <div key={title} className="px-2 text-center sm:px-8">

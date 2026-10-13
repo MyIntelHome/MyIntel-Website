@@ -29,6 +29,7 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li><Link href="/careers" className="text-cream/70 transition-colors hover:text-cream">Careers</Link></li>
           </ul>
         </div>
 

@@ -43,8 +43,28 @@ const faqGroups: { category: string; items: { q: string; a: string }[] }[] = [
         a: "Smart door locks, video doorbells for security, smart thermostats, motion sensor lighting, smart medication dispensers, and smart home assistants are among the most valuable, alongside passive monitoring like MyIntel's sensor platform.",
       },
       {
-        q: "Does MyIntel use cameras or wearables?",
-        a: "No. MyIntel is built privacy-first: discreet in-home sensors learn daily routines without recording video or requiring anything to be worn or charged. Families see calm summaries and alerts, never surveillance footage.",
+        q: "Do I have to wear anything?",
+        a: "No. MyIntel offers configurations that do not require a wearable. For people who want another layer of personal protection, optional wearable fall detection or emergency activation may be considered. We confirm device availability, coverage and suitability before you choose.",
+      },
+      {
+        q: "Does MyIntel use cameras?",
+        a: "Our core monitoring doesn't require cameras. Optional customer-controlled smart-home or security products are separate choices. Voice-capable communication hubs may use a microphone for calls. We explain the features, data collection and choices for your plan before installation.",
+      },
+      {
+        q: "How does MyIntel decide what technology I need?",
+        a: "We start with the person and home. HomeCheck provides a starting point from your answers, with professional assessment when appropriate. We address physical risks first, then recommend the least intrusive technology that fits your needs and preferences.",
+      },
+      {
+        q: "Can the system change as someone's needs change?",
+        a: "Yes. We can review the plan and discuss changes over time. Additions depend on compatibility, service availability and your preferences. We confirm the equipment, costs and any changes to data collection before proceeding.",
+      },
+      {
+        q: "Does every MyIntel system measure sleep, meals or vital signs?",
+        a: "No. Features depend on the installed equipment. Sleep information requires supported sleep sensing. Kitchen activity does not confirm that someone ate, and medication reminders do not confirm a dose was taken. Vital-sign measurements require suitable dedicated equipment and a confirmed service arrangement.",
+      },
+      {
+        q: "How does fall protection work?",
+        a: "Different plans may use non-camera room-level sensing, optional wearable fall detection or a personal alarm. Coverage and detection limits vary. No system guarantees every fall will be detected. Alert contacts and response arrangements are confirmed for your plan, and in-home protection does not automatically cover time away from home.",
       },
     ],
   },

@@ -25,8 +25,12 @@ export default function PrivacyPage() {
             When you contact us, join our waitlist, or subscribe to updates, we
             collect the information you provide, such as your name, email
             address, and phone number. If you use the MyIntel platform, our
-            sensors collect activity and routine data from the home. We never
-            record video or audio of you or your loved ones.
+            selected devices collect the activity, routine or other information
+            supported by your configuration. Our core monitoring does not require
+            cameras. Optional security products and voice-capable hubs have
+            different data collection and communication features. A voice-capable
+            hub may use a microphone for calls. We explain these features and
+            relevant provider privacy terms before installation.
           </p>
         </div>
         <div>
@@ -57,7 +61,7 @@ export default function PrivacyPage() {
             or call {site.phone}.
           </p>
         </div>
-        <p className="text-base">Last updated: July 2026</p>
+        <p className="text-base">Last updated: October 13, 2026</p>
       </section>
     </>
   );

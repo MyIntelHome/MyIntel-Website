@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { positioning } from "@/lib/solutions";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Photo } from "@/components/Photo";
 import {
@@ -56,11 +58,11 @@ const processSteps = [
   },
   {
     title: "Get a plain list",
-    body: "Clear recommendations, sorted by what matters most, with what each one costs. Nothing hidden, nothing upsold.",
+    body: "Clear recommendations, sorted by what matters most, with costs explained before work begins. Physical improvements come first, with suitable technology where it helps.",
   },
   {
     title: "We do the work",
-    body: "Pick what you want done. We handle the installation, show you how it all works, and stay available afterward.",
+    body: "Choose the changes you want. We handle agreed installation, explain the equipment and set out who receives updates and what happens next.",
   },
 ];
 
@@ -133,6 +135,12 @@ export default function AssessmentsPage() {
             </a>
           </article>
         </div>
+      </section>
+
+      <section className="container-x pb-10">
+        <p className="max-w-3xl text-lg font-semibold text-navy">{positioning.principle}</p>
+        <p className="mt-4 max-w-3xl leading-relaxed text-clay">HomeCheck identifies starting points from your answers. A professional review can help confirm priorities, then shape home improvements and a suitable MyIntel configuration.</p>
+        <Link href="/solutions" className="mt-4 inline-flex min-h-11 items-center font-bold text-navy underline underline-offset-4">Compare levels of ongoing support</Link>
       </section>
 
       {/* What we look at */}

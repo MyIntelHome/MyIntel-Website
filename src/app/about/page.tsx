@@ -20,7 +20,7 @@ const values = [
   {
     icon: EyeOff,
     title: "Privacy comes first",
-    body: "No cameras, no wearables, nobody watching. Safety should never cost someone their dignity, and we won't build anything that asks them to make that trade.",
+    body: "MyIntel monitors patterns, not people. Our core monitoring doesn't require cameras, and no wearable is required. We explain optional protection and communication features so each person can choose what fits.",
   },
   {
     icon: Heart,
@@ -67,9 +67,9 @@ export default function AboutPage() {
             </p>
             <p>
               What started as one family&apos;s fix turned into the whole
-              company. Today MyIntel does the same two things for other
-              families: make the house itself safer, and keep an eye on the
-              everyday patterns that tell you how someone is really doing.
+              company. Today MyIntel starts with assessment, helps make the home
+              safer, and recommends the least intrusive suitable technology.
+              Different people and homes need different levels of support.
             </p>
           </div>
 
