@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 import { SolutionComparison } from "@/components/SolutionComparison";
-import { HomeScene } from "@/components/Illustrations";
+import { EditorialImage } from "@/components/EditorialImage";
 import { capabilities, positioning, solutionPolicy } from "@/lib/solutions";
 
 export const metadata: Metadata = {
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 };
 export default function SolutionsPage() {
   return <>
-    <PageHero eyebrow="How we help" title="The right help for your home." body="Start with what you need today. We can review your plan as your needs change." />
+    <PageHero eyebrow="Levels of support" title="The right help for your home." body="Start with what you need today. We can review your plan as your needs change." />
     <section className="container-x pb-16 pt-8">
       <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-clay">We learn what matters to you, look for risks in the home, and recommend practical support. You choose what feels right.</p>
       <div className="mt-10"><SolutionComparison /></div>
       <p className="mx-auto mt-7 max-w-3xl text-center text-lg leading-relaxed text-clay">These are levels of support. Equipment, features, availability and costs are confirmed after your assessment.</p>
     </section>
     <section className="bg-sand"><div className="container-x grid items-center gap-10 py-16 lg:grid-cols-2">
-      <HomeScene className="mx-auto w-full max-w-sm" />
+      <EditorialImage src="/photos/editorial/homecheck-rooms.png" alt="Conceptual cutaway of a comfortable home showing its different rooms" className="aspect-[3/2] rounded-3xl" />
       <div><h2 className="font-display text-3xl font-extrabold text-navy sm:text-4xl">Your home. Your choices.</h2>
       <p className="mt-5 text-xl leading-relaxed text-clay">No wearable required. Some people prefer quiet monitoring around the home. Others want to discuss an optional personal alarm or wearable fall detector.</p>
       <p className="mt-5 text-lg leading-relaxed text-clay">{positioning.principle}</p>

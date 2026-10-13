@@ -18,11 +18,12 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
               className={`inline-flex min-h-11 items-center whitespace-nowrap text-lg font-bold transition-colors hover:text-navy ${
                 pathname === item.href ? "text-navy" : "text-ink/70"
               }`}
@@ -64,6 +65,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
                   onClick={() => setOpen(false)}
                   className={`block border-b border-ink/5 py-3.5 text-lg font-bold ${
                     pathname === item.href ? "text-navy" : "text-ink/80"

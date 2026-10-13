@@ -2,9 +2,10 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { capabilities, followUp, journey, positioning, solutionPolicy } from "@/lib/solutions";
 import { CtaBand } from "@/components/CtaBand";
-import { Photo } from "@/components/Photo";
-import { Arcs, DotGrid, HomeScene } from "@/components/Illustrations";
-import { SupportIllustration } from "@/components/SupportIllustration";
+import { Arcs } from "@/components/Illustrations";
+import { EditorialHero } from "@/components/EditorialHero";
+import { EditorialImage } from "@/components/EditorialImage";
+import { AudiencePaths } from "@/components/AudiencePaths";
 import {
   Activity,
   ArrowRight,
@@ -71,94 +72,28 @@ const stats = [
 
 const steps = followUp;
 
-const audiences = [
-  { icon: Heart, label: "Planning for myself", href: "/solutions#planning-myself" },
-  { icon: Users, label: "Helping a parent", href: "/solutions#helping-parent" },
-  { icon: ClipboardCheck, label: "Professional / care provider", href: "/partners" },
-];
+
 
 const partners = solutionPolicy.partnerLogosApproved ? [{ src: "/partners/talius.png", alt: "Talius" }] : [];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="absolute -right-40 top-0 h-[34rem] w-[34rem] rounded-full bg-sky/70 blur-3xl"
-        />
-        <DotGrid className="pointer-events-none absolute left-0 top-24 h-64 w-64 text-sky-dark/25" />
-        <div className="container-x relative grid items-center gap-14 pb-20 pt-14 lg:grid-cols-2 lg:pb-28 lg:pt-24">
-          <div>
-            <p className="eyebrow">
-              <Sparkles className="h-4 w-4" />
-              Safer, Smarter Care
-            </p>
-            <h1 className="statement mt-5 text-5xl sm:text-6xl lg:text-7xl">
-              Stay in the <span className="text-blue">home you love</span>.
-            </h1>
-            <p className="lead mt-6 max-w-xl">
-              We help make your home safer and choose support that fits your life.
-              Start with a free home check, at your own pace.
-            </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a
-                href={site.homeCheckUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                Start a free home check
-                <ArrowRight className="h-5 w-5" />
-              </a>
-              <a href={site.phoneHref} className="btn-outline">
-                <Phone className="h-5 w-5" />
-                {site.phone}
-              </a>
-            </div>
-            <p className="mt-4 text-sm font-semibold text-clay">
-              Free to view your results. No account needed.
-            </p>
-            <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-bold text-clay">
-              {["Core monitoring without cameras", "No wearable required", "Chosen for your home"].map(
-                (item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-blue" />
-                    {item}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          <div className="relative mx-auto w-full max-w-lg">
-            <div
-              aria-hidden="true"
-              className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-sky via-cream to-blue/15"
-            />
-            <div className="relative rounded-[2rem] border border-white bg-white p-7 shadow-lg shadow-navy/10">
-              <HomeScene className="mx-auto w-full max-w-sm" />
-              <p className="mt-3 text-center text-xl font-bold text-navy">Your rooms. Your routine.</p>
-              <p className="mt-2 text-center text-lg text-clay">A plan that fits your home.</p>
-            </div>
-            <div className="absolute -left-4 -bottom-5 flex items-center gap-3 rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-blue/15 text-blue">
-                <EyeOff className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-sm font-extrabold text-ink">
-                  Private by design
-                </p>
-                <p className="text-xs font-semibold text-clay">
-                  Your choices come first.
-                </p>
-              </div>
-            </div>
-          </div>
+      <EditorialHero
+        eyebrow="Safer living at home"
+        title={<>Stay in the <span className="text-blue">home you love</span>.</>}
+        body="Keep the routines, connections and independence that matter to you. MyIntel helps make the home safer and chooses support around the way you live."
+        image="/photos/editorial/home-independence.png"
+        alt="Illustrative photograph of an older woman enjoying a quiet morning at home"
+      >
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <a href={site.homeCheckUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a free home check <ArrowRight className="h-5 w-5" /></a>
+          <a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a>
         </div>
-      </section>
-
+        <p className="mt-5 text-base text-clay">Free to view your results. No account needed.</p>
+        <p className="mt-3 text-base font-semibold text-navy">No wearable required. Your choices come first.</p>
+      </EditorialHero>
+      <AudiencePaths />
 
       {/* HomeCheck introduction */}
       <section aria-labelledby="homecheck-title" className="border-y border-blue/20 bg-sky">
@@ -180,7 +115,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="rounded-3xl border border-blue/15 bg-white p-7 sm:p-8">
-            <SupportIllustration kind="complete" className="mx-auto mb-5 w-full max-w-[240px]" />
+            <EditorialImage src="/photos/editorial/homecheck-rooms.png" alt="Conceptual cutaway of a home with a kitchen, bedroom, living room and bathroom" className="mb-6 aspect-[3/2] rounded-2xl" />
             <p className="font-display text-2xl font-extrabold text-navy">One step at a time</p>
             <ul className="mt-5 space-y-4">
               {["Choose your rooms", "Answer yes, no, or not sure", "Review your next steps"].map((item) => (
@@ -276,12 +211,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div className="relative">
-            <Photo
-              src="/photos/home-assessment.jpg"
-              alt="A MyIntel specialist going over a home safety plan with an older adult at her kitchen table"
-              label="Home visit photo"
-              className="aspect-[4/3] rounded-3xl shadow-[0_20px_60px_-20px_rgba(20,36,60,0.35)]"
-            />
+            <EditorialImage src="/photos/editorial/home-visit.png" alt="Illustrative photograph of a home specialist and older adult discussing a plan" className="aspect-[4/3] rounded-3xl" />
             <div className="absolute -bottom-5 -right-5 hidden rounded-2xl border border-ink/8 bg-white px-5 py-4 shadow-xl shadow-navy/10 sm:block">
               <p className="font-display text-2xl font-extrabold text-navy">
                 ~1 hour
@@ -367,12 +297,7 @@ export default function HomePage() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <Photo
-              src="/photos/family-couch.jpg"
-              alt="An adult daughter and her mother talking and laughing together at home"
-              label="Family photo"
-              className="aspect-[16/10] rounded-3xl shadow-[0_20px_60px_-20px_rgba(20,36,60,0.3)]"
-            />
+            <EditorialImage src="/photos/editorial/family-connection.png" alt="Illustrative photograph of a father and daughter enjoying a family album" className="aspect-[4/3] rounded-3xl" />
           </div>
         </div>
       </section>
@@ -417,7 +342,7 @@ export default function HomePage() {
           </div>
 
           <div>
-            <SupportIllustration kind="protect" className="mx-auto w-full max-w-lg" />
+            <EditorialImage src="/photos/editorial/home-visit.png" alt="Illustrative photograph of a specialist discussing a home plan with an older adult" className="aspect-[4/3] rounded-3xl" />
             <p className="mt-4 text-center text-xl font-bold text-navy">Support around the person and home</p>
           </div>
         </div>
@@ -492,12 +417,7 @@ export default function HomePage() {
               aria-hidden="true"
               className="absolute -inset-4 rounded-[2.5rem] bg-sky/50 blur-2xl"
             />
-            <Photo
-              src="/photos/product-dashboard.jpg"
-              alt="The MyIntel daily update shown on a tablet and a phone"
-              label="Dashboard photo"
-              className="relative aspect-[4/3] rounded-3xl border border-white/60 shadow-[0_30px_70px_-25px_rgba(20,36,60,0.4)]"
-            />
+            <EditorialImage src="/photos/editorial/family-connection.png" alt="Illustrative photograph of a father and daughter enjoying time together" className="aspect-[4/3] rounded-3xl" />
           </div>
         </div>
       </section>
@@ -531,23 +451,7 @@ export default function HomePage() {
             </div>
           </figure>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <span className="text-sm font-extrabold uppercase tracking-widest text-clay">
-              Your starting point
-            </span>
-            {audiences.map(({ icon: AudienceIcon, label, href }) => (
-              <Link
-                key={label}
-                href={href}
-                className="flex min-h-11 items-center gap-2.5 rounded-full border border-ink/10 bg-white px-4 py-2.5 shadow-sm underline underline-offset-4 hover:bg-sky"
-              >
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-sky text-navy">
-                  <AudienceIcon className="h-4 w-4" />
-                </span>
-                <span className="text-sm font-bold text-ink/80">{label}</span>
-              </Link>
-            ))}
-          </div>
+
         </div>
       </section>
 

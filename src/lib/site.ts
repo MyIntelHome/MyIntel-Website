@@ -16,16 +16,17 @@ export const site = {
 };
 
 export const nav = [
-  { label: "How we help", href: "/solutions" },
-  { label: "Home safety", href: "/assessments" },
+  { label: "For families", href: "/families" },
+  { label: "For partners", href: "/partners" },
+  { label: "How it works", href: "/how-it-works" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerNav = [
   ...nav,
-  { label: "How it works", href: "/how-it-works" },
+  { label: "Levels of support", href: "/solutions" },
+  { label: "HomeCheck & assessments", href: "/assessments" },
   { label: "About MyIntel", href: "/about" },
   { label: "Common questions", href: "/faq" },
-  { label: "For care partners", href: "/partners" },
 ];
 
