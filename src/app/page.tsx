@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { Arcs } from "@/components/Illustrations";
 import { EditorialHero } from "@/components/EditorialHero";
 import { EditorialImage } from "@/components/EditorialImage";
+import { PackagePreview } from "@/components/SolutionComparison";
 import { AudiencePaths } from "@/components/AudiencePaths";
 import {
   Activity,
@@ -83,15 +84,15 @@ export default function HomePage() {
         eyebrow="Safer living at home"
         title={<>Stay in the <span className="text-blue">home you love</span>.</>}
         body="Keep the routines, connections and independence that matter to you. MyIntel helps make the home safer and chooses support around the way you live."
-        image="/photos/editorial/home-independence.png"
-        alt="Illustrative photograph of an older woman enjoying a quiet morning at home"
+        image="/photos/packages/kitchen-life.webp"
+        alt="Illustrative older woman preparing a salad, with a manual emergency pendant and a home hub nearby"
       >
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <a href={site.homeCheckUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a free home check <ArrowRight className="h-5 w-5" /></a>
           <a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a>
         </div>
         <p className="mt-5 text-base text-clay">Free to view your results. No account needed.</p>
-        <p className="mt-3 text-base font-semibold text-navy">No wearable required. Your choices come first.</p>
+        <p className="mt-3 text-base font-semibold text-navy">Room sensing works without wearing a device.</p>
       </EditorialHero>
       <AudiencePaths />
 
@@ -257,10 +258,12 @@ export default function HomePage() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
-            <Link href="/solutions" className="mt-3 inline-flex min-h-11 items-center font-bold text-navy underline underline-offset-4">Compare MyIntel levels of support</Link>
+            <Link href="/solutions" className="mt-3 inline-flex min-h-11 items-center font-bold text-navy underline underline-offset-4">Compare MyIntel packages</Link>
           </div>
         </div>
       </section>
+
+      <PackagePreview />
 
       {/* Peace of mind / reduced burden */}
       <section className="bg-sand">
@@ -297,7 +300,7 @@ export default function HomePage() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <EditorialImage src="/photos/editorial/family-connection.png" alt="Illustrative photograph of a father and daughter enjoying a family album" className="aspect-[4/3] rounded-3xl" />
+            <EditorialImage src="/photos/packages/family-dashboard.webp" fit="contain" alt="Illustrative mother and daughter using a phone together with an example MyIntel dashboard" className="aspect-[4/3] rounded-3xl" />
           </div>
         </div>
       </section>
@@ -417,7 +420,8 @@ export default function HomePage() {
               aria-hidden="true"
               className="absolute -inset-4 rounded-[2.5rem] bg-sky/50 blur-2xl"
             />
-            <EditorialImage src="/photos/editorial/family-connection.png" alt="Illustrative photograph of a father and daughter enjoying time together" className="aspect-[4/3] rounded-3xl" />
+            <EditorialImage src="/photos/packages/mobile-dashboard.webp" fit="contain" alt="Illustrative MyIntel phone app with example daily scores and sleep information" className="aspect-[4/3] rounded-3xl" />
+            <p className="mt-4 text-base leading-relaxed text-clay">Illustrative app view. Available information depends on the installed equipment. Sleep information requires SleepSense.</p>
           </div>
         </div>
       </section>

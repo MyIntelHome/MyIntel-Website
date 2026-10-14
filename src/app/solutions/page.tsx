@@ -1,50 +1,108 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
-import { SolutionComparison } from "@/components/SolutionComparison";
 import { EditorialImage } from "@/components/EditorialImage";
-import { capabilities, positioning, solutionPolicy } from "@/lib/solutions";
+import { SolutionComparison, PackageFeatureComparison } from "@/components/SolutionComparison";
+import { positioning } from "@/lib/solutions";
+import { site } from "@/lib/site";
+import { ArrowRight } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Solutions for Staying at Home",
-  description: "Compare MyIntel HomeAware, HomeProtect and HomeComplete. Assessment-first support, home improvements and technology chosen for the person and home.",
+  title: "Home Safety Packages",
+  description: "Compare MyIntel HomeAware, HomeProtect and HomeComplete. Morning reassurance, broader activity and room fall sensing, or added bed and nighttime information.",
+  alternates: { canonical: "/solutions" },
 };
+const questions = [
+  { q: "Do all packages detect falls automatically?", a: "No. HomeAware includes a standard emergency pendant for manual help. It does not automatically detect falls. HomeProtect adds one MDsense room fall detector. HomeComplete has two. Each detector works within its approved coverage area." },
+  { q: "Does one motion sensor show activity throughout the home?", a: "No. HomeAware's single motion sensor is placed where morning activity is likely to be noticed. HomeProtect and HomeComplete each have five motion sensors for broader activity information. The home layout and placement still matter." },
+  { q: "What does voice-activated help mean?", a: "The VPD2 communicator in HomeProtect and HomeComplete adds voice-activated help and extends emergency communication. It is a different device from MDsense and does not add another area of fall detection." },
+  { q: "What does SleepSense add?", a: "HomeComplete includes one SleepSense for one resident's compatible bed. It adds bed occupancy and supported sleep-related information. Motion at night alone is not a measurement of sleep." },
+  { q: "Who responds when someone requests help?", a: positioning.response },
+  { q: "Are grab bars, home modifications or remote-vitals devices included?", a: "These are separately scoped. HomeComplete adds a detailed safety plan and scheduled follow-up, with timing agreed together. Physical work and remote-vitals equipment have their own scope and costs." },
+];
+
 export default function SolutionsPage() {
   return <>
-    <PageHero eyebrow="Levels of support" title="The right help for your home." body="Start with what you need today. We can review your plan as your needs change." />
-    <section className="container-x pb-16 pt-8">
-      <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-clay">We learn what matters to you, look for risks in the home, and recommend practical support. You choose what feels right.</p>
-      <div className="mt-10"><SolutionComparison /></div>
-      <p className="mx-auto mt-7 max-w-3xl text-center text-lg leading-relaxed text-clay">These are levels of support. Equipment, features, availability and costs are confirmed after your assessment.</p>
+    <section className="package-hero">
+      <div className="container-x package-hero-grid">
+        <div>
+          <p className="eyebrow">MyIntel packages</p>
+          <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">Choose the support that fits your home.</h1>
+          <p className="mt-6 max-w-xl text-xl leading-relaxed text-clay">A reassuring start to the morning. More awareness around the home. Extra support at night. Choose what matters to you today.</p>
+          <a href="#compare" className="package-jump mt-8">Explore the three packages <ArrowRight aria-hidden="true" className="h-5 w-5" /></a>
+          <p className="mt-5 text-lg text-clay">We help you choose. You don&apos;t need to know the devices.</p>
+        </div>
+        <figure className="package-hero-photo">
+          <EditorialImage src="/photos/packages/plant-care.webp" alt="Illustrative older man watering plants in his home, with MyIntel support devices nearby." className="aspect-[5/4] rounded-[2rem]" priority sizes="(min-width: 1024px) 50vw, 100vw" />
+          <figcaption className="package-photo-caption">Keep enjoying your everyday life.</figcaption>
+        </figure>
+      </div>
     </section>
-    <section className="bg-sand"><div className="container-x grid items-center gap-10 py-16 lg:grid-cols-2">
-      <EditorialImage src="/photos/editorial/homecheck-rooms.png" alt="Conceptual cutaway of a comfortable home showing its different rooms" className="aspect-[3/2] rounded-3xl" />
-      <div><h2 className="font-display text-3xl font-extrabold text-navy sm:text-4xl">Your home. Your choices.</h2>
-      <p className="mt-5 text-xl leading-relaxed text-clay">No wearable required. Some people prefer quiet monitoring around the home. Others want to discuss an optional personal alarm or wearable fall detector.</p>
-      <p className="mt-5 text-lg leading-relaxed text-clay">{positioning.principle}</p>
-      <p className="mt-5 text-lg leading-relaxed text-clay">We explain what each option can detect, where it works, and who receives an alert.</p></div>
-    </div></section>
-    <section className="mx-auto max-w-4xl px-6 py-16">
-      <h2 className="font-display text-3xl font-extrabold text-navy">Questions about the technology?</h2>
-      <p className="mt-4 text-xl leading-relaxed text-clay">You don&apos;t need to choose devices yourself. These details are here when you want them.</p>
-      <div className="mt-7 space-y-4">{capabilities.map(c => <details key={c.id} className="rounded-2xl border border-ink/10 bg-white px-6">
-        <summary className="cursor-pointer py-5 text-xl font-bold text-navy">{c.title}</summary><p className="pb-6 text-lg leading-relaxed text-clay">{c.body}</p>
-      </details>)}</div>
-      <details className="mt-4 rounded-2xl border border-ink/10 bg-white px-6"><summary className="cursor-pointer py-5 text-xl font-bold text-navy">Coverage and response</summary>
-        <div className="space-y-4 pb-6 text-lg leading-relaxed text-clay"><p>{positioning.response}</p><p>Detection and alerts cannot guarantee that every fall will be detected or help will arrive. In-home protection does not automatically include GPS or protection away from home. Monitoring does not replace emergency services or clinical care.</p>
-        {solutionPolicy.advancedVitalsVerified && <p>Supported remote-vitals equipment requires an agreed plan for reviewing measurements.</p>}
-        <p>Changes to your system depend on compatible equipment and service availability. We explain new costs and data collection before proceeding.</p></div>
+
+    <section id="compare" className="container-x package-section scroll-mt-28" aria-labelledby="package-heading">
+      <div className="package-section-heading">
+        <div><p className="eyebrow">Find your starting point</p><h2 id="package-heading" className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">Three ways to support everyday life.</h2></div>
+        <p className="max-w-lg text-lg leading-relaxed text-clay">Each package includes an Essence hub and a standard emergency pendant. Broader sensing is added as you move through the packages.</p>
+      </div>
+      <div className="mt-10"><SolutionComparison /></div>
+      <p className="mt-7 max-w-3xl text-lg leading-relaxed text-clay">Installation, service costs, availability and response arrangements are confirmed for your home before you commit.</p>
+      <details className="package-comparison-details">
+        <summary>Compare every device and service <span aria-hidden="true">+</span></summary>
+        <PackageFeatureComparison />
       </details>
     </section>
-    <section className="bg-sand"><div className="container-x py-16">
-      <h2 className="font-display text-3xl font-extrabold text-navy">Start where you are.</h2>
-      <div className="mt-7 grid gap-6 md:grid-cols-2">
-        <article id="planning-myself" className="card scroll-mt-28 p-7"><h3 className="font-display text-2xl font-bold">Planning for myself</h3><p className="mt-4 text-lg leading-relaxed text-clay">Choose the rooms and routines that matter to you. You decide what changes to make and who to involve.</p></article>
-        <article id="helping-parent" className="card scroll-mt-28 p-7"><h3 className="font-display text-2xl font-bold">Helping a parent</h3><p className="mt-4 text-lg leading-relaxed text-clay">Take HomeCheck together where possible. Start with their priorities and agree who should receive updates.</p></article>
+
+    <section className="package-setting-section">
+      <div className="container-x grid items-center gap-10 py-16 lg:grid-cols-2 lg:py-24">
+        <figure>
+          <EditorialImage src="/photos/packages/home-layout.webp" fit="contain" alt="Illustrative cutaway home with examples of motion sensing, room fall sensing, a home hub and a voice communicator." className="aspect-[3/2] rounded-3xl" />
+          <figcaption className="mt-4 text-base leading-relaxed text-clay">Illustrative layout. Device numbers, locations and coverage are checked for the chosen package.</figcaption>
+        </figure>
+        <div>
+          <p className="eyebrow">Thoughtfully placed</p>
+          <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">The right devices, in the places that matter.</h2>
+          <p className="mt-6 text-xl leading-relaxed text-clay">The home layout makes a difference. We discuss the rooms, entrances and routines that matter most, then check suitable device locations.</p>
+          <ol className="package-placement-list">
+            <li><span>1</span><div><h3>Understand your day</h3><p>Start with morning activity, frequently used rooms and your main concerns.</p></div></li>
+            <li><span>2</span><div><h3>Check the coverage</h3><p>Agree the selected areas for fall sensing and check bed compatibility when SleepSense is included.</p></div></li>
+            <li><span>3</span><div><h3>Agree who can help</h3><p>Choose the contacts and response arrangements before installation.</p></div></li>
+          </ol>
+        </div>
       </div>
-      <Link href="/partners" className="mt-6 inline-flex min-h-12 items-center text-lg font-bold text-navy underline underline-offset-4">Information for care and community partners</Link>
-    </div></section>
-    <CtaBand title="Start with a free home check" body="Answer simple questions about your home. See practical next steps, with no payment to view your results." />
+    </section>
+
+    <section className="container-x package-section">
+      <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+        <div>
+          <p className="eyebrow">Information you can use</p>
+          <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">A clearer picture, at your own pace.</h2>
+          <p className="mt-6 text-xl leading-relaxed text-clay">The information available follows the equipment in your home. Morning activity is a starting point. More sensors add context. SleepSense adds supported bed and sleep information.</p>
+          <ul className="mt-7 space-y-5 text-lg leading-relaxed text-clay">
+            <li><strong className="text-navy">HomeAware:</strong> focus on morning activity reassurance and manual help.</li>
+            <li><strong className="text-navy">HomeProtect:</strong> add activity information from more rooms, one area of fall sensing and voice help.</li>
+            <li><strong className="text-navy">HomeComplete:</strong> add a second area of fall sensing, bed information, a detailed safety plan and scheduled follow-up.</li>
+          </ul>
+          <p className="mt-6 text-lg leading-relaxed text-clay">These updates support a conversation and an agreed plan. They do not diagnose a health problem or confirm that someone is safe.</p>
+        </div>
+        <figure className="package-app-figure">
+          <Image src="/photos/packages/mobile-dashboard.webp" alt="Illustrative MyIntel app on a phone, showing example daily scores, activity and sleep information." width={1024} height={1536} className="h-auto max-h-[580px] w-auto max-w-full object-contain" sizes="(min-width: 1024px) 420px, 80vw" />
+          <figcaption className="mt-4 max-w-sm text-center text-base leading-relaxed text-clay">Illustrative app view with example data. Available screens and information depend on the installed system. Sleep information requires SleepSense.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section className="package-setting-section">
+      <div className="container-x grid items-center gap-10 py-16 lg:grid-cols-2">
+        <div><p className="eyebrow">You choose the next step</p><h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">Start with your home, then choose the package.</h2><p className="mt-6 text-xl leading-relaxed text-clay">HomeCheck helps you see a practical starting point. If you already know you want support, request help and we can discuss a suitable package and installation.</p><a href={site.homeCheckUrl + "/?view=help"} className="mt-6 inline-flex min-h-12 items-center gap-3 font-bold text-navy underline underline-offset-4">Ask about a package or installation <ArrowRight aria-hidden="true" className="h-5 w-5" /></a><Link href="/families" className="mt-3 flex min-h-12 items-center font-bold text-navy underline underline-offset-4">Helping a parent? Read our family guide.</Link></div>
+        <EditorialImage src="/photos/packages/family-dashboard.webp" fit="contain" alt="Illustrative mother and daughter using a phone together, with an example MyIntel dashboard alongside them." className="aspect-[3/2] rounded-3xl" />
+      </div>
+    </section>
+
+    <section className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
+      <p className="eyebrow">Clear answers</p><h2 className="mt-4 font-display text-3xl font-extrabold text-navy">Questions about the packages</h2>
+      <div className="mt-8 space-y-4">{questions.map(f => <details key={f.q} className="rounded-2xl border border-ink/10 bg-white px-6"><summary className="cursor-pointer py-5 text-xl font-bold text-navy">{f.q}</summary><p className="pb-6 text-lg leading-relaxed text-clay">{f.a}</p></details>)}</div>
+    </section>
+    <CtaBand title="Begin with a free home check." body="Answer a few simple questions about the home and get a clear starting point. It's free, and there's no payment to see your results." />
   </>;
 }

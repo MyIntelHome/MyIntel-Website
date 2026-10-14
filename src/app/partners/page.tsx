@@ -17,7 +17,7 @@ const audiences = [
 ];
 export default function PartnersPage() {
   return <>
-    <EditorialHero eyebrow="For care partners" title="Better support starts with the home." body="Work with MyIntel to connect assessment, practical home improvements and appropriate technology with the care your organization provides." image="/photos/editorial/home-visit.png" alt="Illustrative photograph of a home specialist discussing a plan with an older adult">
+    <EditorialHero eyebrow="For care partners" title="Better support starts with the home." body="Work with MyIntel to connect assessment, practical home improvements and appropriate technology with the care your organization provides." image="/photos/packages/care-dashboard.webp" imageFit="contain" alt="Illustrative care professional using a laptop with an example MyIntel activity and sleep dashboard">
       <a href="#partnership-contact" className="btn-primary mt-8">Explore a partnership</a>
     </EditorialHero>
     <section className="bg-sand"><div className="container-x grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">

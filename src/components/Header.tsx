@@ -18,7 +18,7 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 xl:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -33,7 +33,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <a
             href={site.homeCheckUrl}
             target="_blank"
@@ -46,7 +46,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex min-h-12 items-center gap-2 rounded-lg px-3 py-2 font-bold text-ink lg:hidden"
+          className="flex min-h-12 items-center gap-2 rounded-lg px-3 py-2 font-bold text-ink xl:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
@@ -57,7 +57,7 @@ export function Header() {
 
       {open && (
         <nav
-          className="border-t border-ink/8 bg-cream px-5 pb-6 pt-2 lg:hidden"
+          className="border-t border-ink/8 bg-cream px-5 pb-6 pt-2 xl:hidden"
           aria-label="Mobile"
         >
           <ul className="flex flex-col">

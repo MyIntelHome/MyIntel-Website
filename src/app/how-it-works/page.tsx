@@ -35,7 +35,7 @@ const monitors = capabilities.map((c, i) => ({ ...c, icon: [Bell, Moon, Utensils
 
 const privacyPoints = [
   { icon: EyeOff, title: "Core monitoring without cameras", body: "Our core monitoring doesn't require cameras. Optional customer-controlled security products are separate choices, discussed before installation." },
-  { icon: Shield, title: "No wearable required", body: "Ambient monitoring is one option. Personal protection may be an option for people who want a wearable fall detector or a way to call for help. Availability and coverage are confirmed." },
+  { icon: Shield, title: "Room sensing, manual help", body: "Each package includes a standard emergency pendant for manual help. Room sensors work without wearing it. HomeProtect and HomeComplete add fall sensing in selected areas." },
   { icon: Users, title: "Choose who is involved", body: "We agree who receives updates and alerts. Voice-capable hubs may use a microphone for calls or communication. We explain the relevant data collection and privacy choices for the configuration." },
 ];
 
