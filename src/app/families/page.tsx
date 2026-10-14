@@ -4,42 +4,22 @@ import { EditorialHero } from "@/components/EditorialHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
 import { site } from "@/lib/site";
-import { positioning } from "@/lib/solutions";
-import { Phone } from "@/components/icons";
+import { ArrowRight, Phone } from "@/components/icons";
 
-export const metadata: Metadata = {
-  title: "For Families",
-  description: "Help a parent stay at home with practical safety improvements, appropriate monitoring and an agreed plan. Start with MyIntel's free HomeCheck.",
-};
-
-const familyQuestions = [
-  { q: "Where should we start?", a: "Take the free HomeCheck together where possible. It provides a starting point from your answers. A professional visit can help confirm priorities before choosing home improvements or technology." },
-  { q: "Does my parent have to wear a device?", a: "Each package includes a standard emergency pendant for manual help. Room sensors work without wearing it. The standard pendant does not automatically detect falls. We discuss placement, coverage and any additional personal support together." },
-  { q: "Who gets the updates?", a: "We agree who should receive updates and alerts, based on the person's preferences and the selected system. Sharing a HomeCheck with a professional is a separate choice." },
-  { q: "Can MyIntel tell us that someone is safe?", a: "No system can confirm that for certain. The selected equipment can help notice particular changes or events, within its coverage and limits. Personal check-ins and an agreed response plan still matter." },
+export const metadata: Metadata = {title:"For Families",description:"Help a parent stay in the home they love. Share the care, choose who gets updates and find the right MyIntel plan."};
+const questions=[
+ {q:"Does my parent have to wear a button?",a:"Each plan has a help button. They press it to ask for help. Room sensors work without wearing it. The button does not sense falls."},
+ {q:"Who gets news from the home?",a:"You and your parent help choose who gets it. We agree who will help and how before setup."},
+ {q:"Can the tools tell us that they are safe?",a:"No tool can tell you that for sure. A change may be a reason to call. Visits and phone calls still matter."},
 ];
-export default function FamiliesPage() {
-  return <>
-    <EditorialHero eyebrow="For families" title="More time together. A clearer plan for home." body="Supporting a parent can bring a lot of questions. Start with their priorities, understand what needs attention, and choose the right support together." image="/photos/packages/family-dashboard.webp" imageFit="contain" alt="Illustrative mother and daughter using a phone together, with an example MyIntel dashboard">
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href={site.homeCheckUrl} className="btn-primary">Start a free home check</a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div>
-      <p className="mt-5 text-base text-clay">Free to view results. Go at your own pace.</p>
-    </EditorialHero>
-    <section className="bg-sand"><div className="container-x grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
-      <EditorialImage src="/photos/packages/kitchen-life.webp" alt="Illustrative older woman preparing a salad with a home hub nearby" className="aspect-[4/3] rounded-3xl" />
-      <div><p className="eyebrow">Independence comes first</p><h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">You shouldn&apos;t have to call five times a day.</h2><p className="mt-6 text-xl leading-relaxed text-clay">You want to know how things are going. They want to keep living their own life. MyIntel helps you make a plan that respects both.</p><p className="mt-5 text-lg leading-relaxed text-clay">That might begin with better lighting or grab bars. It may include quiet monitoring of selected routines, fall protection or an optional personal alarm. The right combination depends on the person and home.</p></div>
-    </div></section>
-    <section className="container-x py-16 lg:py-24">
-      <div className="max-w-3xl"><p className="eyebrow">A practical way forward</p><h2 className="mt-4 font-display text-3xl font-extrabold text-navy sm:text-4xl">Start with a conversation, then a plan.</h2></div>
-      <ol className="mt-10 grid gap-8 md:grid-cols-3">
-        {[{title:"Understand the home",body:"Use HomeCheck to discuss the rooms, routines and concerns that matter. Ask for a professional review when needed."},{title:"Choose what helps",body:"Agree practical home changes and suitable technology. We explain the options, coverage and costs."},{title:"Know what happens next",body:"Decide who gets updates, who checks a concern and how to follow up. Review the plan as needs change."}].map((s,i)=><li key={s.title} className="border-t-2 border-navy/15 pt-6"><p className="text-base font-bold text-blue">0{i+1}</p><h3 className="mt-3 font-display text-2xl font-bold text-navy">{s.title}</h3><p className="mt-4 text-lg leading-relaxed text-clay">{s.body}</p></li>)}
-      </ol>
-    </section>
-    <section className="bg-sky"><div className="container-x grid items-center gap-12 py-16 lg:grid-cols-2">
-      <div><p className="eyebrow">Your circle of support</p><h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">Keep the right people involved.</h2><p className="mt-6 text-xl leading-relaxed text-clay">Family members and caregivers can play different roles. We agree who receives information and what each person should do when a concern is raised.</p><p className="mt-5 text-lg leading-relaxed text-clay">{positioning.response}</p><p className="mt-5 text-lg leading-relaxed text-clay">Already using home care? We can discuss how MyIntel fits alongside that support, with the person's involvement and clear responsibilities.</p><Link href="/solutions" className="mt-5 inline-flex min-h-12 items-center text-lg font-bold text-navy underline underline-offset-4">Compare the three packages</Link></div>
-      <EditorialImage src="/photos/editorial/home-visit.png" alt="Illustrative photograph of a professional discussing support with an older adult" className="aspect-[4/3] rounded-3xl" />
-    </div></section>
-    <section className="container-x py-12"><p className="text-base leading-relaxed text-clay">Dashboard images are illustrative and show example data. Available information depends on the installed equipment. Sleep information requires SleepSense.</p></section>
-    <section className="mx-auto max-w-4xl px-6 py-16 lg:py-24"><h2 className="font-display text-3xl font-extrabold text-navy">Questions families ask</h2><div className="mt-8 space-y-4">{familyQuestions.map(f=><details key={f.q} className="rounded-2xl border border-ink/10 bg-white px-6"><summary className="cursor-pointer py-5 text-xl font-bold text-navy">{f.q}</summary><p className="pb-6 text-lg leading-relaxed text-clay">{f.a}</p></details>)}</div></section>
-    <CtaBand title="Take the first step together." body="A free home check gives you a practical starting point. Your family chooses what to do next." />
-  </>;
+export default function FamiliesPage(){
+ return <>
+  <EditorialHero eyebrow="For families" title="More time to just be family." body="You want to know how things are going. They want to keep their own life. We help you find a way that works for both." image="/photos/stories/family-time.webp" alt="Illustrative father and daughter sharing tea and a laugh on a porch.">
+   <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href={site.homeCheckUrl} className="btn-primary">Start a free home check</a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div><p className="mt-5 text-lg text-clay">Take it together, at your own pace.</p>
+  </EditorialHero>
+  <section className="story-section story-tint"><div className="container-x story-heading"><div><p className="eyebrow">Their home. Their say.</p><h2 className="story-title mt-4">Help that feels right to them.</h2></div><div className="space-y-5 story-lead"><p>Ask what matters to your parent. What do they want to keep doing? Where would a little help feel good?</p><p>Choose the help with them. Room sensors do not need cameras. Your parent helps choose who gets news from the home.</p></div></div></section>
+  <section className="story-section container-x"><div className="max-w-3xl"><p className="eyebrow">Share the care</p><h2 className="story-title mt-4">You don&apos;t have to do it all.</h2><p className="story-lead mt-5">Family and care staff can share the load. You help choose who gets calls and alerts. We agree who will help and how.</p></div><figure className="m-0 mt-9"><EditorialImage src="/photos/packages/family-dashboard.webp" alt="Example of a mother and daughter with a sample MyIntel screen." fit="contain" className="aspect-[3/2] max-h-[580px] rounded-[2rem]" /><figcaption className="story-caption">Example view. Your screen may differ. Sleep details need the right bed sensor.</figcaption></figure><Link href="/solutions" className="story-link mt-6">Find a plan for their home <ArrowRight aria-hidden="true" className="h-5 w-5" /></Link></section>
+  <section className="story-section story-tint"><div className="container-x story-faq-layout"><div><p className="eyebrow">A few answers</p><h2 className="story-title mt-4">What families ask.</h2></div><div className="simple-faq">{questions.map(f=><details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></div></section>
+  <CtaBand title="Start with one small check." body="Our free home check gives you a place to start. You and your parent can choose what comes next." />
+ </>;
 }

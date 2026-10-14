@@ -3,7 +3,7 @@ export const site = {
   legalName: "MyIntel Co.",
   tagline: "Stay in the home you love",
   description:
-    "MyIntel helps older adults live safely on their own, and helps families stop worrying. We assess risks, improve the home and recommend the least intrusive suitable technology. Packages include a manual emergency pendant, with room sensing selected for your home.",
+    "MyIntel helps you stay in the home you love. Take a free home check or choose a plan with free setup and help after setup.",
   url: "https://myintelhome.com",
   phone: "(720) 989-1123",
   phoneHref: "tel:+17209891123",
@@ -17,16 +17,15 @@ export const site = {
 
 export const nav = [
   { label: "For families", href: "/families" },
+  { label: "For professionals", href: "/partners" },
   { label: "Packages", href: "/solutions" },
-  { label: "For partners", href: "/partners" },
   { label: "How it works", href: "/how-it-works" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerNav = [
   ...nav,
-  { label: "HomeCheck & assessments", href: "/assessments" },
+  { label: "Home checks and visits", href: "/assessments" },
   { label: "About MyIntel", href: "/about" },
   { label: "Common questions", href: "/faq" },
 ];
-

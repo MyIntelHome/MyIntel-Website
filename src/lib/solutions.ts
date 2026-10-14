@@ -5,195 +5,214 @@ export const solutionPolicy = {
 };
 
 export const positioning = {
-  principle: "MyIntel recommends the least intrusive technology that fits the person, the home and the risks we find.",
-  privacy: "Our core monitoring doesn't require cameras.",
-  personalProtection: "Each package includes a standard emergency pendant for manual help. Room sensors work without needing to wear it.",
+  principle: "We choose help that fits you and your home.",
+  privacy: "The room sensors do not need cameras.",
+  personalProtection: "Each plan has a help button. Room sensors work without wearing it.",
   response: solutionPolicy.professionalMonitoringReady
-    ? "Ask about 24/7 professional monitoring. Availability, coverage and response arrangements are confirmed for your configuration."
-    : "We agree who should receive alerts and what to do next. Response arrangements, coverage and availability are confirmed before installation.",
+    ? "Ask about 24/7 professional monitoring. Coverage and response arrangements are confirmed for your plan."
+    : "We choose who gets calls and alerts with you. We agree who will help and how before setup.",
 };
-
-export const journey = [
-  { label: "Assess", title: "Understand the person and home", body: "Start with HomeCheck. A professional visit, when needed, helps us understand your home, routines and concerns." },
-  { label: "Improve", title: "Make everyday life safer", body: "Start with practical changes, such as better lighting or grab bars. Agree on the work and costs before anything begins." },
-  { label: "Protect", title: "Choose the right ongoing support", body: "Choose suitable technology and support. Agree who gets updates and what happens when a concern is raised." },
-];
 
 export const solutions = [
   {
     "id": "homeaware",
     "name": "MyIntel HomeAware",
     "shortName": "HomeAware",
-    "focus": "Morning reassurance",
-    "title": "A reassuring start to the morning.",
-    "audience": "For someone living independently who wants a simple morning activity check and a way to request help.",
-    "scope": "Basic Wake & Well support, with a motion sensor placed where morning activity is likely to be noticed.",
+    "focus": "A morning check",
+    "title": "Start your day with a little help.",
+    "audience": "For a morning check and a way to call for help.",
+    "scope": "A room sensor checks for moves in one key spot.",
     "image": "/photos/packages/homeaware.webp",
     "imageAlt": "MyIntel HomeAware product lineup showing an Essence hub, standard emergency pendant with wrist strap, and one motion sensor.",
     "deviceCount": 3,
     "options": [
-      "Morning activity reassurance",
-      "Manual emergency activation",
-      "A simple starting point"
+      "A morning check in one key spot",
+      "Press a button to call for help"
     ],
-    "growth": "Consider HomeProtect when broader activity information or room fall sensing would help.",
-    "limits": "One motion sensor does not show routines throughout the home. The standard pendant must be pressed to request help and does not automatically detect falls.",
+    "growth": "We agree when to check back with you.",
+    "limits": "One room sensor cannot check the whole home. Press the help button to call for help. The button does not sense falls.",
     "devices": [
       {
         "key": "hub",
         "count": 1,
-        "label": "Essence hub",
-        "detail": "Connects the system and provides its supported emergency communication functions."
+        "label": "Home hub",
+        "model": "Essence",
+        "detail": "Links the sensors and lets you call for help."
       },
       {
         "key": "pendant",
         "count": 1,
-        "label": "Standard emergency pendant",
-        "detail": "Lets the resident manually request help. Shown with a wrist strap in the product image."
+        "label": "Help button",
+        "model": "Standard emergency pendant",
+        "detail": "Press to ask for help. It does not sense falls."
       },
       {
         "key": "motion",
         "count": 1,
-        "label": "Motion sensor",
-        "detail": "Placed where morning activity is likely to be detected."
+        "label": "Room sensor",
+        "model": "Motion sensor",
+        "detail": "Notes moves in one spot you use each morning."
       }
-    ]
+    ],
+    "services": {
+      "installationIncluded": true,
+      "followUpIncluded": true,
+      "assessmentIncluded": false,
+      "homePlanIncluded": false
+    }
   },
   {
     "id": "homeprotect",
     "name": "MyIntel HomeProtect",
     "shortName": "HomeProtect",
-    "focus": "Broader awareness and fall protection",
-    "title": "More awareness. Another layer of help.",
-    "audience": "For a home that needs activity information from more rooms and dedicated fall sensing in one priority area.",
-    "scope": "Adds more motion and door sensors, room fall sensing and voice-activated help.",
+    "focus": "More help at home",
+    "title": "More help in the rooms you use.",
+    "audience": "For more room checks and fall sensing in one spot.",
+    "scope": "More room and door sensors add a fuller view.",
     "image": "/photos/packages/homeprotect.webp",
     "imageAlt": "MyIntel HomeProtect lineup showing one Essence hub, one standard emergency pendant, five motion sensors, three door sensor pairs, one MDsense and one VPD2 communicator.",
     "deviceCount": 12,
     "options": [
-      "Activity information from more rooms",
-      "Fall sensing in one selected area",
-      "Voice-activated help"
+      "Room checks in more places",
+      "Fall sensing in one set spot",
+      "Use your voice to ask for help"
     ],
-    "growth": "Consider HomeComplete when nighttime information or a second area of fall sensing would help.",
-    "limits": "The single MDsense detector covers its approved area, not the entire home. The VPD2 adds voice help and emergency communication, not additional fall detection.",
+    "growth": "We agree when to check back with you.",
+    "limits": "The fall sensor works in one set spot. The voice unit helps you call. It does not sense falls.",
     "devices": [
       {
         "key": "hub",
         "count": 1,
-        "label": "Essence hub",
-        "detail": "Connects the system and provides supported emergency communication."
+        "label": "Home hub",
+        "model": "Essence",
+        "detail": "Links the sensors and lets you call for help."
       },
       {
         "key": "pendant",
         "count": 1,
-        "label": "Standard emergency pendant",
-        "detail": "A manual way to request help. It does not automatically detect falls."
+        "label": "Help button",
+        "model": "Standard emergency pendant",
+        "detail": "Press to ask for help. It does not sense falls."
       },
       {
         "key": "motion",
         "count": 5,
-        "label": "Motion sensors",
-        "detail": "Proposed areas include the bedroom, hallway, living room, kitchen and another frequently used area."
+        "label": "Room sensors",
+        "model": "Motion sensor",
+        "detail": "Notes moves in the rooms you use most."
       },
       {
         "key": "door",
         "count": 3,
-        "label": "Door/window sensors",
-        "detail": "For relevant entrances or other locations agreed with you."
+        "label": "Door sensors",
+        "model": "Door/window sensor",
+        "detail": "Notes when a door or window is opened."
       },
       {
         "key": "radar",
         "count": 1,
-        "label": "MDsense fall detector",
-        "detail": "Installed in a priority room after checking placement and coverage."
+        "label": "Fall sensor",
+        "model": "MDsense",
+        "detail": "Can sense a fall in a spot we check first."
       },
       {
         "key": "voice",
         "count": 1,
-        "label": "VPD2 communicator",
-        "detail": "Adds voice-activated help and extends emergency communication."
+        "label": "Voice help unit",
+        "model": "VPD2",
+        "detail": "Use your voice to ask for help. This unit does not sense falls."
       }
-    ]
+    ],
+    "services": {
+      "installationIncluded": true,
+      "followUpIncluded": true,
+      "assessmentIncluded": true,
+      "homePlanIncluded": true
+    }
   },
   {
     "id": "homecomplete",
     "name": "MyIntel HomeComplete",
     "shortName": "HomeComplete",
-    "focus": "Added nighttime and room coverage",
-    "title": "A closer look at day and night.",
-    "audience": "For a home that needs a second area of fall sensing, bed information and a more detailed safety plan.",
-    "scope": "Everything in HomeProtect, with a second MDsense and SleepSense for one compatible bed.",
+    "focus": "Help for day and night",
+    "title": "More help for sleep and key rooms.",
+    "audience": "For help at night and fall sensing in two spots.",
+    "scope": "All of HomeProtect, plus a bed sensor and one more fall sensor.",
     "image": "/photos/packages/homecomplete.webp",
     "imageAlt": "MyIntel HomeComplete lineup showing one Essence hub, one standard emergency pendant, five motion sensors, three door sensor pairs, two MDsense detectors, one VPD2 communicator and one SleepSense.",
     "deviceCount": 14,
     "options": [
-      "Fall sensing in two selected areas",
-      "Bed occupancy and supported sleep information",
-      "Detailed safety plan and scheduled follow-up"
+      "Fall sensing in two set spots",
+      "A bed sensor for sleep details",
+      "All the help in HomeProtect"
     ],
-    "growth": "Review the safety plan and support at scheduled follow-ups. We agree the timing together.",
-    "limits": "Two MDsense detectors cover two selected areas. SleepSense is for one resident's compatible bed. Physical modifications and remote-vitals equipment are separately scoped.",
+    "growth": "We agree when to check back with you.",
+    "limits": "Each fall sensor works in a set spot. The bed sensor needs a bed that works with it. Home changes and health tools cost extra.",
     "devices": [
       {
         "key": "hub",
         "count": 1,
-        "label": "Essence hub",
-        "detail": "Connects the system and provides supported emergency communication."
+        "label": "Home hub",
+        "model": "Essence",
+        "detail": "Links the sensors and lets you call for help."
       },
       {
         "key": "pendant",
         "count": 1,
-        "label": "Standard emergency pendant",
-        "detail": "A manual way to request help. It does not automatically detect falls."
+        "label": "Help button",
+        "model": "Standard emergency pendant",
+        "detail": "Press to ask for help. It does not sense falls."
       },
       {
         "key": "motion",
         "count": 5,
-        "label": "Motion sensors",
-        "detail": "Placed in agreed, frequently used areas."
+        "label": "Room sensors",
+        "model": "Motion sensor",
+        "detail": "Notes moves in the rooms you use most."
       },
       {
         "key": "door",
         "count": 3,
-        "label": "Door/window sensors",
-        "detail": "For relevant entrances or other agreed locations."
+        "label": "Door sensors",
+        "model": "Door/window sensor",
+        "detail": "Notes when a door or window is opened."
       },
       {
         "key": "radar",
         "count": 2,
-        "label": "MDsense fall detectors",
-        "detail": "Cover two selected areas, with placement and coverage checked."
+        "label": "Fall sensors",
+        "model": "MDsense",
+        "detail": "Can sense a fall in a spot we check first."
       },
       {
         "key": "voice",
         "count": 1,
-        "label": "VPD2 communicator",
-        "detail": "Adds voice-activated help and extends emergency communication."
+        "label": "Voice help unit",
+        "model": "VPD2",
+        "detail": "Use your voice to ask for help. This unit does not sense falls."
       },
       {
         "key": "sleep",
         "count": 1,
-        "label": "SleepSense",
-        "detail": "Adds bed occupancy and supported sleep-related information for one resident's compatible bed."
+        "label": "Bed sensor",
+        "model": "SleepSense",
+        "detail": "With the right bed, it can show bed use and sleep details."
       }
-    ]
+    ],
+    "services": {
+      "installationIncluded": true,
+      "followUpIncluded": true,
+      "assessmentIncluded": true,
+      "homePlanIncluded": true
+    }
   }
 ];
 
 export const capabilities = [
-  { id: "falls", title: "Fall protection", body: "Room-level non-camera sensing, optional wearable detection and personal emergency activation are different approaches. We discuss coverage and availability before recommending one." },
-  { id: "sleep", title: "Sleep-related patterns", body: "Sleep information needs a supported sleep sensor. Without it, movement at night is a routine signal, not a measurement of sleep." },
-  { id: "kitchen", title: "Kitchen activity", body: "Changes in kitchen activity or meal-related routines can prompt a check-in. Kitchen movement does not tell us whether someone ate." },
-  { id: "movement", title: "Movement at home", body: "Supported motion and activity sensors can highlight changes in how rooms are used. They do not explain the cause of a change." },
-  { id: "routines", title: "Everyday routines", body: "Door and room activity can help agreed contacts notice a change. The information available depends on the sensors and coverage selected." },
-  { id: "reminders", title: "Reminders and communication", body: "A supported hub or reminder device may help with everyday prompts or contacting family. A reminder does not confirm that medication was taken." },
-];
-
-export const followUp = [
-  { title: "Notice a change", body: "A supported sensor or a person raises a concern." },
-  { title: "Understand the concern", body: "Check the context with the person and the agreed contacts." },
-  { title: "Inform the right person", body: "Use the contacts and response arrangements in the plan." },
-  { title: "Choose an action", body: "Discuss practical help, a home change or a review of the care plan." },
-  { title: "Follow up", body: "Agree who will check back and whether the plan needs to change." },
+  { id: "falls", title: "Falls", body: "Some sensors can sense a fall in a set spot. They can miss falls. A help button lets you call for help." },
+  { id: "sleep", title: "Sleep", body: "Sleep details need a bed sensor and a bed that works with it. A room sensor cannot measure sleep." },
+  { id: "kitchen", title: "Moves in the kitchen", body: "A room sensor may note moves in the kitchen. It cannot tell if you ate." },
+  { id: "movement", title: "Moves at home", body: "Room sensors can note moves near them. A change may be a reason to call." },
+  { id: "routines", title: "Room and door checks", body: "What you see depends on where the sensors are. One sensor cannot check the whole home." },
+  { id: "reminders", title: "Help with calls", body: "Each plan has a help button. Some plans also let you use your voice to ask for help." },
 ];

@@ -1,105 +1,16 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import {
-  ArrowRight,
-  Facebook,
-  Mail,
-  MapPin,
-  Phone,
-} from "@/components/icons";
+import { site } from "@/lib/site";
+import { Phone, Mail, ArrowRight } from "@/components/icons";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Talk to a MyIntel home safety expert. Call (720) 989-1123, email info@myintelhome.com, or start a free HomeCheck.",
-};
-
-const channels = [
-  {
-    icon: Phone,
-    title: "Call us",
-    body: "The fastest way to talk through your family's situation with a real person.",
-    linkLabel: site.phone,
-    href: site.phoneHref,
-  },
-  {
-    icon: Mail,
-    title: "Email us",
-    body: "Questions, assessments, partnerships, careers. We answer everything personally.",
-    linkLabel: site.email,
-    href: site.emailHref,
-  },
-  {
-    icon: Facebook,
-    title: "Follow along",
-    body: "Home safety tips, product updates, and stories from families we work with.",
-    linkLabel: "MyIntel on Facebook",
-    href: site.facebookUrl,
-    external: true,
-  },
-];
-
-export default function ContactPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="Contact"
-        title="Talk to a real person about your home"
-        body="Whether you're planning ahead, worried about a parent, or running a care community, we'd love to hear from you."
-      />
-
-      <section className="container-x section">
-        <div className="grid gap-6 md:grid-cols-3">
-          {channels.map(({ icon: ChannelIcon, title, body, linkLabel, href, external }) => (
-            <a
-              key={title}
-              href={href}
-              {...(external
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
-              className="group card card-hover p-8"
-            >
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
-                <ChannelIcon className="h-6 w-6" />
-              </span>
-              <h2 className="mt-5 font-display text-2xl font-semibold text-ink">
-                {title}
-              </h2>
-              <p className="mt-2.5 leading-relaxed text-clay">{body}</p>
-              <p className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy">
-                {linkLabel}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </p>
-            </a>
-          ))}
-        </div>
-
-
-        {/* Service areas */}
-        <div className="mt-14">
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink">
-            Where we work in person
-          </h2>
-          <div className="mt-6 grid gap-5 sm:grid-cols-3">
-            {site.serviceAreas.map((area) => (
-              <div
-                key={area}
-                className="flex items-center gap-4 rounded-2xl bg-sand px-6 py-5"
-              >
-                <MapPin className="h-6 w-6 shrink-0 text-blue" />
-                <p className="font-display text-lg font-semibold text-ink">
-                  {area}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-5 font-semibold text-clay">
-            Not nearby? You can take the free home check wherever you live.
-            Remote consultations are also available.
-          </p>
-        </div>
-      </section>
-    </>
-  );
+export const metadata: Metadata={title:"Contact",description:"Call MyIntel at (720) 989-1123, email info@myintelhome.com or take a free home check."};
+export default function ContactPage(){
+ return <>
+  <PageHero eyebrow="Contact" title="Let&apos;s talk about your home." body="Have a question? Want help for a parent? We would love to hear from you." />
+  <section className="container-x pb-16 lg:pb-24"><div className="contact-open-grid">
+   <div><h2 className="story-title">Call us.</h2><p className="story-lead mt-4">Talk it through with a real person.</p><a href={site.phoneHref} className="btn-outline mt-6"><Phone className="h-5 w-5" />{site.phone}</a></div>
+   <div><h2 className="story-title">Send a note.</h2><p className="story-lead mt-4">Tell us what you need help with.</p><a href={site.emailHref} className="story-link mt-6 break-all"><Mail className="h-5 w-5 shrink-0" />{site.email}</a></div>
+  </div></section>
+  <section className="story-section story-tint"><div className="container-x story-heading"><div><p className="eyebrow">Close to home</p><h2 className="story-title mt-4">Where we visit.</h2></div><div><p className="story-lead">{site.serviceAreas.join(" and ")}.</p><p className="story-lead mt-5">You can take the free home check wherever you live.</p><a href={site.homeCheckUrl} className="btn-primary mt-7">Start a free home check</a><a href={site.facebookUrl} target="_blank" rel="noopener noreferrer" className="story-link mt-4">Find us on Facebook <ArrowRight aria-hidden="true" className="h-5 w-5" /></a></div></div></section>
+ </>;
 }

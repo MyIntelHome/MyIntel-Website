@@ -1,36 +1,23 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { EditorialHero } from "@/components/EditorialHero";
-import { EditorialImage } from "@/components/EditorialImage";
 import { site } from "@/lib/site";
-import { positioning } from "@/lib/solutions";
-import { Phone, Mail } from "@/components/icons";
+import { Phone, Mail, ArrowRight } from "@/components/icons";
 
-export const metadata: Metadata = {
-  title: "For Care and Community Partners",
-  description: "Partner with MyIntel on home assessment, appropriate technology, safety improvements and practical follow-up for people aging in place.",
-};
-const audiences = [
-  { title: "Home care agencies", body: "Bring home safety, selected monitoring and agreed follow-up into the care you already provide." },
-  { title: "Senior and 55+ housing", body: "Offer residents a practical way to explore support in their own homes, with their choice and involvement." },
-  { title: "Healthcare and discharge teams", body: "Connect returning home with assessment, practical changes and appropriate follow-up." },
-  { title: "Community organizations", body: "Help people find suitable home improvements and support that fits their needs and resources." },
+export const metadata: Metadata={title:"For Professionals",description:"Connect home safety assessments, sensor-based support and agreed response with your care service. Discuss referrals and collaboration with MyIntel.",alternates:{canonical:"/partners"}};
+const topics=[
+ {title:"Home care",body:"Add home activity information alongside visits. Agree which changes should reach family or care staff, with consent and clear responsibilities."},
+ {title:"Home safety and clinical care",body:"Connect a professional home assessment with practical recommendations and appropriate sensing. HomeProtect and HomeComplete include a professional assessment and a personalized home safety plan."},
+ {title:"Housing and community support",body:"Help residents explore options while keeping them involved. We can discuss referrals and support that fits the people you serve."},
 ];
-export default function PartnersPage() {
-  return <>
-    <EditorialHero eyebrow="For care partners" title="Better support starts with the home." body="Work with MyIntel to connect assessment, practical home improvements and appropriate technology with the care your organization provides." image="/photos/packages/care-dashboard.webp" imageFit="contain" alt="Illustrative care professional using a laptop with an example MyIntel activity and sleep dashboard">
-      <a href="#partnership-contact" className="btn-primary mt-8">Explore a partnership</a>
-    </EditorialHero>
-    <section className="bg-sand"><div className="container-x grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
-      <div><p className="eyebrow">Alongside your team</p><h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-navy sm:text-4xl">Make the next step clearer between visits.</h2><p className="mt-6 text-xl leading-relaxed text-clay">When the selected equipment highlights a change, the value comes from knowing who should check it and what to do next.</p><p className="mt-5 text-lg leading-relaxed text-clay">MyIntel brings together assessment, recommendations, installation and monitoring with agreed escalation and follow-up. The plan defines responsibilities, rather than assuming someone else will act.</p><p className="mt-5 text-lg leading-relaxed text-clay">Technology supports personal care. It does not replace caregivers, clinical judgment or emergency services.</p></div>
-      <EditorialImage src="/photos/editorial/family-connection.png" alt="Illustrative photograph of a family sharing time together at home" className="aspect-[4/3] rounded-3xl" />
-    </div></section>
-    <section className="container-x py-16 lg:py-24"><h2 className="font-display text-3xl font-extrabold text-navy sm:text-4xl">Built around the people you serve.</h2><div className="mt-10 grid gap-8 md:grid-cols-2">{audiences.map(a=><article key={a.title} className="rounded-3xl bg-white p-8 ring-1 ring-ink/10"><h3 className="font-display text-2xl font-bold text-navy">{a.title}</h3><p className="mt-4 text-lg leading-relaxed text-clay">{a.body}</p></article>)}</div></section>
-    <section className="bg-sky"><div className="container-x py-16 lg:py-24"><p className="eyebrow">A manageable first step</p><h2 className="mt-4 font-display text-3xl font-extrabold text-navy sm:text-4xl">Begin with a focused pilot.</h2><ol className="mt-10 grid gap-8 md:grid-cols-3">{[{title:"Agree the fit",body:"Discuss your clients, service area and referral process. Identify where MyIntel could help."},{title:"Define the plan",body:"Confirm consent, data access, equipment, installation, costs and response responsibilities."},{title:"Review what works",body:"Gather feedback from the person, family and care team. Adjust before expanding."}].map((s,i)=><li key={s.title} className="border-t-2 border-navy/15 pt-6"><p className="text-base font-bold text-blue">0{i+1}</p><h3 className="mt-3 font-display text-2xl font-bold text-navy">{s.title}</h3><p className="mt-4 text-lg leading-relaxed text-clay">{s.body}</p></li>)}</ol></div></section>
-    <section className="mx-auto max-w-4xl px-6 py-16">
-      <details className="rounded-2xl border border-ink/10 bg-white px-6"><summary className="cursor-pointer py-5 text-xl font-bold text-navy">Coverage, reporting and response</summary><div className="space-y-4 pb-6 text-lg leading-relaxed text-clay"><p>{positioning.response}</p><p>Shared views, reporting and integrations depend on the selected platform and permissions. We confirm what is supported for your organization before starting.</p><p>Each person's plan determines what is monitored. Fall detection has limits and does not guarantee every event will be detected.</p></div></details>
-    </section>
-    <section id="partnership-contact" className="scroll-mt-28 bg-navy"><div className="container-x py-16 text-cream">
-      <h2 className="font-display text-3xl font-extrabold sm:text-4xl">Let&apos;s discuss where MyIntel could help.</h2><p className="mt-5 max-w-3xl text-xl leading-relaxed text-cream/85">Tell us who you serve and how your team works. We can explore a referral relationship or a focused pilot.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row"><a href={`${site.emailHref}?subject=MyIntel%20partnership`} className="btn-light"><Mail className="h-5 w-5" />Discuss a partnership</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div>
-    </div></section>
-  </>;
+export default function PartnersPage(){
+ return <>
+  <EditorialHero eyebrow="For professionals" title="A clearer view between visits." body="MyIntel brings home safety visits and home-based support alongside the care your team provides. Let's discuss where it could fit." image="/photos/packages/care-dashboard.webp" imageFit="contain" alt="Illustrative care professional with a sample MyIntel activity and sleep dashboard.">
+   <a href="#partnership-contact" className="btn-primary mt-8">Talk about working together</a><p className="mt-5 text-lg text-clay">Example screen and data. Available information depends on the installed sensors and permissions.</p>
+  </EditorialHero>
+  <section className="story-section story-tint"><div className="container-x story-heading"><div><p className="eyebrow">Alongside your team</p><h2 className="story-title mt-4">Useful context.<br />Clear boundaries.</h2></div><div className="space-y-5 text-xl leading-relaxed text-clay"><p>Room and door activity can give your team context for a check-in. Dedicated MDsense detectors add fall sensing in approved areas. SleepSense adds supported sleep-related information for a compatible bed.</p><p>These are distinct signals. They do not diagnose a condition, confirm that someone ate, or replace clinical judgment, personal care or emergency services.</p></div></div></section>
+  <section className="story-section container-x"><div className="max-w-3xl"><p className="eyebrow">Where we may fit</p><h2 className="story-title mt-4">Support for the people you serve.</h2></div><div className="professional-topic-list mt-9">{topics.map(t=><article key={t.title}><h3>{t.title}</h3><p>{t.body}</p></article>)}</div><Link href="/solutions" className="story-link mt-7">View the package scope <ArrowRight className="h-5 w-5" aria-hidden="true" /></Link></section>
+  <section className="story-section story-tint"><div className="container-x story-faq-layout"><div><p className="eyebrow">Before a referral or pilot</p><h2 className="story-title mt-4">Agree the details together.</h2><p className="story-lead mt-5">Let's shape a partnership around your service and the people you serve.</p></div><dl className="story-lines"><div><dt>Consent and access</dt><dd>Confirm who can see information, which views are supported and how consent is recorded.</dd></div><div><dt>Coverage and suitability</dt><dd>Check room coverage, compatible beds, connectivity and the limits of each device. Not every fall will be detected.</dd></div><div><dt>Response responsibilities</dt><dd>Agree who receives alerts, who checks a concern and what escalation is available. Professional response services are confirmed separately.</dd></div><div><dt>Service scope</dt><dd>All three packages include free installation and follow-up. HomeProtect and HomeComplete also include professional assessments and home safety plans. Follow-up timing, reporting, integrations and other service costs need agreement.</dd></div></dl></div></section>
+  <section id="partnership-contact" className="story-breath scroll-mt-28 bg-navy text-cream"><div className="container-x"><p className="eyebrow !text-cream/80">Let's talk</p><h2 className="story-title mt-4 !text-cream">Where could MyIntel help?</h2><p className="mt-5 max-w-2xl text-xl leading-relaxed text-cream/90">Tell us who you serve and what your team needs. We can discuss a referral relationship or a small, agreed pilot.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row"><a href={site.emailHref+"?subject=MyIntel%20partnership"} className="btn-light"><Mail className="h-5 w-5" />Talk about a partnership</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div></div></section>
+ </>;
 }

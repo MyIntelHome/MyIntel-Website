@@ -2,8 +2,8 @@ import { site } from "@/lib/site";
 import { ArrowRight } from "@/components/icons";
 
 export function CtaBand({
-  title = "Stay independent. Stay safe. Stay home.",
-  body = "Answer a few simple questions about the home and get a clear starting point. It's free, and there's no payment to see your results.",
+  title = "Stay in the home you love.",
+  body = "Take a free home check. See what may need a closer look. You can choose what to do next.",
 }: {
   title?: string;
   body?: string;
@@ -20,7 +20,7 @@ export function CtaBand({
       />
       <div className="relative mx-auto max-w-4xl px-5 py-20 text-center">
         <h2 className="display text-4xl !text-cream sm:text-5xl">{title}</h2>
-        <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-cream/75">
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-cream/90">
           {body}
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">

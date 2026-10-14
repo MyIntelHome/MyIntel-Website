@@ -1,129 +1,17 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import {
-  ArrowRight,
-  GraduationCap,
-  Heart,
-  Sparkles,
-  Wrench,
-} from "@/components/icons";
+import { site } from "@/lib/site";
+import { ArrowRight } from "@/components/icons";
 
-export const metadata: Metadata = {
-  title: "Careers",
-  description:
-    "Join MyIntel and help families age in place with dignity. We're hiring Certified Aging in Place Specialists (CAPS) and home modification experts (ECHM).",
-};
-
-const roles = [
-  {
-    icon: GraduationCap,
-    title: "Certified Aging in Place Specialist (CAPS)",
-    body: "Lead in-home safety assessments and guide families through practical, dignified modifications. You'll be the trusted expert who shows people what's possible in the home they love.",
-    tag: "Assessments",
-  },
-  {
-    icon: Wrench,
-    title: "Executive Certification in Home Modification (ECHM)",
-    body: "Design and oversee home modification projects that transform safety and accessibility, from planning through professional installation.",
-    tag: "Modifications",
-  },
+export const metadata: Metadata={title:"Work With MyIntel",description:"Help older adults stay at home. MyIntel welcomes home safety and home modification professionals."};
+const roles=[
+ {title:"Home safety visits",body:"Meet people in their homes. Check what may need care. Help them choose what to do next.",credential:"Certified Aging in Place Specialist (CAPS)"},
+ {title:"Home changes",body:"Help plan and fit changes that make a home easier to use. Work with the person and their family.",credential:"Executive Certification in Home Modification (ECHM)"},
 ];
-
-const perks = [
-  {
-    icon: Heart,
-    title: "Work that matters",
-    body: "Every visit helps someone stay independent in the home they love. Few jobs let you see the impact this directly.",
-  },
-  {
-    icon: Sparkles,
-    title: "Ground-floor opportunity",
-    body: "MyIntel is growing fast across Colorado and Missouri. Join early and help shape how the company and the industry grow.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Your expertise, valued",
-    body: "We're built around certified specialists, not commissioned salespeople. Your professional judgment leads.",
-  },
-];
-
-export default function CareersPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="Careers"
-        title="Help families age in place with dignity"
-        body="We're building the team that makes safe, independent living possible in Denver CO and Lake of the Ozarks MO."
-      />
-
-      {/* Open roles */}
-      <section className="container-x section">
-        <div className="max-w-2xl">
-          <p className="eyebrow">Who we&apos;re looking for</p>
-          <h2 className="statement mt-4">Open roles</h2>
-        </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {roles.map(({ icon: RoleIcon, title, body, tag }) => (
-            <div key={title} className="card flex flex-col p-9">
-              <div className="flex items-center justify-between gap-4">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-sky text-navy">
-                  <RoleIcon className="h-6 w-6" />
-                </span>
-                <span className="rounded-full bg-blue/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-blue">
-                  {tag}
-                </span>
-              </div>
-              <h3 className="mt-6 font-display text-2xl font-semibold text-ink">
-                {title}
-              </h3>
-              <p className="mt-3 grow leading-relaxed text-clay">{body}</p>
-              <a
-                href={`${site.emailHref}?subject=Career opportunity: ${encodeURIComponent(title)}`}
-                className="btn-primary mt-8 self-start"
-              >
-                Reach out now
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why MyIntel */}
-      <section className="bg-sand">
-        <div className="container-x section">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow justify-center">Why MyIntel</p>
-            <h2 className="statement mt-4">
-              Do the most meaningful work of your career
-            </h2>
-          </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {perks.map(({ icon: PerkIcon, title, body }) => (
-              <div key={title} className="card p-8 text-center">
-                <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-blue/15 text-blue">
-                  <PerkIcon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 font-display text-xl font-semibold text-ink">
-                  {title}
-                </h3>
-                <p className="mt-3 leading-relaxed text-clay">{body}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mx-auto mt-12 max-w-xl text-center font-semibold text-clay">
-            Don&apos;t see your exact role? If you&apos;re passionate about
-            helping older adults live independently, we want to hear from you
-            anyway. Email{" "}
-            <a href={site.emailHref} className="font-extrabold text-navy">
-              {site.email}
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-
-    </>
-  );
+export default function CareersPage(){
+ return <>
+  <PageHero eyebrow="Work with us" title="Help people stay at home." body="We want to meet people who care about safer homes. Your skills can make a difference." />
+  <section className="container-x pb-16 lg:pb-24"><div className="professional-topic-list">{roles.map(r=><article key={r.title}><div><h2 className="text-3xl font-bold text-navy">{r.title}</h2><p className="mt-3 text-lg font-semibold text-clay">{r.credential}</p></div><div><p className="story-lead">{r.body}</p><a href={site.emailHref+"?subject="+encodeURIComponent("Work with MyIntel: "+r.title)} className="story-link mt-4">Talk about the role <ArrowRight className="h-5 w-5" aria-hidden="true" /></a></div></article>)}</div></section>
+  <section className="story-section story-tint"><div className="container-x story-heading"><h2 className="story-title">Good work.<br />Real care.</h2><div className="story-lead space-y-5"><p>We put the person and their home first. We want good ideas and honest advice.</p><p>Do not see your role here? Send us a note about your skills.</p><a href={site.emailHref} className="story-link break-all">{site.email}</a></div></div></section>
+ </>;
 }

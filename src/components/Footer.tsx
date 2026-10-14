@@ -9,10 +9,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1.2fr]">
         <div>
           <LogoLockup dark className="h-14 w-auto" />
-          <p className="mt-5 max-w-sm text-cream/70">
-            Safer, smarter care. We make homes safer for older adults and keep
-            families in the loop, so everyone can stay independent, stay safe,
-            and stay home.
+          <p className="mt-5 max-w-sm text-cream/85">
+            We help you stay in the home you love. We make it easier to get help and keep family in the loop.
           </p>
         </div>
 
@@ -23,13 +21,13 @@ export function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-cream/70 transition-colors hover:text-cream"
+                  className="text-cream/85 transition-colors hover:text-cream"
                 >
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li><Link href="/careers" className="text-cream/70 transition-colors hover:text-cream">Careers</Link></li>
+            <li><Link href="/careers" className="text-cream/85 transition-colors hover:text-cream">Careers</Link></li>
           </ul>
         </div>
 
@@ -39,7 +37,7 @@ export function Footer() {
             <li>
               <a
                 href={site.phoneHref}
-                className="flex items-center gap-3 text-cream/70 transition-colors hover:text-cream"
+                className="flex items-center gap-3 text-cream/85 transition-colors hover:text-cream"
               >
                 <Phone className="h-5 w-5 shrink-0 text-gold" />
                 {site.phone}
@@ -48,13 +46,13 @@ export function Footer() {
             <li>
               <a
                 href={site.emailHref}
-                className="flex items-center gap-3 text-cream/70 transition-colors hover:text-cream"
+                className="flex items-center gap-3 text-cream/85 transition-colors hover:text-cream"
               >
                 <Mail className="h-5 w-5 shrink-0 text-gold" />
                 {site.email}
               </a>
             </li>
-            <li className="flex items-start gap-3 text-cream/70">
+            <li className="flex items-start gap-3 text-cream/85">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
               <span>Serving {site.serviceAreas.join(", ")}</span>
             </li>
@@ -63,7 +61,7 @@ export function Footer() {
                 href={site.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-cream/70 transition-colors hover:text-cream"
+                className="flex items-center gap-3 text-cream/85 transition-colors hover:text-cream"
               >
                 <Facebook className="h-5 w-5 shrink-0 text-gold" />
                 Follow us on Facebook
@@ -76,7 +74,7 @@ export function Footer() {
       <div className="border-t border-cream/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-6 text-sm text-cream/50 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {site.legalName} All rights reserved.
+            c {new Date().getFullYear()} {site.legalName} All rights reserved.
           </p>
           <Link href="/privacy" className="transition-colors hover:text-cream">
             Privacy Policy
