@@ -74,7 +74,7 @@ export function Footer() {
       <div className="border-t border-cream/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-6 text-sm text-cream/50 sm:flex-row">
           <p>
-            c {new Date().getFullYear()} {site.legalName} All rights reserved.
+            &copy; {new Date().getFullYear()} {site.legalName} All rights reserved.
           </p>
           <Link href="/privacy" className="transition-colors hover:text-cream">
             Privacy Policy

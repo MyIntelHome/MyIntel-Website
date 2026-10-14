@@ -40,7 +40,7 @@ export function LogoLockup({
   return (
     <Image
       src="/myintel-logo.png"
-      alt="MyIntel — Safer, Smarter Care"
+      alt="MyIntel, Safer, Smarter Care"
       width={447}
       height={210}
       priority
