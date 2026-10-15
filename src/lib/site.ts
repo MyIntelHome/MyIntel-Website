@@ -10,6 +10,8 @@ export const site = {
   email: "info@myintelhome.com",
   emailHref: "mailto:info@myintelhome.com",
   homeCheckUrl: "https://homecheck.myintelhome.com",
+  // Build-time public URL. Configure Preview first. Production needs Austin's approval.
+  websiteInquiryUrl: process.env.NEXT_PUBLIC_WEBSITE_INQUIRY_URL || "",
   facebookUrl: "https://www.facebook.com/profile.php?id=61572203865392",
   serviceArea: "the Denver metro area",
   referralHref: "mailto:info@myintelhome.com?subject=MyIntel%20for%20care%20companies",
