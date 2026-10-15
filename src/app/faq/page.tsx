@@ -10,7 +10,6 @@ const groups=[
   {q:"What does MyIntel do?",a:"We help older adults stay safely at home. We check the home for fall risks, set up a help button and simple sensors for free, and a 24/7 monitoring center answers when help is needed. Family gets the updates you choose."},
   {q:"Where do I start?",a:"Try the free home check online, or call us. It takes a few minutes and shows what may need a closer look."},
   {q:"Where do you work?",a:`We set up homes and do home safety visits in ${site.serviceArea}. The online home check works anywhere.`},
-  {q:"Can I see it before I decide?",a:"Yes. Book a tour of our demo home in Denver. You can press the help button and see how everything works."},
  ]},
  {name:"Cost",items:[
   {q:"How much does it cost?",a:"We are finalizing plan prices. Call us and we will give you a quote for your home. Setup is always free."},

@@ -240,7 +240,6 @@ section.bg-navy :focus-visible, section.bg-navy-dark :focus-visible, footer :foc
 .step-top { display: flex; align-items: center; justify-content: space-between; }
 .step-number { display: flex; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; background: #1e3357; color: #fff; font-size: 18px; font-weight: 800; }
 .stat-grid > div { border-top: 1px solid rgba(250, 248, 244, 0.25); padding-top: 22px; }
-.demo-card { display: grid; gap: 28px; align-items: center; border-radius: 32px; background: #f1eee7; padding: 32px 24px; }
 .plan-mini { display: flex; flex-direction: column; overflow: hidden; border: 1px solid #d6dedc; border-radius: 24px; background: #fff; }
 .plan-mini-photo { position: relative; aspect-ratio: 4 / 3; background: #faf8f4; }
 .plan-mini-body { padding: 22px 24px 26px; }
@@ -253,12 +252,10 @@ section.bg-navy :focus-visible, section.bg-navy-dark :focus-visible, footer :foc
 @media (min-width: 768px) {
   .trust-grid, .step-grid, .who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stat-grid, .plan-mini-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-  .demo-card { padding: 48px; }
 }
 @media (min-width: 1024px) {
   .trust-grid, .step-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .who-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .demo-card { grid-template-columns: 1.6fr 1fr; gap: 56px; padding: 56px 64px; }
 }
 @media (min-width: 768px) { .step-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
 @media (min-width: 1024px) { .contact-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 48px; } }

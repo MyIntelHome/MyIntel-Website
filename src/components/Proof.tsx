@@ -1,5 +1,5 @@
-import { fallStats, site, trust } from "@/lib/site";
-import { ArrowRight, Bell, ClipboardCheck, EyeOff, Home, MapPin, Phone, ShieldCheck, Wrench } from "@/components/icons";
+import { fallStats, trust } from "@/lib/site";
+import { Bell, ClipboardCheck, EyeOff, Home, MapPin, ShieldCheck, Wrench } from "@/components/icons";
 
 const trustIcons = { monitoring: Bell, ots: ShieldCheck, cameras: EyeOff, local: MapPin } as const;
 
@@ -38,12 +38,3 @@ export function Steps({ title = "How MyIntel works.", eyebrow = "Four simple ste
   </section>;
 }
 
-export function DemoHome({ audience = "family" }: { audience?: "family" | "pro" }) {
-  return <section className="story-section container-x" aria-labelledby="demo-title">
-    <div className="demo-card">
-      <div><p className="eyebrow">See it for yourself</p><h2 id="demo-title" className="story-title mt-4">Visit our demo home in Denver.</h2>
-        <p className="story-lead mt-5">{audience === "pro" ? "Bring your team. Press the help button, walk past a sensor and see what an alert looks like before you refer anyone." : "Come see the sensors and help button in a real home. Press the button, ask questions and decide with no pressure."}</p></div>
-      <div className="flex flex-col gap-4 sm:flex-row lg:flex-col"><a href={site.demoTourHref} className="btn-primary">Book a tour <ArrowRight className="h-5 w-5" /></a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div>
-    </div>
-  </section>;
-}

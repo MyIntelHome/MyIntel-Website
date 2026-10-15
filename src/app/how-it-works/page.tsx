@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
-import { DemoHome, Steps } from "@/components/Proof";
+import { Steps } from "@/components/Proof";
 import { ArrowRight } from "@/components/icons";
 
 export const metadata: Metadata={title:"How It Works",description:"From a free home check to a home safety visit, free setup and a help button answered 24/7. See how MyIntel keeps an older adult safe at home."};
@@ -20,7 +20,6 @@ export default function HowItWorksPage(){
   <section className="container-x pb-16 lg:pb-24"><figure className="m-0"><EditorialImage src="/photos/packages/home-layout.webp" alt="Sample home with room sensors, a fall sensor, a home hub and a voice help unit." fit="contain" className="aspect-[3/2] max-h-[620px] rounded-[2rem]" priority /><figcaption className="story-caption">A sample home. We choose each spot with you during setup.</figcaption></figure></section>
   <section className="story-section story-tint"><div className="container-x story-faq-layout"><div><p className="eyebrow">What goes in the home</p><h2 className="story-title mt-4">Simple tools. Nothing to learn.</h2><Link href="/solutions" className="story-link mt-6">See what each plan includes <ArrowRight className="h-5 w-5" aria-hidden="true" /></Link></div><dl className="story-lines">{tools.map(t=><div key={t.title}><dt>{t.title}</dt><dd>{t.body}</dd></div>)}</dl></div></section>
   <section className="story-section container-x"><div className="story-heading"><div><p className="eyebrow">Your home. Your say.</p><h2 className="story-title mt-4">You choose who knows what.</h2></div><div className="story-lead space-y-5"><p>You pick who gets updates, like a daughter, a neighbor or a care team. You can change it any time.</p><p>Room sensors notice movement, not faces. There are no cameras. The voice unit uses a microphone only for help calls.</p></div></div></section>
-  <DemoHome />
   <CtaBand title="Start with a free home check." body="See what may need a closer look. Then we can talk through the next step together." />
  </>;
 }

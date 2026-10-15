@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EditorialHero } from "@/components/EditorialHero";
-import { DemoHome, Steps, TrustRow } from "@/components/Proof";
+import { Steps, TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
 import { Phone, Mail, ArrowRight, Building, Stethoscope, Users, Home, ClipboardCheck, Heart } from "@/components/icons";
 
@@ -45,8 +45,6 @@ export default function PartnersPage(){
   <TrustRow eyebrow="Why partners trust us" title="Credentials you can share with families." />
 
   <section className="story-section story-tint" aria-labelledby="limits-title"><div className="container-x story-faq-layout"><div><p className="eyebrow">Good to know</p><h2 id="limits-title" className="story-title mt-4">Clear about what we do.</h2></div><ul className="limits-list">{limits.map(l=><li key={l}>{l}</li>)}</ul></div></section>
-
-  <DemoHome audience="pro" />
 
   <section id="partnership-contact" className="story-breath scroll-mt-28 bg-navy text-cream"><div className="container-x"><p className="eyebrow !text-cream/80">Let&apos;s talk</p><h2 className="story-title mt-4 !text-cream">Refer a client or start a partnership.</h2><p className="mt-5 max-w-2xl text-xl leading-relaxed text-cream/90">Tell us who you serve and what your team needs. To refer a client, include their name, the best way to reach them and anything we should know. We usually reply within one business day.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row"><a href={site.referralHref} className="btn-light"><Mail className="h-5 w-5" />Email a referral</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div></div></section>
  </>;

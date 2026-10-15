@@ -6,7 +6,7 @@ import { EditorialHero } from "@/components/EditorialHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { AudiencePaths } from "@/components/AudiencePaths";
 import { CtaBand } from "@/components/CtaBand";
-import { DemoHome, FallStats, Steps, TrustRow } from "@/components/Proof";
+import { FallStats, Steps, TrustRow } from "@/components/Proof";
 import { ArrowRight, Check, Phone } from "@/components/icons";
 
 const offer = [
@@ -50,8 +50,6 @@ export default function HomePage() {
     <TrustRow tint />
 
     <section className="story-quote-section"><figure className="container-x m-auto"><blockquote className="max-w-4xl font-display text-3xl font-semibold leading-snug text-navy sm:text-4xl">&ldquo;The system has given us so much peace of mind.&rdquo;</blockquote><figcaption className="mt-6 text-lg font-bold text-navy">Alice Koehn <span className="ml-2 font-normal text-clay">MyIntel client</span></figcaption></figure></section>
-
-    <DemoHome />
 
     <CtaBand title="Not sure where to start?" body="Take our free home check. Pick your rooms, answer a few short questions and see what may need a closer look." />
   </>;

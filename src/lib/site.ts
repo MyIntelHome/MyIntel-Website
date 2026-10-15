@@ -12,7 +12,6 @@ export const site = {
   homeCheckUrl: "https://homecheck.myintelhome.com",
   facebookUrl: "https://www.facebook.com/profile.php?id=61572203865392",
   serviceArea: "the Denver metro area",
-  demoTourHref: "mailto:info@myintelhome.com?subject=Demo%20home%20tour",
   referralHref: "mailto:info@myintelhome.com?subject=Client%20referral%20or%20partnership",
 };
 
