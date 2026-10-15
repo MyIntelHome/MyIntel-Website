@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 const questions = [
   {q:"How much does it cost?",a:"We are finalizing plan prices now. Call us and we will give you a quote for your home. Setup is always free."},
-  {q:"Who answers when I press the help button?",a:"A trained person at a UL-listed professional monitoring center, 24 hours a day. They talk with you, send help if needed and let your family know."},
+  {q:"Who answers when I press the help button?",a:"A trained person at a UL-listed response center, 24 hours a day. They talk with you, send help if needed and let your family know."},
   {q:"Will you check in after setup?",a:"Yes, with each plan. We agree when to check back with you. You can tell us what works and what needs a change."},
   {q:"Is a home safety visit included?",a:"Yes, with HomeProtect and HomeComplete. A trained pro checks the home with you. You get a plan made for your home and needs."},
   {q:"Will every fall be found?",a:"No system can promise that. Fall sensors work in the rooms where we set them up, and the help button works when it is pressed. Together they give two ways to get help fast."},
@@ -38,14 +38,14 @@ export default function SolutionsPage(){
     <section className="story-section story-tint"><div className="container-x story-heading">
       <div><p className="eyebrow">Real people, close by</p><h2 className="story-title mt-4">We set it up.<br />We stay in touch.</h2><p className="story-lead mt-5">Insured, professional installers set everything up and show you how it works. We check back after setup to make sure it fits.</p></div>
       <dl className="story-lines">
-        <div><dt>Every plan</dt><dd>Free professional setup, check-ins after setup and a help button answered by a 24/7 monitoring center.</dd></div>
-        <div><dt>Protect and Complete</dt><dd>Routine tracking across the home with AI flags, plus a home safety visit and a plan made for you.</dd></div>
+        <div><dt>Every plan</dt><dd>Free professional setup, check-ins after setup and a help button answered by a real person 24/7.</dd></div>
+        <div><dt>Protect and Complete</dt><dd>Sensors that notice changes in the daily routine, plus a home safety visit and a plan made for you.</dd></div>
         <div><dt>You get a say</dt><dd>We go over any costs and who gets updates before we start.</dd></div>
       </dl>
     </div></section>
 
     <section className="story-section container-x"><div className="story-split">
-      <div><p className="eyebrow">See what matters</p><h2 className="story-title mt-4">A clearer view of the day.</h2><p className="story-lead mt-5">Our AI learns the daily routine from the sensors and flags changes, like a late start to the day or more trips to the bathroom at night. More sensors mean a fuller picture.</p><p className="story-lead mt-5">If something looks off, you hear about it. If the help button is pressed, you know help is on the way.</p><a href={site.homeCheckUrl+"/?view=help"} className="story-link mt-6">Ask us about a plan <ArrowRight aria-hidden="true" className="h-5 w-5" /></a></div>
+      <div><p className="eyebrow">See what matters</p><h2 className="story-title mt-4">A clearer view of the day.</h2><p className="story-lead mt-5">The sensors learn their usual day and notice changes, like a late start to the day or more trips to the bathroom at night. More sensors mean a fuller picture.</p><p className="story-lead mt-5">If something looks off, you hear about it. If the help button is pressed, you know help is on the way.</p><a href={site.homeCheckUrl+"/?view=help"} className="story-link mt-6">Ask us about a plan <ArrowRight aria-hidden="true" className="h-5 w-5" /></a></div>
       <figure className="story-phone"><Image src="/photos/packages/mobile-dashboard.webp" alt="Sample MyIntel phone view with daily and sleep details." width={1024} height={1536} sizes="(min-width: 1024px) 400px, 80vw" className="h-auto max-h-[500px] w-auto max-w-full object-contain" /><figcaption>Example view. Your screen may differ. Sleep details need the right bed sensor.</figcaption></figure>
     </div></section>
 

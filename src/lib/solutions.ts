@@ -9,7 +9,7 @@ export const positioning = {
   privacy: "The room sensors do not need cameras.",
   personalProtection: "Each plan has a help button. Room sensors work without wearing it.",
   response: solutionPolicy.professionalMonitoringReady
-    ? "Help button calls go to a 24/7 professional monitoring center. They talk with you, send help and call your family."
+    ? "Help button calls are answered 24/7 by a trained person. They talk with you, send help and call your family."
     : "We choose who gets calls and alerts with you. We agree who will help and how before setup.",
 };
 
@@ -20,14 +20,14 @@ export const solutions = [
     "shortName": "HomeAware",
     "focus": "A morning check",
     "title": "Start your day with a little help.",
-    "audience": "For a morning check and a way to call for help.",
+    "audience": "For someone doing well who wants a simple safety net.",
     "scope": "A room sensor checks for moves in one key spot.",
     "image": "/photos/packages/homeaware.webp",
     "imageAlt": "MyIntel HomeAware product lineup showing an Essence hub, standard emergency pendant with wrist strap, and one motion sensor.",
     "deviceCount": 3,
     "options": [
-      "A morning check in one key spot",
-      "Press a button to call for help"
+      "Help button answered 24/7",
+      "A morning check in one key room"
     ],
     "growth": "We agree when to check back with you.",
     "limits": "One room sensor cannot check the whole home. Press the help button to call for help. The button does not sense falls.",
@@ -67,15 +67,17 @@ export const solutions = [
     "shortName": "HomeProtect",
     "focus": "More help at home",
     "title": "More help in the rooms you use.",
-    "audience": "For more room checks and fall sensing in one spot.",
+    "audience": "For someone who lives alone or has had a fall or a close call.",
     "scope": "More room and door sensors add a fuller view.",
     "image": "/photos/packages/homeprotect.webp",
     "imageAlt": "MyIntel HomeProtect lineup showing one Essence hub, one standard emergency pendant, five motion sensors, three door sensor pairs, one MDsense and one VPD2 communicator.",
     "deviceCount": 12,
     "options": [
-      "Room checks in more places",
-      "Fall sensing in one set spot",
-      "Use your voice to ask for help"
+      "Everything in HomeAware",
+      "Notices changes in the daily routine",
+      "Door sensors on key doors",
+      "Fall sensing in one key room",
+      "Voice help, no button needed"
     ],
     "growth": "We agree when to check back with you.",
     "limits": "The fall sensor works in one set spot. The voice unit helps you call. It does not sense falls.",
@@ -136,15 +138,15 @@ export const solutions = [
     "shortName": "HomeComplete",
     "focus": "Help for day and night",
     "title": "More help for sleep and key rooms.",
-    "audience": "For help at night and fall sensing in two spots.",
+    "audience": "For someone with more care needs, or restless nights.",
     "scope": "All of HomeProtect, plus a bed sensor and one more fall sensor.",
     "image": "/photos/packages/homecomplete.webp",
     "imageAlt": "MyIntel HomeComplete lineup showing one Essence hub, one standard emergency pendant, five motion sensors, three door sensor pairs, two MDsense detectors, one VPD2 communicator and one SleepSense.",
     "deviceCount": 14,
     "options": [
-      "Fall sensing in two set spots",
-      "A bed sensor for sleep details",
-      "All the help in HomeProtect"
+      "Everything in HomeProtect",
+      "Fall sensing in a second room",
+      "Bed sensor for sleep and night routines"
     ],
     "growth": "We agree when to check back with you.",
     "limits": "Each fall sensor works in a set spot. The bed sensor needs a bed that works with it. Home changes and health tools cost extra.",

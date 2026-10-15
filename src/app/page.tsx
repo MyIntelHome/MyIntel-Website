@@ -10,8 +10,8 @@ import { Activity, ArrowRight, Bell, Check, ClipboardCheck, DoorOpen, Home, Moon
 
 const offer = [
   { title: "We find the risks.", body: "A licensed occupational therapist walks the home with you and points out what could cause a fall, like loose rugs, dark stairs or a hard-to-reach shower." },
-  { title: "We learn the routine.", body: "Sensors around the home track everyday activity. Our AI learns what normal looks like and flags when something is off, so small problems get caught early." },
-  { title: "Someone is always there.", body: "Press the help button any time, day or night, and a trained person at our monitoring center answers. Family gets the updates you choose." },
+  { title: "We notice when something changes.", body: "Small sensors learn their usual day, like when they get up and move around. If something is different, you hear about it early, before a small problem becomes a big one." },
+  { title: "Someone is always there.", body: "Press the help button any time, day or night, and a trained person answers. Family gets the updates you choose." },
 ];
 
 type Feature = { icon: ComponentType<SVGProps<SVGSVGElement>>; text: string };
@@ -22,7 +22,7 @@ const plans: { id: string; name: string; tag: string; bestFor: string; base?: st
     { icon: Wrench, text: "Free professional setup and check-ins" },
   ] },
   { id: "homeprotect", name: "HomeProtect", tag: "More help through the day", bestFor: "Someone who lives alone or has had a fall or a close call.", base: "Everything in HomeAware, plus", devices: 12, features: [
-    { icon: Sparkles, text: "Routine tracking across the home, with AI flags" },
+    { icon: Sparkles, text: "Notices changes in the daily routine" },
     { icon: DoorOpen, text: "Door sensors on key doors" },
     { icon: PersonStanding, text: "Fall sensing in one key room" },
     { icon: Phone, text: "Voice help, no button needed" },
@@ -37,7 +37,7 @@ const plans: { id: string; name: string; tag: string; bestFor: string; base?: st
 
 export default function HomePage() {
   return <>
-    <EditorialHero eyebrow="Aging in place in Denver" title={<>Stay in the <span className="text-blue">home you love</span>.</>} body="MyIntel helps older adults live safely at home and lets family know when something is wrong. We check the home for fall risks, set up sensors that learn the daily routine, and a real person answers the help button 24/7." image="/photos/stories/coming-home.webp" alt="Older woman coming home from a walk with her dog.">
+    <EditorialHero eyebrow="Aging in place in Denver" title={<>Stay in the <span className="text-blue">home you love</span>.</>} body="MyIntel helps older adults live safely at home and lets family know when something is wrong. We check the home for fall risks, set up simple sensors that notice when the day looks different, and a real person answers the help button 24/7." image="/photos/stories/coming-home.webp" alt="Older woman coming home from a walk with her dog.">
       <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
         <a href={site.homeCheckUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a free home check <ArrowRight className="h-5 w-5" /></a>
         <a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a>

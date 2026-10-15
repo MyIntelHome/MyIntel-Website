@@ -3,7 +3,7 @@ export const site = {
   legalName: "MyIntel Co.",
   tagline: "Stay in the home you love",
   description:
-    "MyIntel helps older adults in the Denver area stay safely at home. We check the home for fall risks, set up simple sensors and a help button for free, learn the daily routine to flag when something is off, and a 24/7 monitoring center answers when help is needed.",
+    "MyIntel helps older adults in the Denver area stay safely at home. We check the home for fall risks, set up simple sensors and a help button for free, notice when the daily routine changes, and a real person answers the help button 24/7.",
   url: "https://myintelhome.com",
   phone: "(720) 989-1123",
   phoneHref: "tel:+17209891123",
@@ -32,9 +32,9 @@ export const footerNav = [
 
 // Claims we can stand behind. Keep every line true: they appear on several pages.
 export const trust = [
-  { key: "monitoring", title: "Help answered 24/7", body: "Help button calls go to a UL-listed professional monitoring center, day and night." },
+  { key: "monitoring", title: "Help answered 24/7", body: "Press the help button and a trained person at a UL-listed response center answers, day or night." },
   { key: "ots", title: "Licensed, insured OTs", body: "Home safety visits are done by licensed, insured occupational therapists with CAPS certification." },
-  { key: "cameras", title: "No cameras", body: "Sensors notice movement and routine, not faces. Nobody watches on video." },
+  { key: "cameras", title: "No cameras", body: "Sensors notice movement, not faces. Nobody can see into the home." },
   { key: "installers", title: "Insured professionals", body: "Every system is set up by insured, professional installers who show you how it works. We check back after." },
 ];
 

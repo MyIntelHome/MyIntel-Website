@@ -4,14 +4,12 @@ import { Check } from "@/components/icons";
 
 export function SolutionComparison() {
   return <div className="package-cards">
-    {solutions.map((s,i) => <article key={s.id} id={s.id} className="package-card">
-      <div className="package-card-top"><p className="package-number">0{i+1}</p><p className="package-focus">{s.focus}</p></div>
+    {solutions.map((s,i) => <article key={s.id} id={s.id} className={`package-card package-tier-${i+1}`}>
+      <div className="package-card-top"><div className="flex items-center gap-3"><p className="package-number">0{i+1}</p><p className="package-focus">{s.focus}</p></div><h3 className="package-name">{s.shortName}</h3><p className="package-audience">{s.audience}</p></div>
       <div className="package-photo"><Image src={s.image} alt={s.imageAlt} fill sizes="(min-width: 1100px) 360px, (min-width: 768px) 50vw, 100vw" className="object-contain" quality={85} /></div>
       <div className="package-card-body">
-        <h3 className="font-display text-3xl font-extrabold tracking-tight text-navy">{s.shortName}</h3>
-        <p className="mt-4 text-lg leading-relaxed text-clay">{s.audience}</p>
         <ul className="package-benefits">{s.options.map(o=><li key={o}><Check aria-hidden="true" className="h-5 w-5 shrink-0" /><span>{o}</span></li>)}</ul>
-        <p className="package-service-note">Free setup. Help after setup. 24/7 help button monitoring.{s.services.assessmentIncluded && <span className="mt-2 block">Also: a home safety visit and a plan for your home.</span>}</p>
+        <p className="package-service-note">Free setup. Help after setup. Help button answered 24/7.{s.services.assessmentIncluded && <span className="mt-2 block">Also: a home safety visit and a plan for your home.</span>}</p>
         <details className="package-device-details">
           <summary>See all {s.deviceCount} devices <span aria-hidden="true">+</span></summary>
           <ul className="package-device-list">{s.devices.map(d=><li key={d.key}><span className="device-quantity">{d.count}</span><div><p className="font-bold text-navy">{d.label}</p><p className="device-model">{d.model}</p><p className="mt-1 text-lg leading-relaxed text-clay">{d.detail}</p></div></li>)}</ul>

@@ -286,3 +286,20 @@ section.bg-navy :focus-visible, section.bg-navy-dark :focus-visible, footer :foc
   .plan-step-1 { margin-top: 72px; }
   .plan-step-2 { margin-top: 36px; }
 }
+
+/* Packages page: same color steps as the homepage plan ladder */
+.package-tier-1 .package-card-top { background: #edf3ef; }
+.package-tier-2 .package-card-top { background: #d9e9f3; border-bottom-color: #c6dbe8; }
+.package-tier-3 { border-color: #1e3357; }
+.package-tier-3 .package-card-top { background: #1e3357; border-bottom-color: #1e3357; }
+.package-tier-3 .package-focus { color: #faf8f4; }
+.package-tier-3 .package-number { background: #faf8f4; color: #1e3357; }
+.package-tier-2 .package-photo { background: #f3f8fb; }
+.package-tier-3 .package-photo { background: #eef1f6; }
+.package-tier-3 .package-card-body h3 { color: #1e3357; }
+.package-card-top { flex-direction: column; align-items: stretch; gap: 0; padding: 24px; }
+.package-name { margin-top: 16px; font-family: var(--font-manrope), sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #1e3357; }
+.package-audience { margin-top: 6px; font-size: 18px; line-height: 1.55; color: #55627a; }
+.package-tier-3 .package-name { color: #faf8f4; }
+.package-tier-3 .package-audience { color: rgba(250,248,244,0.85); }
+.package-card-body .package-benefits { margin-top: 0; }
