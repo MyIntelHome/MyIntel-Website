@@ -259,3 +259,30 @@ section.bg-navy :focus-visible, section.bg-navy-dark :focus-visible, footer :foc
 }
 @media (min-width: 768px) { .step-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
 @media (min-width: 1024px) { .contact-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 48px; } }
+.routine-card { border-radius: 28px; background: #fff; border: 1px solid #d6dedc; padding: 28px; }
+.story-tint .routine-card { border-color: transparent; }
+
+/* Homepage plan ladder: each plan is a step up, shown by what it does, not the hardware */
+.plan-ladder { display: grid; gap: 20px; align-items: stretch; }
+.plan-step { display: flex; flex-direction: column; overflow: hidden; border-radius: 28px; border: 1px solid #d6dedc; background: #fff; }
+.plan-step-head { padding: 26px 26px 22px; }
+.plan-step-1 .plan-step-head { background: #edf3ef; }
+.plan-step-2 .plan-step-head { background: #d9e9f3; }
+.plan-step-3 { border-color: #1e3357; }
+.plan-step-3 .plan-step-head { background: #1e3357; color: #faf8f4; }
+.plan-tag { display: inline-block; border-radius: 999px; background: rgba(255,255,255,0.75); padding: 4px 12px; font-size: 14px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #1e3357; }
+.plan-step-head h3 { margin-top: 14px; font-family: var(--font-manrope), sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #1e3357; }
+.plan-step-3 .plan-step-head h3 { color: #faf8f4; }
+.plan-best { margin-top: 8px; font-size: 18px; line-height: 1.55; color: #55627a; }
+.plan-step-3 .plan-best { color: rgba(250,248,244,0.85); }
+.plan-step-body { display: flex; flex: 1; flex-direction: column; padding: 22px 26px 26px; }
+.plan-base { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #2e96d1; }
+.plan-step-body ul { display: grid; gap: 14px; margin-top: 14px; }
+.plan-step-body li { display: flex; align-items: start; gap: 12px; font-size: 18px; line-height: 1.45; font-weight: 700; color: #1e3357; }
+.plan-step-body li svg { margin-top: 2px; color: #2e96d1; }
+.plan-more { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 22px; font-size: 16px; font-weight: 800; color: #1e3357; text-decoration: underline; text-underline-offset: 4px; }
+@media (min-width: 900px) {
+  .plan-ladder { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .plan-step-1 { margin-top: 72px; }
+  .plan-step-2 { margin-top: 36px; }
+}

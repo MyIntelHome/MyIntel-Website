@@ -36,17 +36,16 @@ export default function SolutionsPage(){
     </section>
 
     <section className="story-section story-tint"><div className="container-x story-heading">
-      <div><p className="eyebrow">Real people, close by</p><h2 className="story-title mt-4">We set it up.<br />We stay in touch.</h2><p className="story-lead mt-5">We fit the tools in your home. We show you how to use them. We agree when to check back.</p></div>
+      <div><p className="eyebrow">Real people, close by</p><h2 className="story-title mt-4">We set it up.<br />We stay in touch.</h2><p className="story-lead mt-5">Insured, professional installers set everything up and show you how it works. We check back after setup to make sure it fits.</p></div>
       <dl className="story-lines">
-        <div><dt>Every plan</dt><dd>Free setup and help after setup.</dd></div>
-        <div><dt>Protect and Complete</dt><dd>A home safety visit and a plan made for you.</dd></div>
-        <div><dt>Every plan</dt><dd>A help button answered by a 24/7 monitoring center.</dd></div>
+        <div><dt>Every plan</dt><dd>Free professional setup, check-ins after setup and a help button answered by a 24/7 monitoring center.</dd></div>
+        <div><dt>Protect and Complete</dt><dd>Routine tracking across the home with AI flags, plus a home safety visit and a plan made for you.</dd></div>
         <div><dt>You get a say</dt><dd>We go over any costs and who gets updates before we start.</dd></div>
       </dl>
     </div></section>
 
     <section className="story-section container-x"><div className="story-split">
-      <div><p className="eyebrow">See what matters</p><h2 className="story-title mt-4">A clearer view of the day.</h2><p className="story-lead mt-5">What you see depends on your plan. More room sensors can add more detail. The bed sensor adds sleep details when the bed is a good fit.</p><p className="story-lead mt-5">If the usual morning routine does not happen, you hear about it. If the help button is pressed, you know help is on the way.</p><a href={site.homeCheckUrl+"/?view=help"} className="story-link mt-6">Ask us about a plan <ArrowRight aria-hidden="true" className="h-5 w-5" /></a></div>
+      <div><p className="eyebrow">See what matters</p><h2 className="story-title mt-4">A clearer view of the day.</h2><p className="story-lead mt-5">Our AI learns the daily routine from the sensors and flags changes, like a late start to the day or more trips to the bathroom at night. More sensors mean a fuller picture.</p><p className="story-lead mt-5">If something looks off, you hear about it. If the help button is pressed, you know help is on the way.</p><a href={site.homeCheckUrl+"/?view=help"} className="story-link mt-6">Ask us about a plan <ArrowRight aria-hidden="true" className="h-5 w-5" /></a></div>
       <figure className="story-phone"><Image src="/photos/packages/mobile-dashboard.webp" alt="Sample MyIntel phone view with daily and sleep details." width={1024} height={1536} sizes="(min-width: 1024px) 400px, 80vw" className="h-auto max-h-[500px] w-auto max-w-full object-contain" /><figcaption>Example view. Your screen may differ. Sleep details need the right bed sensor.</figcaption></figure>
     </div></section>
 

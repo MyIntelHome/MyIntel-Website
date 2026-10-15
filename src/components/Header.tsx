@@ -12,7 +12,7 @@ export function Header() {
   const pathname = usePathname();
   // Professionals get a referral action instead of the consumer home check.
   const cta = pathname === "/partners"
-    ? { href: "#partnership-contact", label: "Refer a client", external: false }
+    ? { href: "#partnership-contact", label: "Talk to our team", external: false }
     : { href: site.homeCheckUrl, label: "Start a free home check", external: true };
 
   return (

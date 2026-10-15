@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata={title:"Common Questions",description:"Simple answers about MyIntel home checks, plans, setup, privacy and help for families."};
 const groups=[
  {name:"Getting started",items:[
-  {q:"What does MyIntel do?",a:"We help older adults stay safely at home. We check the home for fall risks, set up a help button and simple sensors for free, and a 24/7 monitoring center answers when help is needed. Family gets the updates you choose."},
+  {q:"What does MyIntel do?",a:"We help older adults stay safely at home. We check the home for fall risks and set up sensors and a help button for free. Our AI learns the daily routine and flags when something is off, and a 24/7 monitoring center answers the help button. Family gets the updates you choose."},
   {q:"Where do I start?",a:"Try the free home check online, or call us. It takes a few minutes and shows what may need a closer look."},
   {q:"Where do you work?",a:`We set up homes and do home safety visits in ${site.serviceArea}. The online home check works anywhere.`},
  ]},
@@ -17,6 +17,7 @@ const groups=[
   {q:"Are grab bars and other home changes included?",a:"No. Home changes are quoted separately. We go over any extra work and cost with you first."},
  ]},
  {name:"Help and safety",items:[
+  {q:"How do you know when something is off?",a:"Sensors around the home track everyday activity, like moving between rooms, opening doors and time in bed. Our AI learns what a normal day looks like and flags changes, like a late start to the day or more trips to the bathroom at night. Our team and the family you choose get a heads up."},
   {q:"Who answers when I press the help button?",a:"A trained person at a UL-listed professional monitoring center, 24 hours a day. They talk with you, send help if needed and let your family know."},
   {q:"Who does the home safety visit?",a:"A licensed, insured occupational therapist with CAPS (Certified Aging-in-Place Specialist) certification. The visit is included with HomeProtect and HomeComplete."},
   {q:"Will every fall be found?",a:"No system can promise that. Fall sensors work in the rooms where we set them up, and the help button works when it is pressed. Together they give two ways to get help fast."},

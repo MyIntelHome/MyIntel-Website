@@ -1,51 +1,59 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { EditorialHero } from "@/components/EditorialHero";
-import { Steps, TrustRow } from "@/components/Proof";
+import { RoutineInsight, Steps, TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
-import { Phone, Mail, ArrowRight, Building, Stethoscope, Users, Home, ClipboardCheck, Heart } from "@/components/icons";
+import { Phone, Mail, ArrowRight, Building, Stethoscope, Users, Home, ClipboardCheck, Heart, Dashboard, GraduationCap, Wrench, Sparkles } from "@/components/icons";
 
-export const metadata: Metadata={title:"For Professionals",description:"Refer clients to MyIntel for home safety visits by licensed OTs, free sensor and help button setup, and 24/7 professional monitoring in the Denver area.",alternates:{canonical:"/partners"}};
+export const metadata: Metadata={title:"For Care Companies",description:"MyIntel gives home care companies the sensors, help buttons, training and a team dashboard to watch over every client at home, with AI that flags changes in daily routine.",alternates:{canonical:"/partners"}};
+const partnerSteps=[
+ {icon:Dashboard,title:"We set up your dashboard",body:"Your company gets its own MyIntel dashboard, with logins for the staff who need them."},
+ {icon:GraduationCap,title:"We train your team",body:"We show your staff how to set up the sensors and help button, read the dashboard and act on alerts."},
+ {icon:Wrench,title:"You set up your clients",body:"Your team puts the equipment in each client's home, on your schedule. We are a call away if you need help."},
+ {icon:Sparkles,title:"Watch over every client",body:"See each client's daily routine in one place. Our AI flags changes, so you know who needs a call today."},
+];
 const who=[
- {icon:Users,title:"Home care agencies",body:"Know when a client needs a check-in between visits, and give families one more reason to choose you."},
- {icon:Stethoscope,title:"OTs, PTs and nurses",body:"Pair your recommendations with a safer home setup and a help button your patient can actually reach."},
- {icon:ClipboardCheck,title:"Case managers and care coordinators",body:"One local call gets a client a home safety visit, setup and 24/7 help, without a pile of separate vendors."},
- {icon:Building,title:"Senior housing and communities",body:"Add help buttons and fall alerts to residents' homes with no cameras and no rewiring."},
- {icon:Home,title:"Discharge planners",body:"Help a patient go home safely after a hospital or rehab stay, with the home checked and help in place."},
- {icon:Heart,title:"Aging and caregiver groups",body:"Give the families you serve a simple, local next step when they ask how to keep a parent safe at home."},
+ {icon:Users,title:"Home care agencies",body:"Know what happens between visits, and give families one more reason to choose you."},
+ {icon:Stethoscope,title:"Home health and therapy teams",body:"Spot changes in mobility, sleep and routine early, before they turn into a fall or a hospital stay."},
+ {icon:Building,title:"Senior living and housing",body:"Watch over residents in their own apartments with no cameras and no rewiring."},
+ {icon:ClipboardCheck,title:"Care management",body:"Keep track of many clients from one screen and focus your time on the ones who need it."},
+ {icon:Home,title:"Hospital and rehab discharge",body:"Help patients go home safely, with their routine watched in the weeks after a stay."},
+ {icon:Heart,title:"Aging and caregiver groups",body:"Give the people you serve a simple way to stay safe at home."},
 ];
 const gains=[
- {title:"Fewer surprises between visits",body:"With your client's permission, your team can get updates when something changes, like a missed morning routine or a help button press."},
- {title:"A home safety report you can use",body:"Our licensed OTs write a plan for the home that you can add to your client's care plan."},
- {title:"One local contact",body:"You talk to the same Denver team for the visit, the setup and every question after."},
- {title:"Help for your clients at 2am",body:"A UL-listed monitoring center answers the help button 24/7, so your client is never on their own."},
+ {title:"One dashboard for every client",body:"Daily activity, routine changes and alerts for all of your clients, in one place your whole team can use."},
+ {title:"AI that flags what changed",body:"The system learns each client's normal routine and points out what is different, so your team spends time where it matters."},
+ {title:"The equipment, ready to go",body:"Help buttons, room and door sensors, fall sensors and bed sensors, chosen to fit each client's needs."},
+ {title:"Training and support",body:"We get your team comfortable with setup and the dashboard, and we stay available when questions come up."},
+ {title:"Help button answered 24/7",body:"When a client presses the help button, a UL-listed professional monitoring center answers, day or night."},
 ];
 const limits=[
- "Your client chooses who sees their information. We set this up with them and record their consent.",
- "Fall sensors work in the spots we set them up in. They can miss a fall, so the help button still matters.",
- "MyIntel adds safety at home. It does not diagnose, or replace care, visits or 911.",
+ "Your clients choose who sees their information. Your team records their consent before setup.",
+ "Fall sensors work in the spots they are set up in. They can miss a fall, so the help button still matters.",
+ "MyIntel flags changes in routine. It does not diagnose, or replace care, visits or 911.",
 ];
 export default function PartnersPage(){
  return <>
-  <EditorialHero eyebrow="For professionals" title="Help your clients stay safely at home." body="Refer a client to MyIntel. A licensed occupational therapist checks the home for fall risks, we set up a help button and sensors for free, and a 24/7 monitoring center answers when they need help. Your team stays in the loop." image="/photos/packages/care-dashboard.webp" imageFit="contain" alt="Care professional at a laptop with an example MyIntel screen showing a client's daily activity, sleep and alerts.">
-   <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href="#partnership-contact" className="btn-primary">Refer a client <ArrowRight className="h-5 w-5" /></a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div>
-   <p className="mt-5 text-lg text-clay">Serving {site.serviceArea}.</p>
+  <EditorialHero eyebrow="For care companies" title="Watch over every client, between every visit." body="MyIntel gives care teams the tools to keep clients safe at home. We set up your company's dashboard, supply the sensors and help buttons, and train your staff. Your team sets up clients and watches over them, and our AI flags when someone's routine changes." image="/photos/packages/care-dashboard.webp" imageFit="contain" alt="Care professional at a laptop with an example MyIntel dashboard showing a client's daily activity, sleep and alerts.">
+   <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href="#partnership-contact" className="btn-primary">Talk to our team <ArrowRight className="h-5 w-5" /></a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div>
+   <p className="mt-5 text-lg text-clay">Example screen. What you see depends on the sensors in each home.</p>
   </EditorialHero>
 
-  <section className="story-section story-tint" aria-labelledby="who-title"><div className="container-x"><p className="eyebrow">Who we work with</p><h2 id="who-title" className="story-title mt-4 max-w-3xl">Built for the people who care for older adults.</h2>
-   <ul className="who-grid mt-10">{who.map(w=><li key={w.title}><span className="trust-icon"><w.icon className="h-6 w-6" /></span><h3>{w.title}</h3><p>{w.body}</p></li>)}</ul>
-  </div></section>
+  <Steps tint eyebrow="How it works for your team" title="We give you the tools. Your team does what it does best." steps={partnerSteps} />
 
-  <Steps eyebrow="How a referral works" title="You refer. We handle the rest." intro="Call or email us with your client's name and a good time to reach them. We take it from there and keep you updated." />
+  <RoutineInsight audience="pro" />
 
-  <section className="story-section story-tint" aria-labelledby="gains-title"><div className="container-x story-faq-layout"><div><p className="eyebrow">What your team gets</p><h2 id="gains-title" className="story-title mt-4">More eyes on the home. Less work for you.</h2><Link href="/solutions" className="story-link mt-6">See what each plan includes <ArrowRight className="h-5 w-5" aria-hidden="true" /></Link></div>
+  <section className="story-section story-tint" aria-labelledby="gains-title"><div className="container-x story-faq-layout"><div><p className="eyebrow">What you get</p><h2 id="gains-title" className="story-title mt-4">Everything your team needs.</h2><p className="story-lead mt-5">Would you rather we handle a client for you? We can also do the setup and a home safety visit by a licensed OT.</p></div>
    <dl className="story-lines">{gains.map(g=><div key={g.title}><dt>{g.title}</dt><dd>{g.body}</dd></div>)}</dl>
   </div></section>
 
-  <TrustRow eyebrow="Why partners trust us" title="Credentials you can share with families." />
+  <section className="story-section" aria-labelledby="who-title"><div className="container-x"><p className="eyebrow">Who we work with</p><h2 id="who-title" className="story-title mt-4 max-w-3xl">Built for the people who care for older adults.</h2>
+   <ul className="who-grid mt-10">{who.map(w=><li key={w.title}><span className="trust-icon"><w.icon className="h-6 w-6" /></span><h3>{w.title}</h3><p>{w.body}</p></li>)}</ul>
+  </div></section>
 
-  <section className="story-section story-tint" aria-labelledby="limits-title"><div className="container-x story-faq-layout"><div><p className="eyebrow">Good to know</p><h2 id="limits-title" className="story-title mt-4">Clear about what we do.</h2></div><ul className="limits-list">{limits.map(l=><li key={l}>{l}</li>)}</ul></div></section>
+  <TrustRow tint eyebrow="Why partners trust us" title="Credentials you can share with families." />
 
-  <section id="partnership-contact" className="story-breath scroll-mt-28 bg-navy text-cream"><div className="container-x"><p className="eyebrow !text-cream/80">Let&apos;s talk</p><h2 className="story-title mt-4 !text-cream">Refer a client or start a partnership.</h2><p className="mt-5 max-w-2xl text-xl leading-relaxed text-cream/90">Tell us who you serve and what your team needs. To refer a client, include their name, the best way to reach them and anything we should know. We usually reply within one business day.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row"><a href={site.referralHref} className="btn-light"><Mail className="h-5 w-5" />Email a referral</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div></div></section>
+  <section className="story-section" aria-labelledby="limits-title"><div className="container-x story-faq-layout"><div><p className="eyebrow">Good to know</p><h2 id="limits-title" className="story-title mt-4">Clear about what it does.</h2></div><ul className="limits-list">{limits.map(l=><li key={l}>{l}</li>)}</ul></div></section>
+
+  <section id="partnership-contact" className="story-breath scroll-mt-28 bg-navy text-cream"><div className="container-x"><p className="eyebrow !text-cream/80">Let&apos;s talk</p><h2 className="story-title mt-4 !text-cream">Bring MyIntel to your clients.</h2><p className="mt-5 max-w-2xl text-xl leading-relaxed text-cream/90">Tell us about your team and the people you serve. We will walk you through the dashboard and talk about what would fit. Just want to refer one client? We can take care of that too. We usually reply within one business day.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row"><a href={site.referralHref} className="btn-light"><Mail className="h-5 w-5" />Email our team</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div></div></section>
  </>;
 }

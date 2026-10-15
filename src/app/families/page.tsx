@@ -9,7 +9,7 @@ import { ArrowRight, Phone } from "@/components/icons";
 
 export const metadata: Metadata = {title:"For Families",description:"Help a parent stay safely in the home they love. A home safety visit, free setup, a help button answered 24/7 and updates you choose."};
 const moments=[
- {time:"7:30 am",title:"Mom is up and moving.",body:"Her morning routine happened, so there is nothing to worry about. If it does not, you get a heads up and can give her a call."},
+ {time:"7:30 am",title:"Mom is up and moving.",body:"Her morning looks like every other morning, so there is nothing to worry about. If it does not, our AI flags it and you get a heads up."},
  {time:"2:00 pm",title:"Dad presses his help button.",body:"A trained person at our 24/7 monitoring center answers right away, talks with him, sends help if needed and calls you."},
  {time:"11:00 pm",title:"A fall in the bathroom.",body:"With a fall sensor in that room, help is alerted even if they cannot reach the button."},
 ];
@@ -21,7 +21,7 @@ const questions=[
 ];
 export default function FamiliesPage(){
  return <>
-  <EditorialHero eyebrow="For families" title="Know they're okay, without calling five times a day." body="Your parent wants to stay in their own home. You want to know they are safe. MyIntel checks the home for fall risks, sets up a help button answered 24/7 and lets you know when something is off." image="/photos/stories/family-time.webp" alt="Father and daughter sharing tea and a laugh on a porch.">
+  <EditorialHero eyebrow="For families" title="Know they're okay, without calling five times a day." body="Your parent wants to stay in their own home. You want to know they are safe. MyIntel checks the home for fall risks, learns their daily routine and lets you know when something is off. A help button is answered 24/7." image="/photos/stories/family-time.webp" alt="Father and daughter sharing tea and a laugh on a porch.">
    <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href={site.homeCheckUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a free home check <ArrowRight className="h-5 w-5" /></a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div><p className="mt-5 text-lg text-clay">Take it together, at your own pace.</p>
   </EditorialHero>
   <section className="story-section story-tint" aria-labelledby="day-title"><div className="container-x"><p className="eyebrow">A day with MyIntel</p><h2 id="day-title" className="story-title mt-4 max-w-3xl">Quiet most days. There when it counts.</h2>
