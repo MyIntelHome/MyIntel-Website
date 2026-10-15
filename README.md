@@ -9,7 +9,6 @@ Built with [Next.js 15](https://nextjs.org) (App Router) and [Tailwind CSS 4](ht
 | Route | Purpose |
 | --- | --- |
 | `/` | Home — hero, stats, how it works, features, audiences, assessments, testimonial |
-| `/how-it-works` | Platform deep-dive, privacy by design, pilot program |
 | `/assessments` | Home Safety Assessments (CAPS), process, financial aid, service areas |
 | `/about` | Founding story, mission, values |
 | `/faq` | Frequently asked questions by category |

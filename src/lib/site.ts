@@ -19,7 +19,6 @@ export const nav = [
   { label: "For families", href: "/families" },
   { label: "For care companies", href: "/partners" },
   { label: "Packages", href: "/solutions" },
-  { label: "How it works", href: "/how-it-works" },
   { label: "About", href: "/about" },
   { label: "Questions", href: "/faq" },
   { label: "Contact", href: "/contact" },
