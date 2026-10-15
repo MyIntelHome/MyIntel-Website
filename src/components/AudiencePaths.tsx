@@ -5,7 +5,7 @@ import { EditorialImage } from "@/components/EditorialImage";
 const paths = [
   { label: "For you", title: "Stay at home, on your terms.", body: "Explore support that respects your routines and choices.", image: "/photos/packages/kitchen-life.webp", alt: "Illustrative older woman preparing a salad with a home hub nearby", href: "/solutions", link: "Explore your options" },
   { label: "For families", title: "Make room for time together.", body: "Understand the next steps without taking over a loved one's life.", image: "/photos/packages/family-dashboard.webp", alt: "Illustrative mother and daughter with an example MyIntel dashboard", href: "/families", link: "Support for families" },
-  { label: "For care partners", title: "Connect care with the home.", body: "Bring home safety and agreed follow-up into the support you provide.", image: "/photos/packages/care-dashboard.webp", alt: "Illustrative care professional with an example MyIntel dashboard", href: "/partners", link: "Work with MyIntel" },
+  { label: "For care partners", title: "Connect care with the home.", body: "Refer a client for a home safety visit, free setup and 24/7 help.", image: "/photos/packages/care-dashboard.webp", alt: "Illustrative care professional with an example MyIntel dashboard", href: "/partners", link: "Refer a client" },
 ];
 
 export function AudiencePaths() {

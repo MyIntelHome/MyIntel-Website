@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
+    images: [{ url: "/photos/stories/coming-home.webp", alt: "Older woman coming home from a walk with her dog." }],
   },
 };
 

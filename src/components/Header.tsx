@@ -10,6 +10,10 @@ import { Close, Menu } from "@/components/icons";
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  // Professionals get a referral action instead of the consumer home check.
+  const cta = pathname === "/partners"
+    ? { href: "#partnership-contact", label: "Refer a client", external: false }
+    : { href: site.homeCheckUrl, label: "Start a free home check", external: true };
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink/8 bg-cream/90 backdrop-blur-md">
@@ -18,7 +22,7 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-6 xl:flex" aria-label="Main">
+        <nav className="hidden items-center gap-5 xl:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -35,12 +39,11 @@ export function Header() {
 
         <div className="hidden xl:block">
           <a
-            href={site.homeCheckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={cta.href}
+            {...(cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="btn-primary whitespace-nowrap !px-5 !py-3 text-base"
           >
-            Start a free home check
+            {cta.label}
           </a>
         </div>
 
@@ -77,12 +80,12 @@ export function Header() {
             ))}
           </ul>
           <a
-            href={site.homeCheckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={cta.href}
+            onClick={() => setOpen(false)}
+            {...(cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="btn-primary mt-5 w-full"
           >
-            Start a free home check
+            {cta.label}
           </a>
         </nav>
       )}

@@ -11,12 +11,11 @@ export function SolutionComparison() {
         <h3 className="font-display text-3xl font-extrabold tracking-tight text-navy">{s.shortName}</h3>
         <p className="mt-4 text-lg leading-relaxed text-clay">{s.audience}</p>
         <ul className="package-benefits">{s.options.map(o=><li key={o}><Check aria-hidden="true" className="h-5 w-5 shrink-0" /><span>{o}</span></li>)}</ul>
-        <p className="package-service-note">Free setup. Help after setup.{s.services.assessmentIncluded && <span className="mt-2 block">Also: a home safety visit and a plan for your home.</span>}</p>
+        <p className="package-service-note">Free setup. Help after setup. 24/7 help button monitoring.{s.services.assessmentIncluded && <span className="mt-2 block">Also: a home safety visit and a plan for your home.</span>}</p>
         <details className="package-device-details">
           <summary>See all {s.deviceCount} devices <span aria-hidden="true">+</span></summary>
           <ul className="package-device-list">{s.devices.map(d=><li key={d.key}><span className="device-quantity">{d.count}</span><div><p className="font-bold text-navy">{d.label}</p><p className="device-model">{d.model}</p><p className="mt-1 text-lg leading-relaxed text-clay">{d.detail}</p></div></li>)}</ul>
-        </details>
-        <p className="package-limit"><strong>Keep in mind:</strong> {s.limits}</p>
+        </details>
       </div>
     </article>)}
   </div>;

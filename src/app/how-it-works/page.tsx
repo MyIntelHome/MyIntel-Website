@@ -3,23 +3,24 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
-import { site } from "@/lib/site";
+import { DemoHome, Steps } from "@/components/Proof";
 import { ArrowRight } from "@/components/icons";
 
-export const metadata: Metadata={title:"How It Works",description:"Learn how MyIntel room sensors, help buttons, room fall sensing and bed sensing can support life at home."};
+export const metadata: Metadata={title:"How It Works",description:"From a free home check to a home safety visit, free setup and a help button answered 24/7. See how MyIntel keeps an older adult safe at home."};
 const tools=[
- {title:"Room and door checks",body:"Small sensors note moves near them. Door sensors note when a door or window opens. What you see depends on where they are."},
- {title:"Press for help",body:"Each plan has a help button. Press it when you need help. The button does not sense falls."},
- {title:"Fall sensing in set spots",body:"Protect has one fall sensor. Complete has two. Each works in a spot we check first. They can miss a fall."},
- {title:"Voice and sleep help",body:"Protect and Complete let you use your voice to ask for help. Complete also has a bed sensor. Sleep details need the right bed."},
+ {title:"A help button, answered 24/7",body:"Wear it on the wrist or around the neck. Press it and a trained person at our monitoring center answers, day or night. They send help and call your family."},
+ {title:"Room and door sensors",body:"Small sensors notice everyday movement, like getting up in the morning or opening the front door. If the usual routine does not happen, family can get a heads up."},
+ {title:"Fall sensors",body:"HomeProtect adds one fall sensor and HomeComplete adds two. We put them where a fall is most likely, like the bathroom or bedroom."},
+ {title:"Voice help and sleep",body:"HomeProtect and HomeComplete add a voice unit, so you can call for help without the button. HomeComplete adds a bed sensor that shows how someone slept."},
 ];
 export default function HowItWorksPage(){
  return <>
-  <PageHero eyebrow="How it works" title="Small tools. A little more help." body="We choose the tools that fit your home. They can help you ask for help or notice a change in the day." />
-  <section className="container-x pb-16 lg:pb-24"><figure className="m-0"><EditorialImage src="/photos/packages/home-layout.webp" alt="Sample home with room sensors, a fall sensor, a home hub and a voice help unit." fit="contain" className="aspect-[3/2] max-h-[620px] rounded-[2rem]" priority /><figcaption className="story-caption">One sample home. We check each spot with you.</figcaption></figure></section>
-  <section className="story-section story-tint"><div className="container-x story-faq-layout"><div><p className="eyebrow">Help around the home</p><h2 className="story-title mt-4">What the tools can do.</h2></div><dl className="story-lines">{tools.map(t=><div key={t.title}><dt>{t.title}</dt><dd>{t.body}</dd></div>)}</dl></div></section>
-  <section className="story-section container-x"><div className="story-heading"><div><p className="eyebrow">Your home. Your say.</p><h2 className="story-title mt-4">Pick who gets the news.</h2></div><div className="story-lead space-y-5"><p>You help choose who gets calls and alerts. We agree who will help and how before setup.</p><p>Room sensors work with no cameras. Some units use a mic for calls. We talk through that with you.</p><p>We fit and set up each plan for free. We also check in after setup. We agree when to check back.</p><Link href="/solutions" className="story-link">See what each plan includes <ArrowRight className="h-5 w-5" aria-hidden="true" /></Link></div></div></section>
-  <section className="story-section story-tint"><div className="container-x story-heading"><div><p className="eyebrow">Our first homes</p><h2 className="story-title mt-4">Help us learn from real homes.</h2></div><div><p className="story-lead">Want to be part of our first group of homes? Share your interest. We will talk through the fit with you.</p><a href={site.waitlistUrl} target="_blank" rel="noopener noreferrer" className="story-link mt-6">Join the founding homes list <ArrowRight className="h-5 w-5" aria-hidden="true" /></a></div></div></section>
-  <CtaBand title="Start with a free home check." body="See what may need a closer look. You can choose what to do next." />
+  <PageHero eyebrow="How it works" title="Safer at home, in four simple steps." body="We check the home, make it safer, set everything up for free and make sure someone is always there to answer." />
+  <Steps eyebrow="From first call to everyday help" title="What happens when you choose MyIntel." />
+  <section className="container-x pb-16 lg:pb-24"><figure className="m-0"><EditorialImage src="/photos/packages/home-layout.webp" alt="Sample home with room sensors, a fall sensor, a home hub and a voice help unit." fit="contain" className="aspect-[3/2] max-h-[620px] rounded-[2rem]" priority /><figcaption className="story-caption">A sample home. We choose each spot with you during setup.</figcaption></figure></section>
+  <section className="story-section story-tint"><div className="container-x story-faq-layout"><div><p className="eyebrow">What goes in the home</p><h2 className="story-title mt-4">Simple tools. Nothing to learn.</h2><Link href="/solutions" className="story-link mt-6">See what each plan includes <ArrowRight className="h-5 w-5" aria-hidden="true" /></Link></div><dl className="story-lines">{tools.map(t=><div key={t.title}><dt>{t.title}</dt><dd>{t.body}</dd></div>)}</dl></div></section>
+  <section className="story-section container-x"><div className="story-heading"><div><p className="eyebrow">Your home. Your say.</p><h2 className="story-title mt-4">You choose who knows what.</h2></div><div className="story-lead space-y-5"><p>You pick who gets updates, like a daughter, a neighbor or a care team. You can change it any time.</p><p>Room sensors notice movement, not faces. There are no cameras. The voice unit uses a microphone only for help calls.</p></div></div></section>
+  <DemoHome />
+  <CtaBand title="Start with a free home check." body="See what may need a closer look. Then we can talk through the next step together." />
  </>;
 }

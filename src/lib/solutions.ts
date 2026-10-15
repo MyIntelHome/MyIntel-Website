@@ -1,5 +1,5 @@
 export const solutionPolicy = {
-  professionalMonitoringReady: false,
+  professionalMonitoringReady: true,
   advancedVitalsVerified: false,
   partnerLogosApproved: false,
 };
@@ -9,7 +9,7 @@ export const positioning = {
   privacy: "The room sensors do not need cameras.",
   personalProtection: "Each plan has a help button. Room sensors work without wearing it.",
   response: solutionPolicy.professionalMonitoringReady
-    ? "Ask about 24/7 professional monitoring. Coverage and response arrangements are confirmed for your plan."
+    ? "Help button calls go to a 24/7 professional monitoring center. They talk with you, send help and call your family."
     : "We choose who gets calls and alerts with you. We agree who will help and how before setup.",
 };
 
