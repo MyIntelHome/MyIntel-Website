@@ -19,7 +19,9 @@ Current branch aliases, both require Vercel sign-in:
 - Website: https://my-intel-website-git-feature-websi-5023cb-austin-8620s-projects.vercel.app
 - HomeCheck: https://myintel-assesment-git-feature-webs-536818-austin-8620s-projects.vercel.app
 
-For these previews, set website Preview `NEXT_PUBLIC_WEBSITE_INQUIRY_URL` to `https://myintel-assesment-git-feature-webs-536818-austin-8620s-projects.vercel.app/api/website-inquiry`. On the HomeCheck preview, set `APP_ORIGIN` to its branch alias above, and `MYINTEL_WEBSITE_PREVIEW_ORIGINS` to the website alias above. Configure only the new branches, keep the backend isolated and use Austin-only staff delivery as detailed in the companion instructions. The preview's cross-origin API must be accessible to the website's credential-free requests; do not disable production protections. No environment values have been set by this change.
+The website Preview `NEXT_PUBLIC_WEBSITE_INQUIRY_URL` is now set to `https://myintel-assesment-git-feature-webs-536818-austin-8620s-projects.vercel.app/api/website-inquiry`, scoped only to `feature/website-inquiry-forms`. On the HomeCheck preview, `APP_ORIGIN` and `MYINTEL_WEBSITE_PREVIEW_ORIGINS` are configured with the branch aliases above, with Austin-only staff delivery settings. Both preview redeployments reached READY after the Vercel connection was repaired on October 15. Production settings and other preview branches were not edited.
+
+The new backend branch still needs its isolated database URL and valid auth token, Supabase server key, and Resend sending key. Existing older-branch Secrets are write-only and cannot be read back for copying. See the companion HomeCheck `docs/website-inquiries.md` for the exact four names and current checkpoint. No hosted submission or actual inbox delivery is verified yet. Protected browser tests also need origin-scoped Vercel test authentication on both previews; do not disable production protection or put bypass secrets in the website bundle.
 
 ## Validation and rollback
 
