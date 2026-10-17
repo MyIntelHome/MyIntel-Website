@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+/* Website inquiry forms, scoped so surrounding pages keep their layout. */
+.inquiry-contact-layout { display: grid; gap: 40px; align-items: start; }
+.inquiry-contact-options { grid-template-columns: minmax(0, 1fr) !important; }
+.inquiry-form { position: relative; min-width: 0; border: 1px solid #d6dedc; border-radius: 24px; padding: clamp(22px, 4vw, 36px); background: #fff; color: #1e3357; }
+.inquiry-form-light { background: #172845; border-color: #6b7b96; color: #faf8f4; }
+.inquiry-fields { display: grid; min-width: 0; gap: 22px; }
+.inquiry-field { display: grid; min-width: 0; gap: 8px; }
+.inquiry-field label { font-size: 18px; font-weight: 800; }
+.inquiry-field input, .inquiry-field select, .inquiry-field textarea { width: 100%; min-width: 0; min-height: 54px; border: 1px solid #8090a5; border-radius: 12px; background: #fff; color: #14243c; padding: 12px 14px; font-size: 18px; line-height: 1.5; }
+.inquiry-field textarea { resize: vertical; }
+.inquiry-pair { display: grid; gap: 22px; min-width: 0; }
+.inquiry-consent { display: flex; align-items: start; gap: 12px; font-size: 18px; line-height: 1.55; cursor: pointer; }
+.inquiry-consent input { flex-shrink: 0; width: 24px; height: 24px; margin-top: 3px; accent-color: #1e3357; }
+.inquiry-fields button { justify-self: start; min-height: 52px; font-size: 18px; }
+.inquiry-fields:disabled { opacity: .7; }
+.inquiry-fields button:disabled { cursor: wait; }
+.inquiry-error { margin-bottom: 24px; padding: 18px; border: 2px solid #a62d22; border-radius: 12px; background: #fff3f0; color: #7d2019; overflow-wrap: anywhere; }
+.inquiry-error a { display: inline-block; margin-top: 8px; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+.inquiry-form :focus-visible { outline: 3px solid #17658f !important; outline-offset: 3px; }
+.inquiry-form-light :focus-visible { outline-color: #d9a441 !important; }
+.inquiry-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.inquiry-partner-layout { display: grid; align-items: start; gap: 40px; }
+@media (min-width: 640px) { .inquiry-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  .inquiry-contact-layout { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 56px; }
+  .inquiry-partner-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 56px; }
+}
+
 @theme {
   --color-cream: #faf8f4;
   --color-sand: #f1eee7;

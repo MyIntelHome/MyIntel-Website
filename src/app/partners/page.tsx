@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { EditorialHero } from "@/components/EditorialHero";
 import { RoutineInsight, Steps, TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
+import { WebsiteInquiryForm } from "@/components/WebsiteInquiryForm";
 import { Phone, Mail, ArrowRight, Building, Stethoscope, Users, Home, ClipboardCheck, Heart, Dashboard, GraduationCap, Wrench, Sparkles } from "@/components/icons";
 
 export const metadata: Metadata={title:"For Care Companies",description:"MyIntel gives home care companies the sensors, help buttons, training and a team dashboard to watch over every client at home, with AI that flags changes in daily routine.",alternates:{canonical:"/partners"}};
@@ -54,6 +55,6 @@ export default function PartnersPage(){
 
   <section className="story-section" aria-labelledby="limits-title"><div className="container-x story-faq-layout"><div><p className="eyebrow">Good to know</p><h2 id="limits-title" className="story-title mt-4">Clear about what it does.</h2></div><ul className="limits-list">{limits.map(l=><li key={l}>{l}</li>)}</ul></div></section>
 
-  <section id="partnership-contact" className="story-breath scroll-mt-28 bg-navy text-cream"><div className="container-x"><p className="eyebrow !text-cream/80">Let&apos;s talk</p><h2 className="story-title mt-4 !text-cream">Bring MyIntel to your clients.</h2><p className="mt-5 max-w-2xl text-xl leading-relaxed text-cream/90">Tell us about your team and the people you serve. We will walk you through the dashboard and talk about what would fit. Just want to refer one client? We can take care of that too. We usually reply within one business day.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row"><a href={site.referralHref} className="btn-light"><Mail className="h-5 w-5" />Email our team</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div></div></section>
+  <section id="partnership-contact" className="story-breath scroll-mt-28 bg-navy text-cream"><div className="container-x inquiry-partner-layout"><div><p className="eyebrow !text-cream/80">Let&apos;s talk</p><h2 className="story-title mt-4 !text-cream">Bring MyIntel to your clients.</h2><p className="mt-5 max-w-2xl text-xl leading-relaxed text-cream/90">Tell us about your team and the people you serve. We will walk you through the dashboard and talk about what would fit. Just want to refer one client? We can take care of that too. We usually reply within one business day.</p><div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href={site.referralHref} className="btn-light"><Mail className="h-5 w-5" />Email our team</a><a href={site.phoneHref} className="btn-light"><Phone className="h-5 w-5" />{site.phone}</a></div></div><WebsiteInquiryForm type="care_company" light /></div></section>
  </>;
 }
