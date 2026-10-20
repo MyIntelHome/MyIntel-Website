@@ -10,9 +10,11 @@ import { Close, Menu } from "@/components/icons";
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  // Professionals get a referral action instead of the consumer home check.
+  // Match the action to the visitor's intent on plan and family pages.
   const cta = pathname === "/partners"
     ? { href: "#partnership-contact", label: "Talk to our team", external: false }
+    : pathname === "/solutions" || pathname === "/families"
+    ? { href: "/contact", label: "Talk about a system", external: false }
     : { href: site.homeCheckUrl, label: "Start a free home check", external: true };
 
   return (

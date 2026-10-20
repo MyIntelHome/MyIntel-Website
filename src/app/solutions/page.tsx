@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
 import { SolutionComparison, PackageFeatureComparison } from "@/components/SolutionComparison";
@@ -45,11 +46,11 @@ export default function SolutionsPage(){
     </div></section>
 
     <section className="story-section container-x"><div className="story-split">
-      <div><p className="eyebrow">See what matters</p><h2 className="story-title mt-4">A clearer view of the day.</h2><p className="story-lead mt-5">The sensors learn their usual day and notice changes, like a late start to the day or more trips to the bathroom at night. More sensors mean a fuller picture.</p><p className="story-lead mt-5">If something looks off, you hear about it. If the help button is pressed, you know help is on the way.</p><a href={site.homeCheckUrl+"/?view=help"} className="story-link mt-6">Ask us about a plan <ArrowRight aria-hidden="true" className="h-5 w-5" /></a></div>
+      <div><p className="eyebrow">See what matters</p><h2 className="story-title mt-4">A clearer view of the day.</h2><p className="story-lead mt-5">The sensors learn their usual day and notice changes, like a late start to the day or more trips to the bathroom at night. More sensors mean a fuller picture.</p><p className="story-lead mt-5">If something looks off, you hear about it. If the help button is pressed, you know help is on the way.</p><Link href="/contact" className="story-link mt-6">Ask us about a plan <ArrowRight aria-hidden="true" className="h-5 w-5" /></Link></div>
       <figure className="story-phone"><Image src="/photos/packages/mobile-dashboard.webp" alt="Sample MyIntel phone view with daily and sleep details." width={1024} height={1536} sizes="(min-width: 1024px) 400px, 80vw" className="h-auto max-h-[500px] w-auto max-w-full object-contain" /><figcaption>Example view. Your screen may differ. Sleep details need the right bed sensor.</figcaption></figure>
     </div></section>
 
     <section className="container-x pb-16 lg:pb-24"><div className="story-faq-layout"><div><p className="eyebrow">A few answers</p><h2 className="story-title mt-4">Good to know.</h2></div><div className="simple-faq">{questions.map(f=><details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></div></section>
-    <CtaBand title="Not sure which plan fits?" body="Start with our free home check. See what may need a closer look. You can go at your own pace." />
+    <CtaBand title="Ready for a system at home?" body="Talk with us about the right plan, a quote and setup. You do not need to complete the online home check first." primary="contact" />
   </>;
 }

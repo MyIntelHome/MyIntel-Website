@@ -40,7 +40,7 @@ export default function HomePage() {
     <EditorialHero eyebrow="Aging in place in Denver" title={<>Stay in the <span className="text-blue">home you love</span>.</>} body="MyIntel helps older adults live safely at home and lets family know when something is wrong. We check the home for fall risks, set up simple sensors that notice when the day looks different, and a real person answers the help button 24/7." image="/photos/stories/coming-home.webp" alt="Older woman coming home from a walk with her dog.">
       <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
         <a href={site.homeCheckUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a free home check <ArrowRight className="h-5 w-5" /></a>
-        <a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a>
+        <Link href="/contact" className="btn-outline">Talk about a system <ArrowRight className="h-5 w-5" /></Link>
       </div>
       <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-lg font-bold text-navy">{["Free setup", "No cameras", "Help answered 24/7"].map(t => <li key={t} className="flex items-center gap-2"><Check className="h-5 w-5 text-blue" />{t}</li>)}</ul>
     </EditorialHero>
