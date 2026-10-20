@@ -26,7 +26,7 @@ export function FallStats() {
 type Step = { icon: ComponentType<SVGProps<SVGSVGElement>>; title: string; body: string };
 
 const familySteps: Step[] = [
-  { icon: ClipboardCheck, title: "Free home check", body: "Start online in a few minutes, or call us. You see what may need a closer look." },
+  { icon: ClipboardCheck, title: "Choose your starting point", body: "Take the free online home check, or contact us about a system. The online check is optional." },
   { icon: Home, title: "Home safety visit", body: "A licensed occupational therapist walks the home with you and spots fall risks. Included with HomeProtect and HomeComplete." },
   { icon: Wrench, title: "Free professional setup", body: "Insured installers put the sensors and help button where they help most, then show everyone how they work." },
   { icon: Sparkles, title: "We notice changes", body: "The sensors learn the usual day and let you know when something is different. The help button is answered 24/7." },

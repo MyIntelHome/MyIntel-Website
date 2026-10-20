@@ -22,7 +22,7 @@ const questions=[
 export default function FamiliesPage(){
  return <>
   <EditorialHero eyebrow="For families" title="Know they're okay, without calling five times a day." body="Your parent wants to stay in their own home. You want to know they are safe. MyIntel checks the home for fall risks, learns their usual day and lets you know when something is different. A help button is answered 24/7." image="/photos/stories/family-time.webp" alt="Father and daughter sharing tea and a laugh on a porch.">
-   <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><a href={site.homeCheckUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a free home check <ArrowRight className="h-5 w-5" /></a><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div><p className="mt-5 text-lg text-clay">Take it together, at your own pace.</p>
+   <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><Link href="/contact" className="btn-primary">Talk about a system <ArrowRight className="h-5 w-5" /></Link><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div><p className="mt-5 text-lg text-clay">Tell us what your family needs. No online home check required.</p>
   </EditorialHero>
   <section className="story-section story-tint" aria-labelledby="day-title"><div className="container-x"><p className="eyebrow">A day with MyIntel</p><h2 id="day-title" className="story-title mt-4 max-w-3xl">Quiet most days. There when it counts.</h2>
    <ol className="step-grid step-grid-3 mt-10">{moments.map(m=><li key={m.time}><p className="text-base font-extrabold uppercase tracking-wider text-blue">{m.time}</p><h3>{m.title}</h3><p>{m.body}</p></li>)}</ol>

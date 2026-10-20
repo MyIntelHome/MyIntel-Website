@@ -1,12 +1,15 @@
+import Link from "next/link";
 import { site } from "@/lib/site";
 import { ArrowRight } from "@/components/icons";
 
 export function CtaBand({
   title = "Stay in the home you love.",
   body = "Take a free home check. See what may need a closer look. You can choose what to do next.",
+  primary = "home-check",
 }: {
   title?: string;
   body?: string;
+  primary?: "home-check" | "contact";
 }) {
   return (
     <section className="relative overflow-hidden bg-navy-dark">
@@ -24,15 +27,17 @@ export function CtaBand({
           {body}
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          {primary === "contact" && <Link href="/contact" className="btn-accent">Talk about a system <ArrowRight className="h-5 w-5" /></Link>}
           <a
             href={site.homeCheckUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-accent"
+            className={primary === "contact" ? "btn-light" : "btn-accent"}
           >
             Start a free home check
             <ArrowRight className="h-5 w-5" />
           </a>
+          {primary === "home-check" && <Link href="/contact" className="btn-light">Talk about a system <ArrowRight className="h-5 w-5" /></Link>}
         </div>
         <p className="mt-5 text-sm text-cream/75">
           Prefer to talk?{" "}
