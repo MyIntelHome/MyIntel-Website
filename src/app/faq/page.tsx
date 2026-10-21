@@ -14,10 +14,11 @@ const groups=[
  {name:"Cost",items:[
   {q:"How much does it cost?",a:"We are finalizing plan prices. Call us and we will give you a quote for your home. Setup is always free."},
   {q:"Does insurance or Medicare pay for it?",a:"We do not bill insurance or Medicare right now. Call us and we will talk through your options."},
-  {q:"Are grab bars and other home changes included?",a:"No. Home changes are quoted separately. We go over any extra work and cost with you first."},
+  {q:"Can you add things like night lights or non-slip treads?",a:"Yes. Our installers can add lighting, slip protection, grab bars, a stove that turns itself off and other safety extras to any plan. These are quoted separately, and we go over the cost with you first."},
  ]},
  {name:"Help and safety",items:[
   {q:"How do you know when something is off?",a:"Small sensors notice everyday movement, like moving between rooms, opening doors and time in bed. Over time they learn what a usual day looks like and notice changes, like a late start to the day or more trips to the bathroom at night. Our team and the family you choose get a heads up."},
+  {q:"What does ongoing support include?",a:"It is included with every plan and built around the devices in your home. On check-up visits we replace batteries, test each device and adjust the setup as needs change. If something stops working in between, call us."},
   {q:"Who answers when I press the help button?",a:"A trained person at a UL-listed response center, 24 hours a day. They talk with you, send help if needed and let your family know."},
   {q:"Who does the home safety visit?",a:"A licensed, insured occupational therapist with CAPS (Certified Aging-in-Place Specialist) certification. The visit is included with HomeProtect and HomeComplete."},
   {q:"Will every fall be found?",a:"No system can promise that. Fall sensors work in the rooms where we set them up, and the help button works when it is pressed. Together they give two ways to get help fast."},

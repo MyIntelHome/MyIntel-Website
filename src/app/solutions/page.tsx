@@ -5,7 +5,14 @@ import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
 import { SolutionComparison, PackageFeatureComparison } from "@/components/SolutionComparison";
 import { site } from "@/lib/site";
-import { ArrowRight } from "@/components/icons";
+import { ArrowRight, Home, Lightbulb, PersonStanding, Utensils } from "@/components/icons";
+
+const addons = [
+  { icon: Lightbulb, title: "Lighting", body: "Lights that turn on by themselves at night, on the stairs, in hallways and on the way to the bathroom." },
+  { icon: PersonStanding, title: "Slip protection", body: "Grip under rugs, non-slip stair treads and grips for the tub and shower." },
+  { icon: Utensils, title: "Kitchen safety", body: "A stove that turns itself off if it is left on." },
+  { icon: Home, title: "Smart home extras", body: "A video doorbell, a smart lock, a smart thermostat and alerts if water starts to leak." },
+];
 
 export const metadata: Metadata = {
   title: "Home Safety Packages",
@@ -15,11 +22,11 @@ export const metadata: Metadata = {
 const questions = [
   {q:"How much does it cost?",a:"We are finalizing plan prices now. Call us and we will give you a quote for your home. Setup is always free."},
   {q:"Who answers when I press the help button?",a:"A trained person at a UL-listed response center, 24 hours a day. They talk with you, send help if needed and let your family know."},
-  {q:"Will you check in after setup?",a:"Yes, with each plan. We agree when to check back with you. You can tell us what works and what needs a change."},
+  {q:"What does ongoing support include?",a:"It is included with every plan and built around the devices in your home. On check-up visits we replace batteries, test each device and adjust the setup as needs change. If something stops working in between, call us."},
   {q:"Is a home safety visit included?",a:"Yes, with HomeProtect and HomeComplete. A trained pro checks the home with you. You get a plan made for your home and needs."},
   {q:"Will every fall be found?",a:"No system can promise that. Fall sensors work in the rooms where we set them up, and the help button works when it is pressed. Together they give two ways to get help fast."},
   {q:"Who gets updates?",a:"You choose. Most people pick one or two family members. A care team can be added too, with your OK."},
-  {q:"Are home changes and health tools included?",a:"No. Work such as grab bars has its own cost. Extra tools that check health also have their own cost. We go over any extra work with you first."},
+  {q:"Can you add other safety items?",a:"Yes. Lighting, slip protection, grab bars, a stove that turns itself off and smart home extras can be added to any plan. They are quoted separately, and we go over the cost with you first."},
   {q:"Does this replace care or 911?",a:"No. MyIntel adds safety at home. It does not diagnose anything or replace care, visits or emergency services."},
 ];
 export default function SolutionsPage(){
@@ -36,10 +43,17 @@ export default function SolutionsPage(){
       <details className="package-comparison-details"><summary>Compare what you get <span aria-hidden="true">+</span></summary><PackageFeatureComparison /></details>
     </section>
 
-    <section className="story-section story-tint"><div className="container-x story-heading">
-      <div><p className="eyebrow">Real people, close by</p><h2 className="story-title mt-4">We set it up.<br />We stay in touch.</h2><p className="story-lead mt-5">Insured, professional installers set everything up and show you how it works. We check back after setup to make sure it fits.</p></div>
+    <section className="story-section story-tint" aria-labelledby="addons-title"><div className="container-x">
+      <div className="story-heading"><div><p className="eyebrow">Add-ons</p><h2 id="addons-title" className="story-title mt-4">Make the home safer, too.</h2></div><div><p className="story-lead">Small changes can prevent a lot of falls. Our installers can add these to any plan, and your ongoing support keeps them working.</p></div></div>
+      <ul className="addon-grid mt-10">{addons.map(a=><li key={a.title}><span className="trust-icon"><a.icon className="h-6 w-6" /></span><h3>{a.title}</h3><p>{a.body}</p></li>)}</ul>
+      <p className="story-lead mt-8">Ask about these during your home safety visit, or call <a href={site.phoneHref} className="font-bold text-navy underline underline-offset-4">{site.phone}</a>.</p>
+    </div></section>
+
+    <section className="story-section"><div className="container-x story-heading">
+      <div><p className="eyebrow">Ongoing support</p><h2 className="story-title mt-4">We set it up.<br />We keep it working.</h2><p className="story-lead mt-5">Insured, professional installers set everything up and show you how it works. After that, ongoing support is included with every plan.</p></div>
       <dl className="story-lines">
-        <div><dt>Every plan</dt><dd>Free professional setup, check-ins after setup and a help button answered by a real person 24/7.</dd></div>
+        <div><dt>Every plan</dt><dd>Free professional setup and a help button answered by a real person 24/7.</dd></div>
+        <div><dt>Ongoing support, built around your home</dt><dd>Check-up visits tailored to the devices you have. We replace batteries, test each device and adjust things as needs change.</dd></div>
         <div><dt>Protect and Complete</dt><dd>Sensors that notice changes in the daily routine, plus a home safety visit and a plan made for you.</dd></div>
         <div><dt>You get a say</dt><dd>We go over any costs and who gets updates before we start.</dd></div>
       </dl>

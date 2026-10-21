@@ -9,7 +9,7 @@ export function SolutionComparison() {
       <div className="package-photo"><Image src={s.image} alt={s.imageAlt} fill sizes="(min-width: 1100px) 360px, (min-width: 768px) 50vw, 100vw" className="object-contain" quality={85} /></div>
       <div className="package-card-body">
         <ul className="package-benefits">{s.options.map(o=><li key={o}><Check aria-hidden="true" className="h-5 w-5 shrink-0" /><span>{o}</span></li>)}</ul>
-        <p className="package-service-note">Free setup. Help after setup. Help button answered 24/7.{s.services.assessmentIncluded && <span className="mt-2 block">Also: a home safety visit and a plan for your home.</span>}</p>
+        <p className="package-service-note">Free setup. Ongoing support for your devices. Help button answered 24/7.{s.services.assessmentIncluded && <span className="mt-2 block">Also: a home safety visit and a plan for your home.</span>}</p>
         <details className="package-device-details">
           <summary>See all {s.deviceCount} devices <span aria-hidden="true">+</span></summary>
           <ul className="package-device-list">{s.devices.map(d=><li key={d.key}><span className="device-quantity">{d.count}</span><div><p className="font-bold text-navy">{d.label}</p><p className="device-model">{d.model}</p><p className="mt-1 text-lg leading-relaxed text-clay">{d.detail}</p></div></li>)}</ul>
@@ -29,7 +29,7 @@ const rows = [
   {label:"Voice help unit", values:count("voice").map(n=>n ? n+"" : "Not included")},
   {label:"Bed sensor", values:count("sleep").map(n=>n ? "1 bed" : "Not included")},
   {label:"Free setup", values:solutions.map(s=>s.services.installationIncluded?"Included":"Not included")},
-  {label:"Help after setup", values:solutions.map(s=>s.services.followUpIncluded?"Included":"Not included")},
+  {label:"Ongoing support", values:solutions.map(s=>s.services.followUpIncluded?"Included":"Not included")},
   {label:"Home safety visit", values:solutions.map(s=>s.services.assessmentIncluded?"Included":"Not included")},
   {label:"A plan for your home", values:solutions.map(s=>s.services.homePlanIncluded?"Included":"Not included")},
 ];

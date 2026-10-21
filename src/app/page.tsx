@@ -19,7 +19,7 @@ const plans: { id: string; name: string; tag: string; bestFor: string; base?: st
   { id: "homeaware", name: "HomeAware", tag: "Start here", bestFor: "Someone who is doing well and wants a simple safety net.", devices: 3, features: [
     { icon: Bell, text: "Help button answered 24/7" },
     { icon: Activity, text: "Morning routine check in one key room" },
-    { icon: Wrench, text: "Free professional setup and check-ins" },
+    { icon: Wrench, text: "Free setup and ongoing support" },
   ] },
   { id: "homeprotect", name: "HomeProtect", tag: "More help through the day", bestFor: "Someone who lives alone or has had a fall or a close call.", base: "Everything in HomeAware, plus", devices: 12, features: [
     { icon: Sparkles, text: "Notices changes in the daily routine" },
