@@ -2,7 +2,7 @@
 
 Marketing website for [MyIntel](https://myintelhome.com) — privacy-first aging-in-place technology. No cameras, no wearables.
 
-Built with [Next.js 15](https://nextjs.org) (App Router) and [Tailwind CSS 4](https://tailwindcss.com). All pages are statically generated.
+Built with [Next.js 16](https://nextjs.org) (App Router), React 19 and [Tailwind CSS 4](https://tailwindcss.com). All pages are statically generated.
 
 ## Pages
 
@@ -17,6 +17,8 @@ Built with [Next.js 15](https://nextjs.org) (App Router) and [Tailwind CSS 4](ht
 | `/privacy` | Privacy policy |
 
 ## Development
+
+Use Node.js 20.9 or later. The Vercel project runs Node.js 24.
 
 ```bash
 npm install
