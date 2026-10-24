@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { EditorialHero } from "@/components/EditorialHero";
 import { RoutineInsight, Steps, TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
 import { WebsiteInquiryForm } from "@/components/WebsiteInquiryForm";
 import { Phone, Mail, ArrowRight, Building, Stethoscope, Users, Home, ClipboardCheck, Heart, Dashboard, GraduationCap, Wrench, Sparkles } from "@/components/icons";
 
-export const metadata: Metadata={title:"For Care Companies",description:"MyIntel gives home care companies the sensors, help buttons, training and a team dashboard to watch over every client at home, with AI that flags changes in daily routine.",alternates:{canonical:"/partners"}};
+export const metadata: Metadata = pageMeta({ path: "/partners", title: "Client Safety Tools for Home Care Companies", description: "MyIntel gives home care companies in Colorado the sensors, help buttons, training and a team dashboard to look after every client at home, with AI that flags changes in daily routine." });
 const partnerSteps=[
  {icon:Dashboard,title:"We set up your dashboard",body:"Your company gets its own MyIntel dashboard, with logins for the staff who need them."},
  {icon:GraduationCap,title:"We train your team",body:"We show your staff how to set up the sensors and help button, read the dashboard and act on alerts."},

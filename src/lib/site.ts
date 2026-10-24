@@ -4,7 +4,7 @@ export const site = {
   tagline: "Stay in the home you love",
   description:
     "MyIntel helps older adults in the Denver area stay safely at home. We check the home for fall risks, set up simple sensors and a help button for free, notice when the daily routine changes, and a real person answers the help button 24/7.",
-  url: "https://myintelhome.com",
+  url: "https://www.myintelhome.com",
   phone: "(720) 989-1123",
   phoneHref: "tel:+17209891123",
   email: "info@myintelhome.com",

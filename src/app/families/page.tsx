@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta, faqLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { EditorialHero } from "@/components/EditorialHero";
 import { EditorialImage } from "@/components/EditorialImage";
@@ -7,7 +9,7 @@ import { Steps, TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
 import { ArrowRight, Phone } from "@/components/icons";
 
-export const metadata: Metadata = {title:"For Families",description:"Help a parent stay safely in the home they love. A home safety visit, free setup, a help button answered 24/7 and updates you choose."};
+export const metadata: Metadata = pageMeta({ path: "/families", title: "Help a Parent Stay Safely at Home in Denver", description: "Help a parent stay safely in the home they love. A home safety visit, free setup, sensors that notice when their day changes, a help button answered 24/7 and updates you choose." });
 const moments=[
  {time:"7:30 am",title:"Mom is up and moving.",body:"Her morning looks like every other morning, so there is nothing to worry about. If it does not, you get a gentle heads up."},
  {time:"2:00 pm",title:"Dad presses his help button.",body:"A trained person answers right away, day or night, talks with him, sends help if needed and calls you."},
@@ -21,6 +23,7 @@ const questions=[
 ];
 export default function FamiliesPage(){
  return <>
+  <JsonLd data={faqLd(questions)} />
   <EditorialHero eyebrow="For families" title="Know they're okay, without calling five times a day." body="Your parent wants to stay in their own home. You want to know they are safe. MyIntel checks the home for fall risks, learns their usual day and lets you know when something is different. A help button is answered 24/7." image="/photos/stories/family-time.webp" alt="Father and daughter sharing tea and a laugh on a porch.">
    <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"><Link href="/contact" className="btn-primary">Talk about a system <ArrowRight className="h-5 w-5" /></Link><a href={site.phoneHref} className="btn-outline"><Phone className="h-5 w-5" />{site.phone}</a></div><p className="mt-5 text-lg text-clay">Tell us what your family needs. No online home check required.</p>
   </EditorialHero>

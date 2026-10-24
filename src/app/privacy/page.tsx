@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata={title:"Privacy Policy",description:"How MyIntel collects, uses and shares your information."};
+export const metadata: Metadata = pageMeta({ path: "/privacy", title: "Privacy Policy", description: "How MyIntel collects, uses and shares your information." });
 export default function PrivacyPage(){
  return <>
   <PageHero eyebrow="Privacy policy" title="Your data. Your say." body="Here is how we use the details you share with us." />

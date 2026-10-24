@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 import { Phone, Mail, ArrowRight } from "@/components/icons";
 import { WebsiteInquiryForm } from "@/components/WebsiteInquiryForm";
 
-export const metadata: Metadata={title:"Contact",description:"Talk with MyIntel about a home safety system, a quote or setup. Call (720) 989-1123, email info@myintelhome.com or send a note. No online home check required."};
+export const metadata: Metadata = pageMeta({ path: "/contact", title: "Contact MyIntel in Denver", description: "Talk with MyIntel about home safety for an older adult, a quote or setup. Call (720) 989-1123, email info@myintelhome.com or send a note. We reply within one business day." });
 export default function ContactPage(){
  return <>
   <PageHero eyebrow="Contact" title="Let&apos;s talk about your home." body="Ready for a MyIntel system, looking for a quote or asking about a parent? Talk with a real person in Denver. No online home check required." />

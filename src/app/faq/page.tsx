@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta, faqLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata={title:"Common Questions",description:"Simple answers about MyIntel home checks, plans, setup, privacy and help for families."};
+export const metadata: Metadata = pageMeta({ path: "/faq", title: "Questions About Home Safety for Seniors", description: "Straight answers about MyIntel: cost, insurance, who answers the help button, fall sensors, privacy and cameras, and home safety visits in the Denver area." });
 const groups=[
  {name:"Getting started",items:[
   {q:"What does MyIntel do?",a:"We help older adults stay safely at home. We check the home for fall risks and set up sensors and a help button for free. The sensors learn their usual day and notice when something changes, and a real person answers the help button 24/7. Family gets the updates you choose."},
@@ -32,6 +34,7 @@ const groups=[
 ];
 export default function FaqPage(){
  return <>
+  <JsonLd data={faqLd(groups.flatMap((g) => g.items))} />
   <PageHero eyebrow="Common questions" title="Straight answers." body="What MyIntel does, what it costs and who answers when you need help." />
   <section className="container-x pb-16 lg:pb-24"><div className="faq-index">{groups.map(g=><a key={g.name} href={"#"+g.name.toLowerCase().replaceAll(" ","-")}>{g.name}</a>)}</div><div className="mt-10 space-y-16">{groups.map(g=><section key={g.name} id={g.name.toLowerCase().replaceAll(" ","-")} className="story-faq-layout scroll-mt-28"><h2 className="text-3xl font-bold text-navy">{g.name}</h2><div className="simple-faq">{g.items.map(f=><details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></section>)}</div><p className="story-lead mt-12">Still have a question? <a href={site.phoneHref} className="font-bold text-navy underline underline-offset-4">Call {site.phone}</a> or <Link href="/contact" className="font-bold text-navy underline underline-offset-4">send us a note</Link>.</p></section>
   <CtaBand title="Take a look at your home." body="Our free home check gives you a place to start." />

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
 import { TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata={title:"About MyIntel",description:"MyIntel is a Denver aging-in-place company founded by Austin Gough to help older adults stay safely in the homes they love."};
+export const metadata: Metadata = pageMeta({ path: "/about", title: "About MyIntel, a Denver Aging in Place Company", description: "MyIntel is a Denver aging in place company founded by Austin Gough. We help older adults stay safely in the homes they love with home safety visits, simple sensors and a help button answered 24/7." });
 const team=[
  {title:"Austin Gough, founder",body:"Austin started MyIntel and is your main point of contact, from your first call through setup and beyond."},
  {title:"Insured, professional installers",body:"Every system is set up by insured professionals who show you and your family how everything works."},

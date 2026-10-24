@@ -1,0 +1,31 @@
+# MyIntel
+
+> MyIntel (MyIntel Co.) helps older adults in the Denver metro area, Colorado, stay safely in their own homes. We check the home for fall risks, set up simple sensors and a help button for free, notice when the daily routine changes, and a trained person at a UL-listed response center answers the help button 24/7.
+
+Key facts:
+- Service area: the Denver metro area, Colorado. The free online home check (HomeCheck) works anywhere.
+- Founded by Austin Gough. Contact: (720) 989-1123, info@myintelhome.com. We reply within one business day.
+- Home safety visits are done by licensed, insured occupational therapists with CAPS (Certified Aging-in-Place Specialist) certification.
+- No cameras. Room sensors notice movement, not faces.
+- Setup by insured, professional installers is free with every plan.
+- Plans: HomeAware (help button answered 24/7, morning routine check in one key room), HomeProtect (adds routine change alerts, door sensors, fall sensing in one room, voice help and a home safety visit), HomeComplete (adds fall sensing in a second room and a bed sensor).
+- Pricing: quoted per home. Call for a quote.
+- MyIntel does not bill insurance or Medicare, and does not replace medical care or 911.
+- For home care companies: MyIntel supplies the sensors, help buttons, staff training and a team dashboard. The care company's staff set up and look after their own clients.
+
+## Main pages
+
+- [Home](https://www.myintelhome.com/): What MyIntel does and the three plans
+- [For families](https://www.myintelhome.com/families): Helping a parent stay safely at home
+- [Home safety packages](https://www.myintelhome.com/solutions): HomeAware, HomeProtect and HomeComplete compared
+- [Home safety assessments](https://www.myintelhome.com/assessments): Free online home check and professional home safety visits
+- [For care companies](https://www.myintelhome.com/partners): Tools for home care agencies
+- [Common questions](https://www.myintelhome.com/faq): Cost, insurance, privacy, fall sensors and who answers the help button
+- [About](https://www.myintelhome.com/about): Who we are
+- [Contact](https://www.myintelhome.com/contact): Phone, email and inquiry form
+
+## Optional
+
+- [Free online home check](https://homecheck.myintelhome.com): A few minutes, shows what in the home may need a closer look
+- [Careers](https://www.myintelhome.com/careers): Work with MyIntel
+- [Privacy policy](https://www.myintelhome.com/privacy)

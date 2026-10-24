@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta, faqLd, serviceLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { EditorialImage } from "@/components/EditorialImage";
@@ -7,11 +9,7 @@ import { SolutionComparison, PackageFeatureComparison } from "@/components/Solut
 import { site } from "@/lib/site";
 import { ArrowRight } from "@/components/icons";
 
-export const metadata: Metadata = {
-  title: "Home Safety Packages",
-  description: "Compare HomeAware, HomeProtect and HomeComplete. All include free installation and follow-up. Protect and Complete include professional home safety assessments.",
-  alternates: { canonical: "/solutions" },
-};
+export const metadata: Metadata = pageMeta({ path: "/solutions", title: "Home Safety Packages for Seniors", description: "Compare HomeAware, HomeProtect and HomeComplete home safety plans for older adults in Denver. Every plan includes a help button answered 24/7 and free professional setup." });
 const questions = [
   {q:"How much does it cost?",a:"We are finalizing plan prices now. Call us and we will give you a quote for your home. Setup is always free."},
   {q:"Who answers when I press the help button?",a:"A trained person at a UL-listed response center, 24 hours a day. They talk with you, send help if needed and let your family know."},
@@ -24,6 +22,7 @@ const questions = [
 ];
 export default function SolutionsPage(){
   return <>
+  <JsonLd data={[serviceLd({ name: "MyIntel home safety plans", path: "/solutions", serviceType: "Home safety monitoring for older adults", description: "HomeAware, HomeProtect and HomeComplete plans with a help button answered 24/7 by a UL-listed response center, sensors that notice changes in the daily routine, fall sensing and free professional setup." }), faqLd(questions)]} />
     <section className="package-hero"><div className="container-x package-hero-grid">
       <div><p className="eyebrow">MyIntel packages</p><h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">Choose the help that fits your home.</h1><p className="story-lead mt-6">Every plan includes a help button answered 24/7, free setup and check-ins after. Bigger plans add fall sensors, more room sensors and a home safety visit by a licensed OT.</p><a href="#compare" className="package-jump mt-8">See the three plans <ArrowRight aria-hidden="true" className="h-5 w-5" /></a><p className="mt-5 text-lg text-clay">Free setup with each plan.</p></div>
       <figure className="package-hero-photo"><EditorialImage src="/photos/packages/plant-care.webp" alt="Illustrative older man watering plants in his home." className="aspect-[5/4] rounded-[2rem]" priority /><figcaption className="package-photo-caption">Keep doing the things you love.</figcaption></figure>

@@ -3,6 +3,8 @@ import { Manrope, Nunito_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
+import { organizationLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -20,7 +22,7 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | ${site.tagline}`,
+    default: `${site.name} | Help Seniors Stay Safely at Home in Denver`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -40,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${nunitoSans.variable}`}>
       <body className="font-sans">
+        <JsonLd data={organizationLd} />
         <Header />
         <main>{children}</main>
         <Footer />

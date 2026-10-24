@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 import { ArrowRight } from "@/components/icons";
 
-export const metadata: Metadata={title:"Work With MyIntel",description:"Help older adults stay at home. MyIntel welcomes home safety and home modification professionals."};
+export const metadata: Metadata = pageMeta({ path: "/careers", title: "Careers for Home Safety and Aging in Place Pros", description: "Help older adults stay at home. MyIntel works with home safety and home modification professionals in the Denver area." });
 const roles=[
  {title:"Home safety visits",body:"Meet people in their homes. Check what may need care. Help them choose what to do next.",credential:"Certified Aging in Place Specialist (CAPS)"},
  {title:"Home changes",body:"Help plan and fit changes that make a home easier to use. Work with the person and their family.",credential:"Executive Certification in Home Modification (ECHM)"},

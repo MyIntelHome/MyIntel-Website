@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMeta } from "@/lib/seo";
 import type { ComponentType, SVGProps } from "react";
 import { site } from "@/lib/site";
 import { EditorialHero } from "@/components/EditorialHero";
@@ -13,6 +15,8 @@ const offer = [
   { title: "We notice when something changes.", body: "Small sensors learn their usual day, like when they get up and move around. If something is different, you hear about it early, before a small problem becomes a big one." },
   { title: "Someone is always there.", body: "Press the help button any time, day or night, and a trained person answers. Family gets the updates you choose." },
 ];
+
+export const metadata: Metadata = pageMeta({ path: "/", absoluteTitle: true, title: "MyIntel | Help Seniors Stay Safely at Home in Denver", description: "MyIntel helps older adults in the Denver area stay safely at home. We check the home for fall risks, set up simple sensors and a help button for free, notice when the daily routine changes, and a real person answers the help button 24/7." });
 
 type Feature = { icon: ComponentType<SVGProps<SVGSVGElement>>; text: string };
 const plans: { id: string; name: string; tag: string; bestFor: string; base?: string; features: Feature[]; devices: number }[] = [
