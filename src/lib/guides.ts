@@ -54,7 +54,7 @@ export const guides: Guide[] = [
       },
     ],
     faqs: [
-      { q: "How long does a home safety assessment take?", a: "It depends on the size of the home and how many rooms need a close look. We will tell you how long to plan for when we schedule the visit." },
+      { q: "How long does a home safety assessment take?", a: "Most visits take about 1 to 2 hours. It depends on the size of the home and how many rooms need a close look." },
       { q: "Do I need to be there?", a: "Yes, it works best when the person who lives there is home, and family is welcome too. The OT sees how everyday tasks are done, which is a big part of finding the right fixes." },
       { q: "Is a home safety assessment included with MyIntel?", a: "Yes. A home safety visit by a licensed, insured occupational therapist is included with the HomeProtect and HomeComplete plans. Call us for a quote." },
     ],
@@ -162,7 +162,7 @@ export const guides: Guide[] = [
     slug: "medicare-home-safety-colorado",
     question: "Does Medicare pay for home safety changes in Colorado?",
     title: "Does Medicare Pay for Home Safety Changes in Colorado?",
-    description: "What Medicare, Medicare Advantage, Health First Colorado (Medicaid) and VA programs may cover for grab bars, bathroom safety and home changes for older adults in Colorado.",
+    description: "What Medicare, Medicare Advantage, Health First Colorado (Medicaid) and HSA or FSA accounts may cover for grab bars, bathroom safety and home changes for older adults in Colorado.",
     answer:
       "Usually not. Original Medicare does not generally pay for grab bars, raised toilet seats, bath seats or changes to the home. It can cover some medical equipment, like walkers, canes and commode chairs, when a doctor orders it. Some Medicare Advantage plans offer extra benefits for bathroom safety items. In Colorado, people on certain Health First Colorado (Medicaid) waivers may qualify for a home modification benefit. Always check with your plan before you buy.",
     sections: [
@@ -185,11 +185,9 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "Other places to look",
-        bullets: [
-          "Veterans: the VA has home improvement grants for eligible veterans. Ask the VA about the HISA grant.",
-          "Denver area: the Denver Regional Council of Governments (DRCOG) Area Agency on Aging can point you to local help at 303-480-6700, at no cost.",
-          "HSA or FSA: some home safety items may qualify with a letter of medical necessity. Check with your plan administrator.",
+        heading: "HSA or FSA accounts",
+        paragraphs: [
+          "Some home safety items may qualify for HSA or FSA funds with a letter of medical necessity from a doctor. Check with your plan administrator before you buy.",
         ],
       },
       {
@@ -207,9 +205,7 @@ export const guides: Guide[] = [
     sources: [
       { label: "Medicare.gov: Durable medical equipment coverage", url: "https://www.medicare.gov/coverage/durable-medical-equipment-dme-coverage" },
       { label: "AARP: Does Medicare cover home safety equipment?", url: "https://www.aarp.org/medicare/faq/does-medicare-cover-home-safety-equipment/" },
-      { label: "Colorado HCPF: Home Modification Benefit", url: "https://hcpf.colorado.gov/home-modification-benefit" },
-      { label: "DRCOG: Aging and Disability Resource Center", url: "https://drcog.org/programs/area-agency-aging/aging-and-disability-resource-center" },
-    ],
+      { label: "Colorado HCPF: Home Modification Benefit", url: "https://hcpf.colorado.gov/home-modification-benefit" },    ],
     updated: "2026-10-26",
   },
   {
