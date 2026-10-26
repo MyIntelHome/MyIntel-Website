@@ -29,6 +29,7 @@ export const nav = [
 export const footerNav = [
   ...nav,
   { label: "Home safety visits", href: "/assessments" },
+  { label: "Guides", href: "/guides" },
 ];
 
 // Claims we can stand behind. Keep every line true: they appear on several pages.

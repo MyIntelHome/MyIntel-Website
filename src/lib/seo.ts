@@ -73,3 +73,28 @@ export function serviceLd({ name, description, path, serviceType }: { name: stri
     areaServed: { "@type": "AdministrativeArea", name: "Denver metro area, Colorado" },
   };
 }
+
+export function articleLd({ headline, description, path, updated }: { headline: string; description: string; path: string; updated: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    url: `${site.url}${path}`,
+    mainEntityOfPage: `${site.url}${path}`,
+    datePublished: updated,
+    dateModified: updated,
+    inLanguage: "en-US",
+    author: { "@id": orgId },
+    publisher: { "@id": orgId },
+    image: `${site.url}/photos/stories/coming-home.webp`,
+  };
+}
+
+export function breadcrumbLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((i, n) => ({ "@type": "ListItem", position: n + 1, name: i.name, item: `${site.url}${i.path}` })),
+  };
+}
