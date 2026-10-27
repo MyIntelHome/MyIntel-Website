@@ -5,6 +5,7 @@ import Link from "next/link";
 import { EditorialHero } from "@/components/EditorialHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
+import { GuideLinks } from "@/components/GuideLinks";
 import { Steps, TrustRow } from "@/components/Proof";
 import { site } from "@/lib/site";
 import { ArrowRight, Phone } from "@/components/icons";
@@ -35,6 +36,7 @@ export default function FamiliesPage(){
   <Steps tint eyebrow="Getting started" title="You don't have to figure this out alone." />
   <TrustRow />
   <section className="story-section story-tint"><div className="container-x story-faq-layout"><div><p className="eyebrow">A few answers</p><h2 className="story-title mt-4">What families ask.</h2><Link href="/faq" className="story-link mt-6">More questions <ArrowRight aria-hidden="true" className="h-5 w-5" /></Link></div><div className="simple-faq">{questions.map(f=><details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></div></section>
+  <GuideLinks title="Plain answers for families." slugs={["help-aging-parent-live-alone", "signs-parent-needs-help-at-home", "medical-alert-vs-fall-sensors"]} />
   <CtaBand title="Start with one small check." body="Our free home check gives you and your parent a place to start. You choose what comes next." />
  </>;
 }

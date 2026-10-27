@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { EditorialImage } from "@/components/EditorialImage";
 import { CtaBand } from "@/components/CtaBand";
+import { GuideLinks } from "@/components/GuideLinks";
 import { SolutionComparison, PackageFeatureComparison } from "@/components/SolutionComparison";
 import { site } from "@/lib/site";
 import { ArrowRight } from "@/components/icons";
@@ -50,6 +51,7 @@ export default function SolutionsPage(){
     </div></section>
 
     <section className="container-x pb-16 lg:pb-24"><div className="story-faq-layout"><div><p className="eyebrow">A few answers</p><h2 className="story-title mt-4">Good to know.</h2></div><div className="simple-faq">{questions.map(f=><details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>)}</div></div></section>
+    <GuideLinks tint slugs={["medical-alert-vs-fall-sensors", "medicare-home-safety-colorado", "home-safety-assessment"]} />
     <CtaBand title="Ready for a system at home?" body="Talk with us about the right plan, a quote and setup. You do not need to complete the online home check first." primary="contact" />
   </>;
 }

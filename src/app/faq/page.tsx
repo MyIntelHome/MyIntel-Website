@@ -11,7 +11,7 @@ const groups=[
  {name:"Getting started",items:[
   {q:"What does MyIntel do?",a:"We help older adults stay safely at home. We check the home for fall risks and set up sensors and a help button for free. The sensors learn their usual day and notice when something changes, and a real person answers the help button 24/7. Family gets the updates you choose."},
   {q:"Where do I start?",a:"Try the free home check online, or call us. It takes a few minutes and shows what may need a closer look."},
-  {q:"Where do you work?",a:`We set up homes and do home safety visits in ${site.serviceArea}. The online home check works anywhere.`},
+  {q:"Where do you work?",a:`We set up homes and do home safety visits in ${site.serviceArea}, including Denver, Aurora, Lakewood, Arvada, Westminster, Thornton, Centennial, Littleton, Highlands Ranch, Parker, Castle Rock, Broomfield and Boulder. The online home check works anywhere.`},
  ]},
  {name:"Cost",items:[
   {q:"How much does it cost?",a:"We are finalizing plan prices. Call us and we will give you a quote for your home. Setup is always free."},

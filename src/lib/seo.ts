@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { serviceCities } from "@/lib/serviceArea";
 
 const defaultImage = { url: "/photos/stories/coming-home.webp", alt: "Older woman coming home from a walk with her dog." };
 
@@ -36,8 +37,8 @@ export const organizationLd = {
       email: site.email,
       founder: { "@type": "Person", name: "Austin Gough", jobTitle: "Founder" },
       areaServed: [
-        { "@type": "City", name: "Denver", containedInPlace: { "@type": "State", name: "Colorado" } },
         { "@type": "AdministrativeArea", name: "Denver metro area, Colorado" },
+        ...serviceCities.map((name) => ({ "@type": "City", name, containedInPlace: { "@type": "State", name: "Colorado" } })),
       ],
       knowsAbout: ["Aging in place", "Home safety for older adults", "Fall prevention", "Home safety assessments", "Medical alert help buttons", "Fall detection sensors"],
       sameAs: [site.facebookUrl, "https://www.linkedin.com/company/myintel-co/"],

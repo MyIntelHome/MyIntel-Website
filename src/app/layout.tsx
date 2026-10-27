@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 import { organizationLd } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

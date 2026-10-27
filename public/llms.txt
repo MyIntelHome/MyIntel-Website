@@ -3,7 +3,7 @@
 > MyIntel (MyIntel Co.) helps older adults in the Denver metro area, Colorado, stay safely in their own homes. We check the home for fall risks, set up simple sensors and a help button for free, notice when the daily routine changes, and a trained person at a UL-listed response center answers the help button 24/7.
 
 Key facts:
-- Service area: the Denver metro area, Colorado. The free online home check (HomeCheck) works anywhere.
+- Service area: the Denver metro area, Colorado, including Denver, Aurora, Lakewood, Arvada, Westminster, Thornton, Northglenn, Commerce City, Brighton, Centennial, Englewood, Littleton, Greenwood Village, Wheat Ridge, Golden, Evergreen, Highlands Ranch, Parker, Castle Rock, Lone Tree, Broomfield, Boulder, Longmont, Louisville, Lafayette, Superior and Erie. The free online home check (HomeCheck) works anywhere.
 - Founded by Austin Gough. Contact: (720) 989-1123, info@myintelhome.com. We reply within one business day.
 - Home safety visits are done by licensed, insured occupational therapists with CAPS (Certified Aging-in-Place Specialist) certification.
 - No cameras. Room sensors notice movement, not faces.
@@ -20,6 +20,7 @@ Key facts:
 - [Home safety packages](https://www.myintelhome.com/solutions): HomeAware, HomeProtect and HomeComplete compared
 - [Home safety assessments](https://www.myintelhome.com/assessments): Free online home check and professional home safety visits
 - [For care companies](https://www.myintelhome.com/partners): Tools for home care agencies
+- [Where we work](https://www.myintelhome.com/service-area): Cities and counties we serve across metro Denver
 - [Common questions](https://www.myintelhome.com/faq): Cost, insurance, privacy, fall sensors and who answers the help button
 - [About](https://www.myintelhome.com/about): Who we are
 - [Contact](https://www.myintelhome.com/contact): Phone, email and inquiry form
