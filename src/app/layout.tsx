@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  // Bing Webmaster Tools site ownership check.
+  verification: { other: { "msvalidate.01": "C993C40B39C59B3F8F69B8E90DF144AE" } },
   openGraph: {
     title: `${site.name} | ${site.tagline}`,
     description: site.description,
